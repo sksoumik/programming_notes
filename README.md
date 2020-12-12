@@ -1,6 +1,6 @@
-##                                            Programming Notes
+##                                            
 
-#### Computer shortcuts
+## Computer shortcuts
 
 - Select the whole line: if the cursor is at the beginning of the line, then `shift+down arrow` if the cursor is at the end of a line then, `shit+up arrow`
 - Show line numbers in colab: `ctrl + M + L`
@@ -18,32 +18,26 @@
 - Vscode: Move File to Split Windows = `CTRL + \ `
 - Vscode: Navigating Text/ move a line up or down: Hold `ALT` when moving `left and right` through text to move faster.  
 
-#### Terminal Commands
+## Terminal Commands
 
 ###### Linux
 
-- delete a folder from linux including all files
+- delete a folder from linux including all files`sudo rm -r folder_name` 
 
-- delete a folder from linux including all files
-  `sudo rm -r folder_name` 
-
-- Delete all files from  the current directory 
-  `sudo rm ./*` 
+- Delete all files from  the current directory `sudo rm ./*` 
 
 - Clean up root disk in Linux | dev/sda1 disk full problem
 
-  ``sudo apt-get install ncdu`
+  `sudo apt-get install ncdu`
   `sudo ncdu /  (too see all files size in root dir)`
-  `or`
-  `ncdu` . (see files sizes in the current directory)
+  or
+  `ncdu`   (see files sizes in the current directory)
 
 - Download youtube videos as mp3 youtube-dl 
 
 ​      `youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>`
 
-- Create a new file
-
-​      `cat filename`
+- Create a new file:  `cat filename`
 
 
 
@@ -96,28 +90,28 @@
 
   
 
-#### Instance segmentation:
+## Instance segmentation:
 
 - object localization and detect boundaries. 
 
-#### NLP INTRO
+## NLP Intro
 
 - Concepts of Bag-of-Words (BoW) and TF-IDF come into play. Both BoW and TF-IDF are techniques that help us convert text sentences into **numeric vectors**. [Read](https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/)
 - BERT tokenizer does the preprocessing by itself, so usually you don't benefit from standard preprocessing.
 
-#### SVM
+## SVM
 
 Support Vector Machine (SVM) is a supervised machine learning algorithm that can be used for **both classification or regression** challenges. The model extracts the best possible hyper-plane / line that segregates the two classes.
 
-#### Random Forest Model
+## Random Forest Model
 
 Random Forest models are a type of **ensemble** models, particularly **bagging** models. They are part of the tree-based model family.
 
-#### Microsoft -vs- Google
+## Microsoft -vs- Google
 
 Microsoft is an enterprise software company driven by **license revenue**, while Google is a consumer Internet company driven by **advertising revenue**.
 
-#### Enterprise software vs Consumer software
+## Enterprise software vs Consumer software
 
 Enterprise software is just another term for business software. This is software that is **sold to (or targeted at) companies, not to individuals.** So, all the software which you use on a general basis like Windows or **Google or Quora is consumer software.**
 

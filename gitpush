@@ -1,5 +1,5 @@
 eval `ssh-agent -s`
 ssh-add 
 git add .
-git commit -m "ms vs google" 
+git commit -m "reformat" 
 git push origin main 
