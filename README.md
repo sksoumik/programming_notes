@@ -1,6 +1,6 @@
-### Programming Notes
+##                                            Programming Notes
 
-##### Computer shortcuts
+#### Computer shortcuts
 
 - Select the whole line: if the cursor is at the beginning of the line, then `shift+down arrow` if the cursor is at the end of a line then, `shit+up arrow`
 - Show line numbers in colab: `ctrl + M + L`
@@ -18,7 +18,7 @@
 - Vscode: Move File to Split Windows = `CTRL + \ `
 - Vscode: Navigating Text/ move a line up or down: Hold `ALT` when moving `left and right` through text to move faster.  
 
-##### Commands
+#### Terminal Commands
 
 ###### Linux
 
@@ -95,3 +95,31 @@
   `tar -xf filename.xz`
 
   
+
+#### Instance segmentation:
+
+- object localization and detect boundaries. 
+
+#### NLP INTRO
+
+- Concepts of Bag-of-Words (BoW) and TF-IDF come into play. Both BoW and TF-IDF are techniques that help us convert text sentences into **numeric vectors**. [Read](https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/)
+- BERT tokenizer does the preprocessing by itself, so usually you don't benefit from standard preprocessing.
+
+#### SVM
+
+Support Vector Machine (SVM) is a supervised machine learning algorithm that can be used for **both classification or regression** challenges. The model extracts the best possible hyper-plane / line that segregates the two classes.
+
+#### Random Forest Model
+
+Random Forest models are a type of **ensemble** models, particularly **bagging** models. They are part of the tree-based model family.
+
+#### Microsoft -vs- Google
+
+Microsoft is an enterprise software company driven by **license revenue**, while Google is a consumer Internet company driven by **advertising revenue**.
+
+#### Enterprise software vs Consumer software
+
+Enterprise software is just another term for business software. This is software that is **sold to (or targeted at) companies, not to individuals.** So, all the software which you use on a general basis like Windows or **Google or Quora is consumer software.**
+
+Enterprise software is sold to companies to solve their problems. This can cover a wide range of applications, from software to manage the employees like payroll, attendance, promotions etc. (HRM), interacting with customers like the one’s marketing, sales.
+

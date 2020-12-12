@@ -1,5 +1,5 @@
 eval `ssh-agent -s`
 ssh-add 
 git add .
-git commit -m "GCP commands" 
+git commit -m "ms vs google" 
 git push origin main 
