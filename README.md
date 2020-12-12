@@ -88,28 +88,44 @@
 
   `tar -xf filename.xz`
 
-  
+###### Git
+
+- create a new branch without adding any content from the master branch (empty brach)
+
+  `git checkout --orphan branchname` 
+
+  `git rm -rf .`
 
 ## Instance segmentation:
 
 - object localization and detect boundaries. 
+
+
 
 ## NLP Intro
 
 - Concepts of Bag-of-Words (BoW) and TF-IDF come into play. Both BoW and TF-IDF are techniques that help us convert text sentences into **numeric vectors**. [Read](https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/)
 - BERT tokenizer does the preprocessing by itself, so usually you don't benefit from standard preprocessing.
 
+
+
 ## SVM
 
 Support Vector Machine (SVM) is a supervised machine learning algorithm that can be used for **both classification or regression** challenges. The model extracts the best possible hyper-plane / line that segregates the two classes.
+
+
 
 ## Random Forest Model
 
 Random Forest models are a type of **ensemble** models, particularly **bagging** models. They are part of the tree-based model family.
 
+
+
 ## Microsoft -vs- Google
 
 Microsoft is an enterprise software company driven by **license revenue**, while Google is a consumer Internet company driven by **advertising revenue**.
+
+
 
 ## Enterprise software vs Consumer software
 
@@ -117,3 +133,145 @@ Enterprise software is just another term for business software. This is software
 
 Enterprise software is sold to companies to solve their problems. This can cover a wide range of applications, from software to manage the employees like payroll, attendance, promotions etc. (HRM), interacting with customers like the one’s marketing, sales.
 
+
+
+## Text classification
+
+###### **Approaches to automatic text classification can be grouped into three categories:**
+
+- Rule-based methods
+- Machine learning (data-driven) based methods
+- Hybrid methods
+
+###### **neural network architectures, such as models based on** 
+
+- recurrent neural networks (RNNs),
+- Convolutional neural networks (CNNs), 
+- attention, 
+- Transformers, 
+- Capsule Nets
+
+
+
+## Batch Size
+
+- **Batch Gradient Descent**. Batch size is set to the total number of examples in the training dataset.
+- **Stochastic Gradient Descent**. Batch size is set to one.
+- **Minibatch Gradient Descent**. Batch size is set to more than one and less than the total number of examples in the training dataset.
+
+
+
+## Python’s built-in `sorted()` function
+
+The built-in sorting algorithm of Python uses a special version of merge sort, called Timsort, which runs in O(n log n) on average and worst-case both. 
+
+
+
+## Permutations vs Anagrams vs Palindromes                  
+
+Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
+
+I’m working through algorithm exercises with a group of people, and there was a lot of confusion about what permutation means, and how it differs from anagrams and palindromes.
+
+So, to clarify:
+
+A permutation is one of several possible variations, in which a set of things (like numbers, characters or items in an array) can be ordered or arranged. A permutation of characters does not have to have meaning.
+
+Example: Given the string abcd, the permutations are abcd, abdc, acbd, acdb, adbc, adcb, bacd, badc, bcad, bcda, bdac, bdca, cabd, cadb, cbad, cbda, cdab, cdba, dabc, dacb, dbac, dbca, dcab and dcba
+
+An anagram is a word, phrase, or name formed by rearranging the characters of a string. An anagram must have meaning, it can’t just be gibberish.
+
+Example: These words are anagrams of carets: caters, caster, crates, reacts, recast, traces
+
+A palindrome is a word, phrase, or sequence that reads the same backward as forward. A palindrome must have meaning, it can’t just be gibberish.
+
+Example: Civic, level, madam, mom and noon are all palindromes.
+
+All palindromes and anagrams are permutations, but not all permutations are either anagrams or palindromes.
+
+
+
+## What to do when you can’t find the solution?
+
+- Use a jupyter notebook to debug the code. 
+- Search similar problems in GitHub, Kaggle, Medium, YouTube, StackOverflow
+- Break-down the problem into smaller parts and understand what you really need to do. 
+
+
+
+### Multi-class Text Classification
+
+- For multi-class classification: loss-function: categorical cross entropy (For binary classification: binary cross entropy loss). 
+- BERT: Take a pre-trained BERT model, add an untrained dense layer of neurons, train the layer for any downstream task, … 
+
+
+
+## Backpropagation
+
+The backward function contains the backpropagation algorithm, where the goal is to essentially minimize the loss with respect to our weights. In other words, the weights need to be updated in such a way that the loss decreases while the neural network is training (well, that is what we hope for). All this magic is possible with the gradient descent algorithm. 
+
+
+
+### Activation function vs Loss function
+
+An *Activation function* is a property of the neuron, a function of all the inputs from previous layers and its output, is the input for the next layer.
+
+If we choose it to be linear, we know the entire network would be linear and would be able to distinguish only linear divisions of the space.
+
+Thus we want it to be non-linear, the traditional choice of function (tanh / sigmoid) was rather arbitrary, as a way to introduce non-linearity.
+
+One of the major advancements in deep learning, is using ReLu, that is easier to train and converges faster. but still - from a theoretical perspective, the only point of using it, is to introduce non-linearity.
+
+On the other hand, a *Loss function*, is the goal of your whole network.
+
+it encapsulate what your model is trying to achieve, and this concept is more general than just Neural models.
+
+A *Loss function*, is what you want to minimize, your error.
+
+Say you want to find the best line to fit a bunch of points:
+
+*D*={(*x*1,*y*1),…,(*x**n*,*y**n*)}
+$$
+D={(x1,y1),…,(x**n,y**n)}
+$$
+Your model (linear regression) would look like this:
+
+`y=mx+n`
+
+And you can choose several ways to measure your error (loss), for example L1:
+
+or maybe go wild, and optimize for their harmonic loss:
+
+
+
+## t-SNE algorithm
+
+(**t**-**SNE**) **t**-Distributed Stochastic Neighbor Embedding is a non-linear dimensionality reduction algorithm **used for** exploring high-dimensional data. It maps multi-dimensional data to two or more dimensions suitable for human observation.
+
+
+
+## Cross-Validation data
+
+We should not use augmented data in cross validation dataset. 
+
+
+
+## Concurrency and parallelism
+
+**Concurrency** and **parallelism** both relate to "different things happening more or less at the same time. 
+
+https://fastapi.tiangolo.com/async/#in-a-hurry
+
+
+
+## Pickle vs JSON for serialization 
+
+https://docs.python.org/3/library/pickle.html#comparison-with-json
+
+
+
+## Hyperparameter optimization techniques
+
+- Grid Search
+- Bayesian Optimization. 
+- Random Search 
