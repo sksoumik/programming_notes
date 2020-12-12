@@ -1,5 +1,5 @@
 eval `ssh-agent -s`
 ssh-add 
 git add .
-git commit -m "vscode shortcuts" 
+git commit -m "linux and anaconda commands" 
 git push origin main 

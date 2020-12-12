@@ -18,3 +18,47 @@
 - Vscode: Move File to Split Windows = `CTRL + \ `
 - Vscode: Navigating Text/ move a line up or down: Hold `ALT` when moving `left and right` through text to move faster.  
 
+##### Commands
+
+###### Linux
+
+- delete a folder from linux including all files
+
+- delete a folder from linux including all files
+  `sudo rm -r folder_name` 
+
+- Delete all files from  the current directory 
+  `sudo rm ./*` 
+
+- Clean up root disk in Linux | dev/sda1 disk full problem
+
+  ``sudo apt-get install ncdu`
+  `sudo ncdu /  (too see all files size in root dir)`
+  `or`
+  `ncdu` . (see files sizes in the current directory)
+
+- Download youtube videos as mp3 youtube-dl 
+
+​      `youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>`
+
+- Create a new file
+
+​      `cat filename`
+
+
+
+###### Anaconda commands
+
+- create a new venv
+  `conda create -n myenv python=3.6`
+
+- create  anaconda env file from terminal 
+  `conda env export > conda.yaml`
+
+- remove a venv from anaconda
+  `conda env remove -n env_name`
+
+- Remove any anaconda env: 
+
+​       `conda env remove -n env_name`
+
