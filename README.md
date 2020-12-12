@@ -20,7 +20,7 @@
 
 ## Terminal Commands
 
-###### Linux
+##### Linux
 
 - delete a folder from linux including all files`sudo rm -r folder_name` 
 
@@ -41,7 +41,7 @@
 
 
 
-###### Anaconda commands
+##### Anaconda commands
 
 - create a new venv
   `conda create -n myenv python=3.6`
@@ -54,7 +54,7 @@
 
 - Remove any anaconda env:    `conda env remove -n env_name`
 
-###### GCP commands
+##### GCP commands
 
 - Connect with the instance from terminal: 
   `gcloud compute config-ssh`
@@ -86,13 +86,15 @@
 
   `tar -xf filename.xz`
 
-###### Git
+##### Git
 
 - create a new branch without adding any content from the master branch (empty brach)
 
   `git checkout --orphan branchname` 
 
   `git rm -rf .`
+
+
 
 ## Instance segmentation:
 
