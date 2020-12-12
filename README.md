@@ -35,7 +35,7 @@
 
 - Download youtube videos as mp3 youtube-dl 
 
-​      `youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>`
+​          `youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>`
 
 - Create a new file:  `cat filename`
 
@@ -52,9 +52,7 @@
 - remove a venv from anaconda
   `conda env remove -n env_name`
 
-- Remove any anaconda env: 
-
-​       `conda env remove -n env_name`
+- Remove any anaconda env:    `conda env remove -n env_name`
 
 ###### GCP commands
 
@@ -212,7 +210,7 @@ The backward function contains the backpropagation algorithm, where the goal is 
 
 
 
-### Activation function vs Loss function
+## Activation function vs Loss function
 
 An *Activation function* is a property of the neuron, a function of all the inputs from previous layers and its output, is the input for the next layer.
 
@@ -275,3 +273,66 @@ https://docs.python.org/3/library/pickle.html#comparison-with-json
 - Grid Search
 - Bayesian Optimization. 
 - Random Search 
+
+
+
+## Normalization in ML
+
+Normalizing helps keep the network weights near zero which in turn makes backpropagation more stable. Without normalization, networks will tend to fail to learn.
+
+
+
+## Why do call `scheduler.step()` in pytorch?
+
+If you don’t call it, the learning rate won’t be changed and stays at the initial value. 
+
+
+
+## Momentum and Learning rate dealing 
+
+If the LR is low, then momentum should be high and vice versa. The basic idea of momentum in ML is to increase the speed of training. 
+
+
+
+## YOLO
+
+You only look once (YOLO) is SOTA real-time object detection system. 
+
+
+
+## Object Recognition
+
+[Ref link](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
+
+Object classification + Object localization (bbox) = Object detection 
+
+Object classification + Object localization + Object detection = Object Recognition (Object detection) 
+
+
+
+## CRUD
+
+In computer programming, **create, read, update, and delete** (CRUD) are the four basic functions of persistent storage. 
+
+
+
+## SQL vs NoSQL 
+
+**SQL:** 
+
+- Relational database. 
+- Organize data into one or more tables. 
+- Each table has rows and columns.
+- An unique identifier is added in each row. 
+
+Relational database management systems: mysql, postgresql, mariadb, oracle etc. 
+
+**NoSQL**
+
+- Non-relational. 
+- Organize data in a key:value pair. 
+- Mainly documents in JSON/XML format. 
+
+NoSQL management systems: MongoDB, firebase, apache cassandra etc. 
+
+**Foreign key** is just the primary key of another table. So that we can make a relationship between two tables.
