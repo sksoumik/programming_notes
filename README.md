@@ -338,3 +338,29 @@ Relational database management systems: mysql, postgresql, mariadb, oracle etc.
 NoSQL management systems: MongoDB, firebase, apache cassandra etc. 
 
 **Foreign key** is just the primary key of another table. So that we can make a relationship between two tables.
+
+## SQL
+
+##### JOIN statement
+
+A SQL Join statement is used to combine data or rows from two or more tables based on a common field between them. Different types of Joins  are:
+
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL JOIN
+
+##### Aggregate Functions
+
+An aggregate function performs a calculation on a set of values, and returns a single value. Except for `COUNT(*)`, aggregate functions ignore null values. Aggregate functions are often used with the `GROUP BY` clause of the SELECT statement.
+
+Various aggregate functions are: 
+
+```sql
+1) Count()
+2) Sum() 
+3) Avg()
+4) Min()
+5) Max()
+```
+

@@ -1,5 +1,5 @@
 eval `ssh-agent -s`
 ssh-add 
 git add .
-git commit -m "fixed formats" 
+git commit -m "SQL" 
 git push origin main 
