@@ -388,3 +388,34 @@ Let's say, we have a dataset which contains cancer patient data (Chest X-ray ima
 **False positive (FP):** Given an image, if your model predicts that the patient has cancer but the the actual target for that image says that the patient doesn't have cancer, it a false positive. Means the model prediction is False. 
 
 **False negative (FN):** Given an image, if your model predicts that the patient doesn't have cancer but the actual target for that image says that the patient has cancer, it is a false negative. This prediction is also false.
+
+
+
+## When not to use accuracy as Metric
+
+If the number of samples in one class outnumber the number of samples in another class by a lot. In these kinds of cases, it is not advisable to use accuracy as an evaluation metric as it is not representative of the data. So, you might get high accuracy, but your model will probably not perform that well when it comes to real-world samples, and you won’t be able to explain to your managers why. In these cases, it’s better to look at other metrics such as precision.
+
+
+
+## Common Evaluation Metrics in ML
+
+If we talk about **classification problems**, the most common metrics used are:
+
+- Accuracy
+
+- Precision (P)
+- Recall (R)
+- F1 score (F1)
+- Area under the ROC (Receiver Operating Characteristic) curve or simply AUC (AUC)
+- Log loss- Precision at k (P@k)
+- Average precision at k (AP@k)
+- Mean average precision at k (MAP@k)
+
+When it comes to **regression**, the most commonly used evaluation metrics are:
+
+- Mean absolute error (MAE)
+- Mean squared error (MSE)
+- Root mean squared error (RMSE)
+- Root mean squared logarithmic error (RMSLE)
+- Mean percentage error (MPE)
+- Mean absolute percentage error (MAPE)- R2
