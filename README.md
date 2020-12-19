@@ -419,3 +419,12 @@ When it comes to **regression**, the most commonly used evaluation metrics are:
 - Root mean squared logarithmic error (RMSLE)
 - Mean percentage error (MPE)
 - Mean absolute percentage error (MAPE)- R2
+
+## Autoencoder
+
+An **autoencoder** is a type of artificial neural network used to learn efficient data codings in an unsupervised manner. The aim of an **autoencoder** is to learn a representation (encoding) for a set of data, typically for dimensionality reduction. 
+
+[See](https://github.com/L1aoXingyu/pytorch-beginner/tree/master/08-AutoEncoder) visual representation and code in pytorch. A great [notebook](https://www.cs.toronto.edu/~lczhang/360/lec/w05/autoencoder.html) from cstoronto. 
+
+
+
