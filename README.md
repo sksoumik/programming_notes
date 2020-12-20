@@ -94,9 +94,11 @@
 
    `gsutil -m cp -r gs://bucket_name/folder .` 
 
-- 
+- Clean up root disk in Linux | dev/sda1 disk full problem | see which files are taking what space in the disk: 
 
-  
+  - install ncdu: `sudo apt-get install ncdu`
+  - to see all file/folder size in the root directory of disk: `sudo ncdu /` 
+  - to see all file/folder size in the current directory of disk: `ncdu .`  
 
 
 
@@ -284,7 +286,7 @@ https://docs.python.org/3/library/pickle.html#comparison-with-json
 
 
 
-## Hyperparameter optimization techniques
+## Hyper-parameter optimization techniques
 
 - Grid Search
 - Bayesian Optimization. 
@@ -294,7 +296,7 @@ https://docs.python.org/3/library/pickle.html#comparison-with-json
 
 ## Normalization in ML
 
-Normalizing helps keep the network weights near zero which in turn makes backpropagation more stable. Without normalization, networks will tend to fail to learn.
+Normalizing helps keep the network weights near zero which in turn makes back-propagation more stable. Without normalization, networks will tend to fail to learn.
 
 
 
