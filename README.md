@@ -444,9 +444,9 @@ An **autoencoder** is a type of artificial neural network used to learn efficien
 
 ##### Difference between AutoEncoder(AE) and Variational AutoEncoder(VAE):
 
-The key difference between and autoencoder and variational autoencoder is autoencoders learn a “compressed representation” of input (*could be image,text sequence etc.)* automatically by first compressing the input (*encoder*) and decompressing it back (*decoder*) to match the original input. The learning is aided by using distance  function that quantifies the information loss that occurs from the lossy compression. So learning in an autoencoder is a form of unsupervised  learning (*or self-supervised as some refer to it*) - there is no labeled data.
+The key difference between and autoencoder and variational autoencoder is autoencoders learn a “compressed representation” of input (could be image,text sequence etc.) automatically by first compressing the input (*encoder*) and decompressing it back (decoder) to match the original input. The learning is aided by using distance  function that quantifies the information loss that occurs from the lossy compression. So learning in an autoencoder is a form of unsupervised  learning (or self-supervised as some refer to it) - there is no labeled data.
 
-Instead of just learning a function representing the data ( *a compressed representation*) like autoencoders, variational autoencoders learn the parameters of a  probability distribution representing the data. Since it learns to model the data, we can sample from the distribution and generate new input  data samples. So it is a generative model like, for instance, GANs
+Instead of just learning a function representing the data ( a compressed representation) like autoencoders, variational autoencoders learn the parameters of a  probability distribution representing the data. Since it learns to model the data, we can sample from the distribution and generate new input  data samples. So it is a generative model like, for instance, GANs.
 
 So, VAE are generative autoencoders, meaning they can generate new instances  that look similar to original dataset used for training. VAE learns **probability distribution** of the data  whereas autoencoders learns a function to map each input to a number and decoder learns the reverse mapping.
 
