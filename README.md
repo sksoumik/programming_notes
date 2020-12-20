@@ -20,7 +20,7 @@
 
 ## Terminal Commands
 
-##### Linux
+#### Linux Terminal
 
 - delete a folder from linux including all files`sudo rm -r folder_name` 
 
@@ -38,10 +38,12 @@
 ​          `youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>`
 
 - Create a new file:  `cat filename`
+- Zip a folder with a name: `zip -r file_name.zip targer_folder_name/`
+- 
 
 
 
-##### Anaconda commands
+#### Anaconda commands
 
 - create a new venv
   `conda create -n myenv python=3.6`
@@ -54,7 +56,9 @@
 
 - Remove any anaconda env:    `conda env remove -n env_name`
 
-##### GCP commands
+
+
+#### GCP commands
 
 - Connect with the instance from terminal: 
   `gcloud compute config-ssh`
@@ -73,22 +77,32 @@
   for example:
   `gsutil -m cp -r gs://ceri_snow_unified/CERI_snow_10sec/ C:/Users/Dell/code/ceri_test_windows`
 
-- See how much space left on GCP:
-  `df -h`
-
-- Upload files from bucket to instance:
-  ``gsutil -m cp -R gs://bucket_location_gs_path .`
-
+- See how much space left on GCP: `df -h`
+  
+- Upload files from bucket to instance: `gsutil -m cp -R gs://bucket_location_gs_path .`
+  
 - Download file from gcp bucket to an instance (. means current directory)
   `gsutil -m cp -r gs://bucket_location .` 
 
-- Untar files
+- Untar files: `tar -xf filename.xz`
 
-  `tar -xf filename.xz`
+- Transfer (copy) file from GCP instance to Cloud Storage Bucket: (run from the instance workplace) 
 
-##### Git
+  `gsutil cp filename gs://bucket_name`
 
-- create a new branch without adding any content from the master branch (empty brach)
+- Transfer/Copy file/folder from Cloud Storage Bucket to the local computer: (Open terminal in your local computer and navigate to the folder where you need the file to be copied and run this command):
+
+   `gsutil -m cp -r gs://bucket_name/folder .` 
+
+- 
+
+  
+
+
+
+#### Git
+
+- create a new branch without adding any content from the master branch (empty branch)
 
   `git checkout --orphan branchname` 
 
