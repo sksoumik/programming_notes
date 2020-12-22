@@ -112,6 +112,16 @@
 
 
 
+## Interesting Notebooks
+
+1. **[Bringing Old Photos Back to Life](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life)**  [Notebook](https://colab.research.google.com/drive/1NEm6AsybIiC5TwTU_4DqDkQO0nFRB-uA?usp=sharing)
+2. **[first order model](https://github.com/AliaksandrSiarohin/first-order-model)** Notebook 
+3. [Get SH*T Done with PyTorch](https://github.com/curiousily/Getting-Things-Done-with-Pytorch) 
+4. PyTorch Transformers [Tutorials](https://github.com/abhimishra91/transformers-tutorials) 
+5. **[huggingtweets](https://github.com/borisdayma/huggingtweets)** 
+
+
+
 ## Instance segmentation:
 
 - object localization and detect boundaries. 
