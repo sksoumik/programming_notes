@@ -1,5 +1,9 @@
 ##                                            
 
+[TOC]
+
+
+
 ## Computer shortcuts
 
 - Select the whole line: if the cursor is at the beginning of the line, then `shift+down arrow` if the cursor is at the end of a line then, `shit+up arrow`
@@ -47,14 +51,12 @@
 
 - create a new venv
   `conda create -n myenv python=3.6`
-
 - create  anaconda env file from terminal 
   `conda env export > conda.yaml`
-
 - remove a venv from anaconda
   `conda env remove -n env_name`
-
 - Remove any anaconda env:    `conda env remove -n env_name`
+- Remove any package from an environment: activate the target env and `conda remove package_name`
 
 
 
@@ -459,4 +461,45 @@ The key difference between and autoencoder and variational autoencoder is autoen
 Instead of just learning a function representing the data ( a compressed representation) like autoencoders, variational autoencoders learn the parameters of a  probability distribution representing the data. Since it learns to model the data, we can sample from the distribution and generate new input  data samples. So it is a generative model like, for instance, GANs.
 
 So, VAE are generative autoencoders, meaning they can generate new instances  that look similar to original dataset used for training. VAE learns **probability distribution** of the data  whereas autoencoders learns a function to map each input to a number and decoder learns the reverse mapping.
+
+## Frequently used terms in ML
+
+##### Feature engineering
+
+Features are transformations on input data that facilitate a downstream algorithm, like a classi-
+fier, to produce correct outcomes on new data. Feature engineering consists of com-
+ing up with the right transformations so that the downstream algorithm can solve a
+task. For instance, in order to tell ones from zeros in images of handwritten digits, we
+would come up with a set of filters to estimate the direction of edges over the image,
+and then train a classifier to predict the correct digit given a distribution of edge
+directions. Another useful feature could be the number of enclosed holes, as seen in a
+zero, an eight, and, particularly, loopy twos. [Read this article](https://medium.com/mindorks/what-is-feature-engineering-for-machine-learning-d8ba3158d97a)
+
+##### Why PyTorch?
+
+PyTorch’s clear syntax, streamlined API, and easy debugging make it an excellent choice for introducing deep learning. PyTorch’s dynamic graph structure lets you experiment with *every part of the model*, meaning that the graph and its input can be modified during runtime.  This is referred to as **eager execution**. It offers the programmer better  access to the inner workings of the network than a static graph (TF) does,  which considerably eases the process of debugging the code.
+
+Want to make your own loss function? One that adapts over time or reacts to certain conditions? Maybe your own optimizer? Want to try something really weird like growing extra layers during training? Whatever - PyTorch is just here to crunch the numbers - you drive.
+
+##### Tensor
+
+Tensor is multidimensional arrays similar to NumPy arrays. 
+
+##### ImageNet
+
+ImageNet dataset (http://imagenet.stanford.edu). ImageNet is a very large dataset of over 14 million images maintained by Stanford University. All of the images are labeled with a hierarchy of nouns that come from the WordNet dataset (http://wordnet.princeton.edu),
+which is in turn a large lexical database of the English language.
+
+##### GAN
+
+GAN, where two networks, one acting as the painter and the other as the art historian, compete to outsmart each other at creating and detecting forgeries. GAN stands for generative adversarial network, where generative means something is being created (in this
+case, fake masterpieces), adversarial means the two networks are competing to outsmart the other, and well, network is pretty obvious. These networks are one of the most original outcomes of recent deep learning research. Remember that our overarching goal is to produce synthetic examples of a class of images that cannot be recognized as fake. When mixed in with legitimate examples, a
+skilled examiner would have trouble determining which ones are real and which are our forgeries.
+
+The end goal for the generator is to fool the discriminator into mixing up real and fake images. The end goal for the discriminator is to find out when it’s being tricked, but it also helps inform the generator about the identifiable mistakes in the generated images. At the start, the generator produces confused, three-eyed monsters that look nothing like a Rembrandt portrait. The discriminator is easily able to distinguish the muddled messes from the real paintings. As training progresses, information flows back from the discriminator, and the
+generator uses it to improve. By the end of training, the generator is able to produce convincing fakes, and the discriminator no longer is able to tell which is which. [ *Ref: Deep Learning with PyTorch - Eli Stevens* ] 
+
+
+
+
 
