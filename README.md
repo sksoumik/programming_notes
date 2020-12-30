@@ -1,11 +1,3 @@
-##                                           Table of Contents
-
-
-
-[TOC]
-
-
-
 ## Computer shortcuts
 
 - Select the whole line: if the cursor is at the beginning of the line, then `shift+down arrow` if the cursor is at the end of a line then, `shit+up arrow`
@@ -114,6 +106,8 @@
 
   `git rm -rf .`
 
+------
+
 
 
 ## Interesting Notebooks
@@ -124,11 +118,15 @@
 4. PyTorch Transformers [Tutorials](https://github.com/abhimishra91/transformers-tutorials) 
 5. **[huggingtweets](https://github.com/borisdayma/huggingtweets)** 
 
+------
+
 
 
 ## Instance segmentation:
 
 - object localization and detect boundaries. 
+
+------
 
 
 
