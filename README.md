@@ -106,8 +106,6 @@
 
   `git rm -rf .`
 
-------
-
 
 
 ## Interesting Notebooks
@@ -118,15 +116,11 @@
 4. PyTorch Transformers [Tutorials](https://github.com/abhimishra91/transformers-tutorials) 
 5. **[huggingtweets](https://github.com/borisdayma/huggingtweets)** 
 
-------
-
 
 
 ## Instance segmentation:
 
 - object localization and detect boundaries. 
-
-------
 
 
 
@@ -498,6 +492,8 @@ skilled examiner would have trouble determining which ones are real and which ar
 
 The end goal for the generator is to fool the discriminator into mixing up real and fake images. The end goal for the discriminator is to find out when it’s being tricked, but it also helps inform the generator about the identifiable mistakes in the generated images. At the start, the generator produces confused, three-eyed monsters that look nothing like a Rembrandt portrait. The discriminator is easily able to distinguish the muddled messes from the real paintings. As training progresses, information flows back from the discriminator, and the
 generator uses it to improve. By the end of training, the generator is able to produce convincing fakes, and the discriminator no longer is able to tell which is which. [ *Ref: Deep Learning with PyTorch - Eli Stevens* ] 
+
+
 
 
 
