@@ -478,6 +478,14 @@ Tensor is multidimensional arrays similar to NumPy arrays.
 ImageNet dataset (http://imagenet.stanford.edu). ImageNet is a very large dataset of over 14 million images maintained by Stanford University. All of the images are labeled with a hierarchy of nouns that come from the WordNet dataset (http://wordnet.princeton.edu),
 which is in turn a large lexical database of the English language. 
 
+##### Embedding
+
+An embedding is a relatively low-dimensional space into which you can translate high-dimensional vectors. The embedding in machine learning or NLP is actually a technique mapping from words to vectors which you can do better analysis or relating, for example, "toyota" or "honda" can be hardly related in words, but in **vector space** it can be set to very close according to some measure, also you can strengthen the relation ship of word by setting:  king-man+woman = Queen. So we can set boy to (1,0) and then set girl to (-1,0) to show they are in the same dimension but the meaning is just opposite.
+
+##### Baseline
+
+A baseline is the result of a very basic model/solution. You generally  create a baseline and then try to make more complex solutions in order  to get a better result. If you achieve a better score than the baseline, it is good.
+
 
 
 ## GAN 
@@ -488,4 +496,18 @@ skilled examiner would have trouble determining which ones are real and which ar
 
 The end goal for the generator is to fool the discriminator into mixing up real and fake images. The end goal for the discriminator is to find out when it’s being tricked, but it also helps inform the generator about the identifiable mistakes in the generated images. At the start, the generator produces confused, three-eyed monsters that look nothing like a Rembrandt portrait. The discriminator is easily able to distinguish the muddled messes from the real paintings. As training progresses, information flows back from the discriminator, and the
 generator uses it to improve. By the end of training, the generator is able to produce convincing fakes, and the discriminator no longer is able to tell which is which. [ *Ref: Deep Learning with PyTorch - Eli Stevens* ] 
+
+##### CycleGAN
+
+An interesting evolution of this concept is the CycleGAN, proposed in 2017. A CycleGAN can turn images of one domain into images of another domain (and back), without the need for us to explicitly provide matching pairs in the training set. It can perform the task of image translation. Once trained you can  translate an image from one domain to another domain. For example, when  trained on horse and zebra data set, if you give it an image with horses in the ground, the CycleGAN can convert the horses to zebra with the  same background. FaceApp is one of the most popular examples of CycleGAN where human faces are transformed into different age groups.
+
+##### StyleGAN
+
+StyleGAN is a GAN formulation which is capable of generating very high-resolution images even of 1024*1024 resolution. The idea is to build a stack of layers where initial layers are capable of  generating low-resolution images (starting from 2\*2) and further layers  gradually increase the resolution.
+
+The easiest way for GAN to generate high-resolution images is to remember images from the training dataset and while generating new  images it can add random noise to an existing image. In reality,  StyleGAN doesn’t do that rather it learn features regarding human face  and generates a new image of the human face that doesn’t exist in  reality.
+
+##### text-2-image
+
+This GAN architecture that made significant progress in generating meaningful images based on an explicit textual description. This GAN formulation takes a textual description as input and generates an RGB image that was described in the textual description. 
 
