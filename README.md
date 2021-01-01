@@ -486,6 +486,12 @@ An embedding is a relatively low-dimensional space into which you can translate 
 
 A baseline is the result of a very basic model/solution. You generally  create a baseline and then try to make more complex solutions in order  to get a better result. If you achieve a better score than the baseline, it is good.
 
+##### Benchmarking
+
+It a process of measuring the performance of a company's products, services, or processes against those of another business considered to be the best in the industry, aka “best in class.” The point of **benchmarking** is to identify internal opportunities for improvement. The same concept applies for the ML use cases as well. For example, It's a tool, comparing how well one ML method does at performing a specific task compared to another ML method which is already known as the best in that category. 
+
+
+
 
 
 ## GAN 
