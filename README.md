@@ -37,9 +37,8 @@
 
 - Create a new file:  `cat filename`
 - Zip a folder with a name: `zip -r file_name.zip targer_folder_name/`
+- Open a folder in file explorer using Linux Terminal: `xdg-open folder`
 - 
-
-
 
 #### Anaconda commands
 
