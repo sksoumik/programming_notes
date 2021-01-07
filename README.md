@@ -489,7 +489,15 @@ A baseline is the result of a very basic model/solution. You generally  create a
 
 It a process of measuring the performance of a company's products, services, or processes against those of another business considered to be the best in the industry, aka “best in class.” The point of **benchmarking** is to identify internal opportunities for improvement. The same concept applies for the ML use cases as well. For example, It's a tool, comparing how well one ML method does at performing a specific task compared to another ML method which is already known as the best in that category. 
 
+##### Bands and Modes of Image
 
+An image can consist of one or more bands of data. The Python Imaging Library allows you to store several bands in a single image, provided they all have the same dimensions and depth.  For example, a PNG image might have ‘R’, ‘G’, ‘B’, and ‘A’ bands for the red, green, blue, and alpha transparency values.  Many operations act on each band separately, e.g., histograms.  It is often useful to think of each pixel as having one value per band. 
+
+The mode of an image defines the **type and depth** of a pixel in the image. The current release supports the following standard modes: [Read](https://pillow.readthedocs.io/en/3.0.x/handbook/concepts.html#concept-modes)
+
+##### Mixed-Precision
+
+Mixed precision is the use of both 16-bit and 32-bit floating-point types in a model during training to make it run faster and use less memory. By keeping certain parts of the model in the 32-bit types for numeric stability, the model will have a lower step time and train equally as well in terms of the evaluation metrics such as accuracy.
 
 
 
@@ -512,7 +520,15 @@ StyleGAN is a GAN formulation which is capable of generating very high-resolutio
 
 The easiest way for GAN to generate high-resolution images is to remember images from the training dataset and while generating new  images it can add random noise to an existing image. In reality,  StyleGAN doesn’t do that rather it learn features regarding human face  and generates a new image of the human face that doesn’t exist in  reality.
 
-##### text-2-image
+##### Text-2-Image
 
 This GAN architecture that made significant progress in generating meaningful images based on an explicit textual description. This GAN formulation takes a textual description as input and generates an RGB image that was described in the textual description. 
+
+## CMOS
+
+Stands for "Complementary Metal Oxide Semiconductor." It is a technology used to produce integrated circuits. **CMOS** circuits are found in several types of electronic components, including microprocessors, batteries, and digital camera image sensors.
+
+## Profiling
+
+In software engineering, profiling is a form of dynamic program  analysis that measures, for example, the space or time complexity of a  program, the usage of particular instructions, or the frequency and  duration of function calls. Most commonly, profiling information serves  to aid program optimization. 
 
