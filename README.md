@@ -534,4 +534,4 @@ In software engineering, profiling is a form of dynamic program  analysis that m
 
 ## Tensors
 
-![](/home/soumik/Pictures/programming_notes/tensors.png)
+![](static/tensors.png)
