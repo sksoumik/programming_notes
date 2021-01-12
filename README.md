@@ -532,3 +532,6 @@ Stands for "Complementary Metal Oxide Semiconductor." It is a technology used to
 
 In software engineering, profiling is a form of dynamic program  analysis that measures, for example, the space or time complexity of a  program, the usage of particular instructions, or the frequency and  duration of function calls. Most commonly, profiling information serves  to aid program optimization. 
 
+## Tensors
+
+![](/home/soumik/Pictures/programming_notes/tensors.png)
