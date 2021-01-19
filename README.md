@@ -38,7 +38,7 @@
 - Create a new file:  `cat filename`
 - Zip a folder with a name: `zip -r file_name.zip targer_folder_name/`
 - Open a folder in file explorer using Linux Terminal: `xdg-open folder`
-- 
+- copy or move files from subdirectories that ends with a common extension: `mv **/*.csv target_dir`
 
 #### Anaconda commands
 
@@ -499,6 +499,25 @@ The mode of an image defines the **type and depth** of a pixel in the image. The
 
 Mixed precision is the use of both 16-bit and 32-bit floating-point types in a model during training to make it run faster and use less memory. By keeping certain parts of the model in the 32-bit types for numeric stability, the model will have a lower step time and train equally as well in terms of the evaluation metrics such as accuracy.
 
+## SQLite Database Creation: Flask
+
+##  
+
+```sql
+$ sqlite3 database.db
+$ .tables
+$ .exit
+# define the database path code. 
+$ python
+$ from app import db
+$ db.create_all()
+$ exit()
+# open the database
+$ sqlite3 database.db
+$ .tables
+$ select * from table_name 
+```
+
 
 
 ## GAN 
@@ -535,3 +554,28 @@ In software engineering, profiling is a form of dynamic program  analysis that m
 ## Tensors
 
 ![](static/tensors.png)
+
+## Why Linux is a better OS for developers
+
+1. ##### Security
+
+   Linux tends to be a safer system. So, you won't need anti-virus softwares. The reason it's secure because it's open-source, which means you can see its source code. A lot of programmers are constantly reading through the source code everyday and looking for vulnerabilities because they themselves using the system.  
+
+2. ##### It's package manager
+
+   It can increase the work-flow of a programmer/anyone. Installing any softwares is extremely easy compared to other OS. You just need to write in the terminal `sudo apt-get install whatever-the-software-name`. 
+
+   
+
+3. ##### No rebooting stuff
+
+   In windows, you may install one software and after the process, you may need to reboot the os to make it work. In Linux, most cases, you don't have to do that. 
+
+4. ##### Powerful programming tools comes pre-installed(i.e. grep, wget)
+
+5. ##### Task automation
+
+6. ##### Provides useful error messages
+
+   ref: [youtube](https://www.youtube.com/watch?v=otDOHt_Jges&t=617s)
+
