@@ -39,6 +39,8 @@
 - Zip a folder with a name: `zip -r file_name.zip targer_folder_name/`
 - Open a folder in file explorer using Linux Terminal: `xdg-open folder`
 - copy or move files from subdirectories that ends with a common extension: `mv **/*.csv target_dir`
+- Install VS Code from terminal: [read here](https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/)
+- 
 
 #### Anaconda commands
 
@@ -46,6 +48,7 @@
   `conda create -n myenv python=3.6`
 - create  anaconda env file from terminal 
   `conda env export > conda.yaml`
+- Creating new anaconda environment using a yaml file: `conda env create --file dependency.yaml`
 - remove a venv from anaconda
   `conda env remove -n env_name`
 - Remove any anaconda env:    `conda env remove -n env_name`
