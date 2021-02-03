@@ -607,13 +607,13 @@ class AbstractClassExample(ABC):
         pass
 ```
 
-We will define now a subclass using the previously  defined abstract class. You will notice that we haven't implemented the  `do_something` method, even though we are required to implement it,  because this method is **decorated** as an abstract method with the  decorator "`abstractmethod`". We get an exception that DoAdd42 can't be  instantiated.
+We will define now a subclass using the previously  defined abstract class. You will notice that we haven't implemented the  `do_something` method, even though we are required to implement it,  because this method is **decorated** as an abstract method with the  decorator "`abstractmethod`". We get an exception that Add42 can't be  instantiated.
 
 ```python
-class DoAdd42(AbstractClassExample):
+class Add42(AbstractClassExample):
     pass
 
-x = DoAdd42(4)
+x = Add42(4)
 ```
 
 Output: 
@@ -624,26 +624,26 @@ TypeError                                 Traceback (most recent call last)
 <ipython-input-4-2bcc42ab0b46> in <module>
       2     pass
       3 
-----> 4 x = DoAdd42(4)
+----> 4 x = Add42(4)
 
-TypeError: Can't instantiate abstract class DoAdd42 with abstract methods do_something
+TypeError: Can't instantiate abstract class Add42 with abstract methods do_something
 ```
 
 We will do it the correct way in the following example, in which we define two classes inheriting from our abstract class:
 
 ```python
-class DoAdd42(AbstractClassExample):
+class Add42(AbstractClassExample):
 
     def do_something(self):
         return self.value + 42
     
-class DoMul42(AbstractClassExample):
+class Mul42(AbstractClassExample):
    
     def do_something(self):
         return self.value * 42
     
-x = DoAdd42(10)
-y = DoMul42(10)
+x = Add42(10)
+y = Mul42(10)
 
 print(x.do_something())
 print(y.do_something())
@@ -659,3 +659,4 @@ Read [more...](https://www.python-course.eu/python3_abstract_classes.php)
 ## Python collections module
 
 Read [here](https://docs.python.org/3/library/collections.html#module-collections)
+
