@@ -567,3 +567,95 @@ In software engineering, profiling is a form of dynamic program  analysis that m
 
 **Babel** is a **transpiler** that converts our ultra-modern JavaScript syntax to browser-readable JavaScript, HTML, and CSS.
 
+## HTML class vs ID
+
+The **difference** between an **ID** and a **class** is that an **ID** is only used to identify **one single element** in our **HTML**. ... However, a **class** can be used to identify more than one **HTML** element. 
+
+## Vue.js commands
+
+```bash
+# check vue version
+$ vue --version
+# create the app from the current directory
+$ vue create <app-name>
+# run the app to browser 
+$ npm run serve
+
+
+
+```
+
+## Abstract class
+
+An **abstract class** is a **class** that is declared **abstract** —it may or may not include **abstract** methods. **Abstract classes** cannot be instantiated, but they can be subclassed. Abstract classes are classes that contain one or more abstract methods.  An abstract method is a method that is declared, but contains **no implementation**. Abstract classes **cannot be instantiated**, and require subclasses to provide implementations for the abstract methods. 
+
+Python on its own doesn't provide abstract classes.  Yet, Python comes with a module which provides the infrastructure for defining Abstract Base Classes (ABCs). This module is called - for  obvious reasons - **abc**.
+
+The following Python code uses the abc module and defines an abstract base class:
+
+```python
+from abc import ABC, abstractmethod
+ 
+class AbstractClassExample(ABC):
+ 
+    def __init__(self, value):
+        self.value = value
+        super().__init__()
+    
+    @abstractmethod
+    def do_something(self):
+        pass
+```
+
+We will define now a subclass using the previously  defined abstract class. You will notice that we haven't implemented the  `do_something` method, even though we are required to implement it,  because this method is **decorated** as an abstract method with the  decorator "`abstractmethod`". We get an exception that DoAdd42 can't be  instantiated.
+
+```python
+class DoAdd42(AbstractClassExample):
+    pass
+
+x = DoAdd42(4)
+```
+
+Output: 
+
+```bash
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-4-2bcc42ab0b46> in <module>
+      2     pass
+      3 
+----> 4 x = DoAdd42(4)
+
+TypeError: Can't instantiate abstract class DoAdd42 with abstract methods do_something
+```
+
+We will do it the correct way in the following example, in which we define two classes inheriting from our abstract class:
+
+```python
+class DoAdd42(AbstractClassExample):
+
+    def do_something(self):
+        return self.value + 42
+    
+class DoMul42(AbstractClassExample):
+   
+    def do_something(self):
+        return self.value * 42
+    
+x = DoAdd42(10)
+y = DoMul42(10)
+
+print(x.do_something())
+print(y.do_something())
+```
+
+```bash
+52
+420
+```
+
+Read [more...](https://www.python-course.eu/python3_abstract_classes.php)
+
+## Python collections module
+
+Read [here](https://docs.python.org/3/library/collections.html#module-collections)
