@@ -660,3 +660,17 @@ Read [more...](https://www.python-course.eu/python3_abstract_classes.php)
 
 Read [here](https://docs.python.org/3/library/collections.html#module-collections)
 
+## Python Enumerate
+
+```python
+college_years = ['Freshman', 'Sophomore', 'Junior', 'Senior']
+res = list(enumerate(college_years, 2019))
+print(res)
+```
+
+Output:
+
+```bash
+[(2019, 'Freshman'), (2020, 'Sophomore'), (2021, 'Junior'), (2022, 'Senior')]
+```
+
