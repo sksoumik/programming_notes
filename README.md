@@ -766,7 +766,11 @@ In pytorch, we can add these **L2** regularization by adding weight decay parame
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, weight_decay=1e-5)
 ```
 
-L1 regularization is not included by default in the pytorch optimizers, but could be added by including an extra loss `nn.L1Loss` in the weights of the model.  
+L1 regularization is not included by default in the PyTorch optimizers, but could be added by including an extra loss `nn.L1Loss` in the weights of the model.  
+
+## Semantic segmentation vs Instance Segmentation
+
+
 
 ## What is gradient descent
 
