@@ -663,6 +663,7 @@ Read [here](https://docs.python.org/3/library/collections.html#module-collection
 ## Python Enumerate
 
 ```python
+# python program
 college_years = ['Freshman', 'Sophomore', 'Junior', 'Senior']
 res = list(enumerate(college_years, 2019))
 print(res)
@@ -673,4 +674,103 @@ Output:
 ```bash
 [(2019, 'Freshman'), (2020, 'Sophomore'), (2021, 'Junior'), (2022, 'Senior')]
 ```
+
+## JavaScript Basic Syntax
+
+##### ES6 var, let and const
+
+- Unlike `var`, `let` throws an error if you declare the same variable twice.
+- Variables declared with `let` inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
+- Variables declared with `const` are read-only and cannot be reassigned.
+- Objects (including arrays and functions) assigned to a variable using `const` are still mutable and only prevents the reassignment of the variable identifier.
+
+To ensure your data doesn't change, JavaScript provides a function `Object.freeze` to prevent data mutation.
+
+```javascript
+let obj = {
+  name: "FreeCodeCamp",
+  review: "Awesome",
+};
+
+Object.freeze(obj);
+obj.review = "bad"; //will be ignored. Mutation not allowed
+obj.newProp = "Test"; // will be ignored. Mutation not allowed
+console.log(obj);
+// { name: "FreeCodeCamp", review:"Awesome"}
+```
+
+##### The length of a string
+
+```javascript
+"Alan Peter".length; // 10
+```
+
+##### Split and Join
+
+```javascript
+"one two three four".split(" "); // ['one', 'two', 'three', 'four']
+splittedStr = ['one', 'two', 'three', 'four']
+joinStr = splittedStr.join(""); //onetwothreefour
+joinStr = splittedStr.join(" "); //one two three four
+```
+
+##### Index of Strings
+
+```javascript
+//first element has an index of 0
+var firstLetterOfFirstName = "";
+var firstName = "Ada";
+firstLetterOfFirstName = firstName[0]; // A
+
+// find the las character of a string
+var firstName = "Ada";
+var lastLetterOfFirstName = firstName[firstName.length - 1]; // a
+```
+
+## Reinforcement Learning
+
+An agent interacts with its environment by producing actions and discovers errors or rewards. 
+
+## Bias-Variance Trade-off
+
+**Bias** is error due to wrong or overly simplistic  assumptions in the learning algorithm you’re using. This can lead to the model underfitting your data, making it hard  for it to have high predictive accuracy and for you to generalize your  knowledge from the training set to the test set.
+
+**Variance** is error due to too much complexity in the  learning algorithm you’re using. This leads to the algorithm being  highly sensitive to high degrees of variation in your training data,  which can lead your model to overfit the data. You’ll be carrying too much noise from your training data for your model to be very useful for your test data.
+
+The bias-variance decomposition essentially decomposes the learning error from any algorithm by adding the bias,  the variance and a bit of irreducible error due to noise in the  underlying dataset. Essentially, if you make the model more complex and  add more variables, you’ll lose bias but gain some variance — in order  to get the optimally reduced amount of error, you’ll have to tradeoff bias and variance. You don’t want either high bias or high variance in your model.
+
+## KNN vs K-means clustering
+
+K-Nearest Neighbors is a supervised classification algorithm, while k-means clustering is an unsupervised clustering algorithm. While the mechanisms may seem similar at first, what this really means  is that in order for K-Nearest Neighbors to work, you need labeled data  you want to classify an unlabeled point into (thus the nearest neighbor  part). K-means clustering requires only a set of unlabeled points and a  threshold: the algorithm will take unlabeled points and gradually learn  how to cluster them into groups by computing the mean of the distance  between different points.
+
+The critical difference here is that KNN needs labeled  points and is thus supervised learning, while k-means doesn’t—and is  thus unsupervised learning.
+
+## ROC curve
+
+The ROC curve is a graphical  representation of the contrast between true **positive rates** and the false **positive rate** at various thresholds. It’s often used as a proxy for the trade-off between the **sensitivity** of the model (true positives) vs the  fall-out or the probability it will trigger a false alarm (false  positives). 
+
+## L1 and L2 regularization
+
+A regression model that uses L1 regularization technique is called ***Lasso Regression\*** and model which uses L2 is called ***Ridge Regression\***.
+
+To implement these two, note that the linear regression model stays the same, but it is the calculation of the **loss function** that includes these regularization terms. 
+
+**L1 regularization( Lasso Regression)**- It adds **sum of the** **absolute values** of all weights in the model to cost function. It shrinks the less important feature’s coefficient to zero thus, removing some feature altogether.  So, this works well for **feature selection** in case we have a huge number of features.
+
+**L2 regularization(** **Ridge Regression**)- It adds **sum of squares** of all weights in the model to cost function. It is able to learn complex data patterns and gives non-sparse solutions unlike L1 regularization.
+
+In pytorch, we can add these **L2** regularization by adding weight decay parameters. 
+
+```python
+# adding L2 penalty in the loss function 
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, weight_decay=1e-5)
+```
+
+L1 regularization is not included by default in the pytorch optimizers, but could be added by including an extra loss `nn.L1Loss` in the weights of the model.  
+
+## What is gradient descent
+
+
+
+### Momentum in PyTorch
 
