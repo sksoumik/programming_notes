@@ -749,6 +749,16 @@ The critical difference here is that KNN needs labeled  points and is thus super
 
 The ROC curve is a graphical  representation of the contrast between true **positive rates** and the false **positive rate** at various thresholds. It’s often used as a proxy for the trade-off between the **sensitivity** of the model (true positives) vs the  fall-out or the probability it will trigger a false alarm (false  positives). 
 
+## Convolution Operation
+
+There are two inputs to a convolutional operation
+
+i) A 3D volume (input image) of size (nin x nin x channels)
+
+ii) A set of ‘k’ filters (also called as kernels or feature extractors)  each one of size (f x f x channels), where f is typically 3 or 5.
+
+An excellent blog post can be found [here](https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47).
+
 ## L1 and L2 regularization
 
 A regression model that uses L1 regularization technique is called ***Lasso Regression\*** and model which uses L2 is called ***Ridge Regression\***.
@@ -770,11 +780,38 @@ L1 regularization is not included by default in the PyTorch optimizers, but coul
 
 ## Semantic segmentation vs Instance Segmentation
 
+Semantic segmentation treats **multiple objects of the same class** as a single entity. 
+
+On the other hand, instance segmentation treats **multiple objects of the same class** as distinct individual objects (or **instances**). Typically, **instance segmentation** is harder than **semantic segmentation**. 
+
+## Semantic Segmentation
+
+#### Steps to do semantic segmentation
+
+The goal of semantic image segmentation is to label each **pixel** of an image with a corresponding **class** of what is being represented. Because we’re predicting for every pixel in the image, this task is commonly referred to as **dense prediction**. Thus it is a pixel level image classification.
+
+- The origin could be located at **classification**, which consists of making a prediction for a whole input.
+- The next step is **localization / detection**, which provide not only the classes but also additional information regarding the spatial location of those classes.
+- Finally, **semantic segmentation** achieves fine-grained inference by making dense predictions inferring  labels for every pixel, so that each pixel is labeled with the class of  its enclosing object ore region.
+
+#### Generic existing approaches to solve a semantic segmentation problem
+
+A general semantic segmentation architecture can be broadly thought of as an **encoder** network followed by a **decoder** network:
+
+- The **encoder** is usually is a pre-trained classification network like VGG/ResNet followed by a decoder network.
+- The task of the **decoder** is to semantically project the discriminative features (lower resolution) learnt by the encoder onto the pixel space (higher resolution) to get a dense classification.
+
+There are a lot of SOTA architectures to solve this problem. But, U-Net is one of those architectures that stands out, specially for biomedical image segmentation,  which use a Fully Convolutional Network Model for the task
+
+Read this blog which explains semantic segmentation and U-Net architecture very well. Link of the [blog](https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47) 
+
 
 
 ## What is gradient descent
 
+### Sigmoid activation function
 
+Sigmoid activation function makes sure that mask pixels are in [0, 1] range.
 
 ### Momentum in PyTorch
 
