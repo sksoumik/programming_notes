@@ -786,7 +786,7 @@ On the other hand, instance segmentation treats **multiple objects of the same c
 
 ## Semantic Segmentation
 
-#### Steps to do semantic segmentation
+#### **1. Steps to do semantic segmentation**
 
 The goal of semantic image segmentation is to label each **pixel** of an image with a corresponding **class** of what is being represented. Because we’re predicting for every pixel in the image, this task is commonly referred to as **dense prediction**. Thus it is a pixel level image classification.
 
@@ -794,7 +794,7 @@ The goal of semantic image segmentation is to label each **pixel** of an image w
 - The next step is **localization / detection**, which provide not only the classes but also additional information regarding the spatial location of those classes.
 - Finally, **semantic segmentation** achieves fine-grained inference by making dense predictions inferring  labels for every pixel, so that each pixel is labeled with the class of  its enclosing object ore region.
 
-#### Generic existing approaches to solve a semantic segmentation problem
+#### **2. Generic existing approaches to solve a semantic segmentation problem**
 
 A general semantic segmentation architecture can be broadly thought of as an **encoder** network followed by a **decoder** network:
 
