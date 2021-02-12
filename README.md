@@ -809,9 +809,106 @@ Read this blog which explains semantic segmentation and U-Net architecture very 
 
 ## What is gradient descent
 
+## Why do we use an activation function?
+
+If we do not have the activation function the weights and bias would simply do a **linear transformation**. A linear equation is simple to solve but is limited in its capacity to solve complex problems and have less power to learn complex functional mappings from data. A neural network without an activation function is  just a linear regression model. 
+
+Activation function is nothing but a mathematical function that takes in an input and produces an output. The function is activated when the computed result reaches the specified threshold.
+
+Activation functions can add non-linearity to the output. Subsequently, this very feature of activation function makes neural network solve  non-linear problems. Non-linear problems are those where there is no  direct linear relationship between the input and output.
+
+Some of the non-linear activation functions are: Sigmoid, ReLU, TenH, Softmax etc. 
+
+**Sigmoid**
+
+The output of the sigmoid function always ranges between 0 and 1. Sigmoid is very popular in classification problems. 
+
+**RELU** 
+
+ReLU is one of the most used activation functions. It is preferred to  use RELU in the hidden layer. The concept is very straight forward. It  also adds non-linearity to the output. However the result can range from 0 to infinity. If you are unsure of which activation function you want to use then use RELU. The main reason why ReLu is used is because it is simple, fast, and empirically it seems to work well.
+
+**Softmax Activation Function**
+
+Softmax is an extension of the Sigmoid activation function. Softmax  function adds non-linearity to the output, however it is mainly used for classification examples where multiple classes of results can be  computed. 
+
+
+
 ### Sigmoid activation function
 
 Sigmoid activation function makes sure that mask pixels are in [0, 1] range.
 
 ### Momentum in PyTorch
+
+## Static method vs Instance method
+
+##### Static Method
+
+Static methods are methods that can be called without creating an object of the class. They can be just called by referring the class name. For example: if we have a class: 
+
+```javascript
+class ClassName{
+ static getPosts(){
+     
+ }
+}
+```
+
+Then, I don't to create an object like obj = new ClassName() something like this. I can directly call `ClassName.getPosts()`.
+
+Pythonic way to create a static method: Most common form is to put  a `@staticmethod` decorator on top of the function. 
+
+```python
+class MyClass:
+    @staticmethod
+    def hello():
+        print('static method called')
+```
+
+```bash
+# way to call a static method
+>>> MyClass.hello()
+```
+
+Output:
+
+```
+static method called
+```
+
+##### Instance Method
+
+Pythonic way to create an instance method: Instance method must contain a self parameter. 
+
+```python
+class MyClass:
+    def instance_method(self):
+        return 'instance method called', self
+```
+
+#### When do we want to use a `static` method?
+
+1. Static methods are used when we don't want subclasses of a class change/override a specific implementation of a method. 
+2. A particular piece of code is to be shared by all the instance methods. 
+3. If you are writing utility classes and they are not supposed to be changed.
+
+## What is the purpose of self keyword in Python?
+
+`self` represents the instance of the class. By using the “self” keyword we can access the attributes and methods of the class in python. 
+
+Let's say you have a class `ClassA` which contains a method `methodA` defined as:
+
+```python
+def methodA(self, arg1, arg2):
+    # do something
+```
+
+and `ObjectA` is an instance of this class.
+
+Now when `ObjectA.methodA(arg1, arg2)` is called, python internally converts it for you as:
+
+```python
+ClassA.methodA(ObjectA, arg1, arg2)
+```
+
+The `self` variable refers to the object itself. The `self` parameter is a reference to the  **current instance of the class**, and is used to access variables that belongs to the class. It does not have to be named `self` , you can  call it whatever you like, but it has to be the first parameter of any function  in the class. 
 
