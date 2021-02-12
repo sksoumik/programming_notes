@@ -853,7 +853,7 @@ class ClassName{
 }
 ```
 
-Then, I don't to create an object like obj = new ClassName() something like this. I can directly call `ClassName.getPosts()`.
+Then, I don't need to create an object like `obj = new ClassName()` something like this. I can directly call `ClassName.getPosts()`.
 
 Pythonic way to create a static method: Most common form is to put  a `@staticmethod` decorator on top of the function. 
 
