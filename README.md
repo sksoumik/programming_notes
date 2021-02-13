@@ -912,3 +912,33 @@ ClassA.methodA(ObjectA, arg1, arg2)
 
 The `self` variable refers to the object itself. The `self` parameter is a reference to the  **current instance of the class**, and is used to access variables that belongs to the class. It does not have to be named `self` , you can  call it whatever you like, but it has to be the first parameter of any function  in the class. 
 
+## list pop()
+
+Code:
+
+```python
+queue = [1, 2, 3]
+queue.pop()  # delete the last item
+print(queue)
+```
+
+Output:
+
+```
+[1, 2]
+```
+
+Code:
+
+```python
+queue = [1, 2, 3]
+queue.pop(0)  # delete the first item
+print(queue)
+```
+
+Output:
+
+```
+[2, 3]
+```
+
