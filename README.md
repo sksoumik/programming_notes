@@ -942,3 +942,69 @@ Output:
 [2, 3]
 ```
 
+## List comprehension in Python
+
+code: 
+
+```python
+words = ['data','science','machine','learning']
+
+#for loop
+a = []
+for word in words:
+   a.append(len(word))
+
+#list comprehension
+b = [len(word) for word in words]
+
+print(f"a is {a}")
+print(f"b is {b}"
+```
+
+output:
+
+```bash
+a is [4, 7, 7, 8]
+b is [4, 7, 7, 8]
+```
+
+code:
+
+```python
+#for loop
+a = []
+for word in words:
+   if len(word) > 5:
+    	a.append(word)
+     
+#list comprehension
+b = [word for word in words if len(word) > 5]
+
+print(f"a is {a}")
+print(f"b is {b}")
+```
+
+output:
+
+```bash
+a is ['science', 'machine', 'learning']
+b is ['science', 'machine', 'learning']
+```
+
+code:
+
+```python
+#for loop
+a = []
+for word in words:
+  for letter in word:
+    if letter in ["a","e","i"]:
+       a.append(letter)
+       
+
+# list comprehension  
+b = [letter for word in words for letter in word if letter in ["a","e","i"]]
+```
+
+Read [more](https://towardsdatascience.com/crystal-clear-explanation-of-python-list-comprehensions-ac4e652c7cfb).. 
+
