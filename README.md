@@ -521,15 +521,21 @@ With neural networks, you’re usually working with hyperparameters once  the da
 
    In scikit-learn there is a Class `from sklearn.model_selection import RandomizedSearchCV` which we can use to do random search. We can't use the random search directly with PyTorch, but there is a library which is called [skorch](https://github.com/skorch-dev/skorch). Using skorch, we can use the sklearn's `RandomizedSearchCV` with PyTorch models. 
 
+   Read [more ...](https://discuss.pytorch.org/t/what-is-the-best-way-to-perform-hyper-parameter-search-in-pytorch/19943) 
+
 4. *Bayesian Optimization*
 
    There are different libraries for searching hyperparameter, for example: optuna, hypersearch. gridsearchCV in sklearn etc. 
 
-   
 
 
+# If your machine learning model is 99% correct, what are the possible wrong things happened?
 
-
+1. Overfitting. 
+2. Wrong evaluation metric
+3. Bad validation set
+4.  Leakage: you're accidentally using 100% of the training set as your test set.
+5. Extreme class imbalance (with, say, 98% in one class) combined with the accuracy metric or a feature that leaks the target. 
 
 # SQLite Database Creation: Flask
 
