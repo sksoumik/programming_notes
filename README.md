@@ -1,3 +1,9 @@
+
+
+[TOC]
+
+
+
 # Computer shortcuts
 
 - Select the whole line: if the cursor is at the beginning of the line, then `shift+down arrow` if the cursor is at the end of a line then, `shit+up arrow`
