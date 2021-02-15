@@ -113,7 +113,7 @@
 
 
 
-# Interesting Notebooks
+# Useful Notebooks
 
 1. **[Bringing Old Photos Back to Life](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life)**  [Notebook](https://colab.research.google.com/drive/1NEm6AsybIiC5TwTU_4DqDkQO0nFRB-uA?usp=sharing)
 2. **[first order model](https://github.com/AliaksandrSiarohin/first-order-model)** Notebook 
@@ -151,8 +151,6 @@ Random Forest models are a type of **ensemble** models, particularly **bagging**
 # Microsoft -vs- Google
 
 Microsoft is an enterprise software company driven by **license revenue**, while Google is a consumer Internet company driven by **advertising revenue**.
-
-
 
 # Enterprise software vs Consumer software
 
@@ -229,29 +227,23 @@ All palindromes and anagrams are permutations, but not all permutations are eith
 - For multi-class classification: loss-function: categorical cross entropy (For binary classification: binary cross entropy loss). 
 - BERT: Take a pre-trained BERT model, add an untrained dense layer of neurons, train the layer for any downstream task, … 
 
-
-
 # Backpropagation
 
 The backward function contains the backpropagation algorithm, where the goal is to essentially minimize the loss with respect to our weights. In other words, the weights need to be updated in such a way that the loss decreases while the neural network is training (well, that is what we hope for). All this magic is possible with the gradient descent algorithm. 
 
 # Activation function vs Loss function
 
-An *Activation function* is a property of the neuron, a function of all the inputs from previous layers and its output, is the input for the next layer.
+An Activation function is a property of the neuron, a function of all the inputs from previous layers and its output, is the input for the next layer.
 
 If we choose it to be linear, we know the entire network would be linear and would be able to distinguish only linear divisions of the space.
 
 Thus we want it to be non-linear, the traditional choice of function (tanh / sigmoid) was rather arbitrary, as a way to introduce non-linearity.
 
-One of the major advancements in deep learning, is using ReLu, that is easier to train and converges faster. but still - from a theoretical perspective, the only point of using it, is to introduce non-linearity.
-
-On the other hand, a *Loss function*, is the goal of your whole network.
+One of the major advancements in deep learning, is using ReLu, that is easier to train and converges faster. but still - from a theoretical perspective, the only point of using it, is to introduce non-linearity. On the other hand, a Loss function, is the goal of your whole network.
 
 it encapsulate what your model is trying to achieve, and this concept is more general than just Neural models.
 
-A *Loss function*, is what you want to minimize, your error.
-
-Say you want to find the best line to fit a bunch of points:
+A Loss function, is what you want to minimize, your error. Say you want to find the best line to fit a bunch of points:
 
 *D*={(*x*1,*y*1),…,(*x**n*,*y**n*)}
 $$
@@ -280,6 +272,10 @@ We should not use augmented data in cross validation dataset.
 https://fastapi.tiangolo.com/async/#in-a-hurry
 
 
+
+# Daemon in Linux
+
+A **daemon**  (pronounced DEE-muhn) is a program that runs continuously and exists for the purpose of handling periodic service requests that a computer  system expects to receive. The **daemon** program forwards the requests to other programs (or processes) as appropriate. For example, the **Cron** daemon is a built-in **Linux** utility that runs processes on your system at a scheduled time. We can configure a **cron** job to schedule scripts or other commands to run automatically.
 
 # Pickle vs JSON for serialization 
 
@@ -498,7 +494,7 @@ With neural networks, you’re usually working with hyperparameters once  the da
 - Number of epochs
 - 
 
-##### Methods for finding out Hyperparameters
+# Methods for finding out Hyperparameters
 
 1. *Manual Search*
 
@@ -612,8 +608,6 @@ $ vue --version
 $ vue create <app-name>
 # run the app to browser 
 $ npm run serve
-
-
 
 ```
 
@@ -1054,5 +1048,33 @@ Read [more](https://towardsdatascience.com/crystal-clear-explanation-of-python-l
 4. time series problems such as predicting the prices of stocks in a month or quarter
 5. 
 
+# Evaluation metrics
 
+### Semantic segmentation: 
+
+IoU, Jaccard Index (Intersection-Over-Union) are mostly used. 
+
+![image](static/iou.png)
+
+IoU is the **area of overlap** between the **predicted segmentation** and the **ground truth** divided by the **area of union** between  the **predicted segmentation** and the **ground truth**, as shown on  the image to the left. This metric ranges from 0–1 (0–100%) with 0  signifying no overlap and 1 signifying perfectly overlapping  segmentation. 
+
+In scikit-learn there is a built-in function to calculate Jaccard index (IoU): Say, we have 
+
+```
+ predictions   |   true_label
+
+ 0|0|0|1|2         0|0|0|1|2 
+ 0|2|1|0|0         0|2|1|0|0
+ 0|0|1|1|1         0|0|1|1|1
+ 0|0|0|0|1         0|0|0|0|1
+```
+
+Then, we can do the following: 
+
+```python
+from sklearn.metrics import jaccard_similarity_score
+jac = jaccard_similarity_score(predictions, label, Normalize = True/False)
+```
+
+### Instance Segmentation
 
