@@ -1,4 +1,4 @@
-## Computer shortcuts
+# Computer shortcuts
 
 - Select the whole line: if the cursor is at the beginning of the line, then `shift+down arrow` if the cursor is at the end of a line then, `shit+up arrow`
 - Show line numbers in colab: `ctrl + M + L`
@@ -16,7 +16,7 @@
 - Vscode: Move File to Split Windows = `CTRL + \ `
 - Vscode: Navigating Text/ move a line up or down: Hold `ALT` when moving `left and right` through text to move faster.  
 
-## Terminal Commands
+# Terminal Commands
 
 #### Linux Terminal
 
@@ -113,7 +113,7 @@
 
 
 
-## Interesting Notebooks
+# Interesting Notebooks
 
 1. **[Bringing Old Photos Back to Life](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life)**  [Notebook](https://colab.research.google.com/drive/1NEm6AsybIiC5TwTU_4DqDkQO0nFRB-uA?usp=sharing)
 2. **[first order model](https://github.com/AliaksandrSiarohin/first-order-model)** Notebook 
@@ -123,38 +123,38 @@
 
 
 
-## Instance segmentation:
+# Instance segmentation:
 
 - object localization and detect boundaries. 
 
 
 
-## NLP Intro
+# NLP Intro
 
 - Concepts of Bag-of-Words (BoW) and TF-IDF come into play. Both BoW and TF-IDF are techniques that help us convert text sentences into **numeric vectors**. [Read](https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/)
 - BERT tokenizer does the preprocessing by itself, so usually you don't benefit from standard preprocessing.
 
 
 
-## SVM
+# SVM
 
 Support Vector Machine (SVM) is a supervised machine learning algorithm that can be used for **both classification or regression** challenges. The model extracts the best possible hyper-plane / line that segregates the two classes.
 
 
 
-## Random Forest Model
+# Random Forest Model
 
 Random Forest models are a type of **ensemble** models, particularly **bagging** models. They are part of the tree-based model family.
 
 
 
-## Microsoft -vs- Google
+# Microsoft -vs- Google
 
 Microsoft is an enterprise software company driven by **license revenue**, while Google is a consumer Internet company driven by **advertising revenue**.
 
 
 
-## Enterprise software vs Consumer software
+# Enterprise software vs Consumer software
 
 Enterprise software is just another term for business software. This is software that is **sold to (or targeted at) companies, not to individuals.** So, all the software which you use on a general basis like Windows or **Google or Quora is consumer software.**
 
@@ -162,7 +162,7 @@ Enterprise software is sold to companies to solve their problems. This can cover
 
 
 
-## Text classification
+# Text classification
 
 ###### **Approaches to automatic text classification can be grouped into three categories:**
 
@@ -180,7 +180,7 @@ Enterprise software is sold to companies to solve their problems. This can cover
 
 
 
-## Batch Size
+# Batch Size
 
 - **Batch Gradient Descent**. Batch size is set to the total number of examples in the training dataset.
 - **Stochastic Gradient Descent**. Batch size is set to one.
@@ -188,13 +188,13 @@ Enterprise software is sold to companies to solve their problems. This can cover
 
 
 
-## Python’s built-in `sorted()` function
+# Python’s built-in `sorted()` function
 
 The built-in sorting algorithm of Python uses a special version of merge sort, called Timsort, which runs in O(n log n) on average and worst-case both. 
 
 
 
-## Permutations vs Anagrams vs Palindromes                  
+# Permutations vs Anagrams vs Palindromes                  
 
 Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
 
@@ -218,28 +218,24 @@ All palindromes and anagrams are permutations, but not all permutations are eith
 
 
 
-## What to do when you can’t find the solution?
+# What to do when you can’t find the solution?
 
 - Use a jupyter notebook to debug the code. 
 - Search similar problems in GitHub, Kaggle, Medium, YouTube, StackOverflow
 - Break-down the problem into smaller parts and understand what you really need to do. 
 
-
-
-### Multi-class Text Classification
+# Multi-class Text Classification
 
 - For multi-class classification: loss-function: categorical cross entropy (For binary classification: binary cross entropy loss). 
 - BERT: Take a pre-trained BERT model, add an untrained dense layer of neurons, train the layer for any downstream task, … 
 
 
 
-## Backpropagation
+# Backpropagation
 
 The backward function contains the backpropagation algorithm, where the goal is to essentially minimize the loss with respect to our weights. In other words, the weights need to be updated in such a way that the loss decreases while the neural network is training (well, that is what we hope for). All this magic is possible with the gradient descent algorithm. 
 
-
-
-## Activation function vs Loss function
+# Activation function vs Loss function
 
 An *Activation function* is a property of the neuron, a function of all the inputs from previous layers and its output, is the input for the next layer.
 
@@ -269,21 +265,15 @@ And you can choose several ways to measure your error (loss), for example L1:
 
 or maybe go wild, and optimize for their harmonic loss:
 
-
-
-## t-SNE algorithm
+# t-SNE algorithm
 
 (**t**-**SNE**) **t**-Distributed Stochastic Neighbor Embedding is a non-linear dimensionality reduction algorithm **used for** exploring high-dimensional data. It maps multi-dimensional data to two or more dimensions suitable for human observation.
 
-
-
-## Cross-Validation data
+# Cross-Validation data
 
 We should not use augmented data in cross validation dataset. 
 
-
-
-## Concurrency and parallelism
+# Concurrency and parallelism
 
 **Concurrency** and **parallelism** both relate to "different things happening more or less at the same time. 
 
@@ -291,13 +281,13 @@ https://fastapi.tiangolo.com/async/#in-a-hurry
 
 
 
-## Pickle vs JSON for serialization 
+# Pickle vs JSON for serialization 
 
 https://docs.python.org/3/library/pickle.html#comparison-with-json
 
 
 
-## Hyper-parameter optimization techniques
+# Hyper-parameter optimization techniques
 
 - Grid Search
 - Bayesian Optimization. 
@@ -305,31 +295,25 @@ https://docs.python.org/3/library/pickle.html#comparison-with-json
 
 
 
-## Normalization in ML
+# Normalization in ML
 
 Normalizing helps keep the network weights near zero which in turn makes back-propagation more stable. Without normalization, networks will tend to fail to learn.
 
-
-
-## Why do call `scheduler.step()` in pytorch?
+# Why do call `scheduler.step()` in pytorch?
 
 If you don’t call it, the learning rate won’t be changed and stays at the initial value. 
 
+# Momentum and Learning rate dealing 
 
+If the LR is low, then momentum should be high and vice versa. The basic idea of momentum in ML is to **increase the speed of training**. 
 
-## Momentum and Learning rate dealing 
+Momentum helps to know the direction of the next step with the knowledge of the previous steps. It helps to prevent oscillations. A typical  choice of momentum is between **0.5 to 0.9**.
 
-If the LR is low, then momentum should be high and vice versa. The basic idea of momentum in ML is to increase the speed of training. 
-
-
-
-## YOLO
+# YOLO
 
 You only look once (YOLO) is SOTA real-time object detection system. 
 
-
-
-## Object Recognition
+# Object Recognition
 
 [Ref link](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
 
@@ -339,13 +323,13 @@ Object classification + Object localization + Object detection = Object Recognit
 
 
 
-## CRUD
+# CRUD
 
 In computer programming, **create, read, update, and delete** (CRUD) are the four basic functions of persistent storage. 
 
 
 
-## SQL vs NoSQL 
+# SQL vs NoSQL 
 
 **SQL:** 
 
@@ -366,7 +350,7 @@ NoSQL management systems: MongoDB, firebase, apache cassandra etc.
 
 **Foreign key** is just the primary key of another table. So that we can make a relationship between two tables.
 
-## SQL
+# SQL Basics
 
 ##### JOIN statement
 
@@ -391,7 +375,7 @@ Various aggregate functions are:
 5) Max()
 ```
 
-## Target Value Types
+# Target Value Types
 
 Categorical variables can be:
 
@@ -402,9 +386,7 @@ Categorical variables can be:
 
 Nominal variables are variables that have two or more categories which do not have any kind of order associated with them. For example, if gender is classified into two groups, i.e. male and female, it can be considered as a nominal variable.Ordinal variables, on the other hand, have “levels” or categories with a particular order associated with them. For example, an ordinal categorical variable can be a feature with three different levels: low, medium and high. Order is important.As far as definitions are concerned, we can also categorize categorical variables as binary, i.e., a categorical variable with only two categories. Some even talk about a type called “cyclic” for categorical variables. Cyclic variables are present in “cycles” for example, days in a week: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday. After Saturday, we have Sunday again. This is a cycle. Another example would be hours in a day if we consider them to be categories.
 
-
-
-## Confusion Matrix
+# Confusion Matrix
 
 Let's say, we have a dataset which contains cancer patient data (Chest X-ray image), and we have built a machine learning model to predict if a patient has cancer or not. 
 
@@ -416,15 +398,11 @@ Let's say, we have a dataset which contains cancer patient data (Chest X-ray ima
 
 **False negative (FN):** Given an image, if your model predicts that the patient doesn't have cancer but the actual target for that image says that the patient has cancer, it is a false negative. This prediction is also false.
 
-
-
-## When not to use accuracy as Metric
+# When not to use accuracy as Metric
 
 If the number of samples in one class outnumber the number of samples in another class by a lot. In these kinds of cases, it is not advisable to use accuracy as an evaluation metric as it is not representative of the data. So, you might get high accuracy, but your model will probably not perform that well when it comes to real-world samples, and you won’t be able to explain to your managers why. In these cases, it’s better to look at other metrics such as precision.
 
-
-
-## Common Evaluation Metrics in ML
+# Common Evaluation Metrics in ML
 
 If we talk about **classification problems**, the most common metrics used are:
 
@@ -447,7 +425,7 @@ When it comes to **regression**, the most commonly used evaluation metrics are:
 - Mean percentage error (MPE)
 - Mean absolute percentage error (MAPE)- R2
 
-## Autoencoder
+# Autoencoder
 
 An **autoencoder** is a type of artificial neural network used to learn efficient data codings in an unsupervised manner. The aim of an **autoencoder** is to learn a representation (encoding) for a set of data, typically for dimensionality reduction. 
 
@@ -461,13 +439,13 @@ Instead of just learning a function representing the data ( a compressed represe
 
 So, VAE are generative autoencoders, meaning they can generate new instances  that look similar to original dataset used for training. VAE learns **probability distribution** of the data  whereas autoencoders learns a function to map each input to a number and decoder learns the reverse mapping.
 
-## Why PyTorch?
+# Why PyTorch?
 
 PyTorch’s clear syntax, streamlined API, and easy debugging make it an excellent choice for introducing deep learning. PyTorch’s dynamic graph structure lets you experiment with *every part of the model*, meaning that the graph and its input can be modified during runtime.  This is referred to as **eager execution**. It offers the programmer better  access to the inner workings of the network than a static graph (TF) does,  which considerably eases the process of debugging the code.
 
 Want to make your own loss function? One that adapts over time or reacts to certain conditions? Maybe your own optimizer? Want to try something really weird like growing extra layers during training? Whatever - PyTorch is just here to crunch the numbers - you drive. [Ref: *Ref: Deep Learning with PyTorch - Eli Stevens*]
 
-## Frequently used terms in ML
+# Frequently used terms in ML
 
 ##### Feature engineering
 
@@ -505,7 +483,55 @@ The mode of an image defines the **type and depth** of a pixel in the image. The
 
 Mixed precision is the use of both 16-bit and 32-bit floating-point types in a model during training to make it run faster and use less memory. By keeping certain parts of the model in the 32-bit types for numeric stability, the model will have a lower step time and train equally as well in terms of the evaluation metrics such as accuracy.
 
-## SQLite Database Creation: Flask
+##### Hyperparameters
+
+With neural networks, you’re usually working with hyperparameters once  the data is formatted correctly. A hyperparameter is a parameter whose  value is set before the learning process begins. It determines how a  network is trained and the structure of the network. Few hyperparameter example: 
+
+- Number of hidden layers in the network
+- Number of hidden units for each hidden layer
+- Learning rate
+- Activation function for different layers
+- Momentum
+- Learning rate decay.
+- Mini-batch size.
+- Dropout rate (if we use any dropout layer)
+- Number of epochs
+- 
+
+##### Methods for finding out Hyperparameters
+
+1. *Manual Search*
+
+2. *Grid Search* [(http://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/](http://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)) 
+
+   In scikit-learn there is a `from sklearn.model_selection import GridSearchCV` class to find the best parameters using GridSearch. 
+
+   ```python
+   from sklearn.model_selection import GridSearchCV
+   
+   model = KerasClassifier(build_fn=create_model, epochs=100, batch_size=10, verbose=0)
+   optimizer = ['SGD', 'RMSprop', 'Adagrad', 'Adadelta', 'Adam', 'Adamax', 'Nadam']
+   param_grid = dict(optimizer=optimizer)
+   grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs=-1, cv=3)
+   ```
+
+   We can't use the gridsearch directly with PyTorch, but there is a library which is called [skorch](https://github.com/skorch-dev/skorch). Using skorch, we can use the sklearns's gridsearch with PyTorch models. 
+
+3.  *Random Search*
+
+   In scikit-learn there is a Class `from sklearn.model_selection import RandomizedSearchCV` which we can use to do random search. We can't use the random search directly with PyTorch, but there is a library which is called [skorch](https://github.com/skorch-dev/skorch). Using skorch, we can use the sklearn's `RandomizedSearchCV` with PyTorch models. 
+
+4. *Bayesian Optimization*
+
+   There are different libraries for searching hyperparameter, for example: optuna, hypersearch. gridsearchCV in sklearn etc. 
+
+   
+
+
+
+
+
+# SQLite Database Creation: Flask
 
 ##  
 
@@ -526,7 +552,7 @@ $ select * from table_name
 
 
 
-## GAN 
+# GAN 
 
 GAN, where two networks, one acting as the painter and the other as the art historian, compete to outsmart each other at creating and detecting forgeries. GAN stands for generative adversarial network, where generative means something is being created (in this
 case, fake masterpieces), adversarial means the two networks are competing to outsmart the other, and well, network is pretty obvious. These networks are one of the most original outcomes of recent deep learning research. Remember that our overarching goal is to produce synthetic examples of a class of images that cannot be recognized as fake. When mixed in with legitimate examples, a
@@ -549,29 +575,29 @@ The easiest way for GAN to generate high-resolution images is to remember images
 
 This GAN architecture that made significant progress in generating meaningful images based on an explicit textual description. This GAN formulation takes a textual description as input and generates an RGB image that was described in the textual description. 
 
-## CMOS
+# CMOS
 
 Stands for "Complementary Metal Oxide Semiconductor." It is a technology used to produce integrated circuits. **CMOS** circuits are found in several types of electronic components, including microprocessors, batteries, and digital camera image sensors.
 
-## Profiling
+# Profiling
 
 In software engineering, profiling is a form of dynamic program  analysis that measures, for example, the space or time complexity of a  program, the usage of particular instructions, or the frequency and  duration of function calls. Most commonly, profiling information serves  to aid program optimization. 
 
-## Tensors
+# Tensors
 
 ![](static/tensors.png)
 
 1. https://www.youtube.com/watch?v=otDOHt_Jges&t=617s)
 
-## Babel
+# Babel
 
 **Babel** is a **transpiler** that converts our ultra-modern JavaScript syntax to browser-readable JavaScript, HTML, and CSS.
 
-## HTML class vs ID
+# HTML class vs ID
 
 The **difference** between an **ID** and a **class** is that an **ID** is only used to identify **one single element** in our **HTML**. ... However, a **class** can be used to identify more than one **HTML** element. 
 
-## Vue.js commands
+# Vue.js commands
 
 ```bash
 # check vue version
@@ -585,7 +611,7 @@ $ npm run serve
 
 ```
 
-## Abstract class
+# Abstract class
 
 An **abstract class** is a **class** that is declared **abstract** —it may or may not include **abstract** methods. **Abstract classes** cannot be instantiated, but they can be subclassed. Abstract classes are classes that contain one or more abstract methods.  An abstract method is a method that is declared, but contains **no implementation**. Abstract classes **cannot be instantiated**, and require subclasses to provide implementations for the abstract methods. 
 
@@ -656,11 +682,11 @@ print(y.do_something())
 
 Read [more...](https://www.python-course.eu/python3_abstract_classes.php)
 
-## Python collections module
+# Python collections module
 
 Read [here](https://docs.python.org/3/library/collections.html#module-collections)
 
-## Python Enumerate
+# Python Enumerate
 
 ```python
 # python program
@@ -675,7 +701,7 @@ Output:
 [(2019, 'Freshman'), (2020, 'Sophomore'), (2021, 'Junior'), (2022, 'Senior')]
 ```
 
-## JavaScript Basic Syntax
+# JavaScript Basic Syntax
 
 ##### ES6 var, let and const
 
@@ -727,11 +753,11 @@ var firstName = "Ada";
 var lastLetterOfFirstName = firstName[firstName.length - 1]; // a
 ```
 
-## Reinforcement Learning
+# Reinforcement Learning
 
 An agent interacts with its environment by producing actions and discovers errors or rewards. 
 
-## Bias-Variance Trade-off
+# Bias-Variance Trade-off
 
 **Bias** is error due to wrong or overly simplistic  assumptions in the learning algorithm you’re using. This can lead to the model underfitting your data, making it hard  for it to have high predictive accuracy and for you to generalize your  knowledge from the training set to the test set.
 
@@ -739,17 +765,17 @@ An agent interacts with its environment by producing actions and discovers error
 
 The bias-variance decomposition essentially decomposes the learning error from any algorithm by adding the bias,  the variance and a bit of irreducible error due to noise in the  underlying dataset. Essentially, if you make the model more complex and  add more variables, you’ll lose bias but gain some variance — in order  to get the optimally reduced amount of error, you’ll have to tradeoff bias and variance. You don’t want either high bias or high variance in your model.
 
-## KNN vs K-means clustering
+# KNN vs K-means clustering
 
 K-Nearest Neighbors is a supervised classification algorithm, while k-means clustering is an unsupervised clustering algorithm. While the mechanisms may seem similar at first, what this really means  is that in order for K-Nearest Neighbors to work, you need labeled data  you want to classify an unlabeled point into (thus the nearest neighbor  part). K-means clustering requires only a set of unlabeled points and a  threshold: the algorithm will take unlabeled points and gradually learn  how to cluster them into groups by computing the mean of the distance  between different points.
 
 The critical difference here is that KNN needs labeled  points and is thus supervised learning, while k-means doesn’t—and is  thus unsupervised learning.
 
-## ROC curve
+# ROC curve
 
 The ROC curve is a graphical  representation of the contrast between true **positive rates** and the false **positive rate** at various thresholds. It’s often used as a proxy for the trade-off between the **sensitivity** of the model (true positives) vs the  fall-out or the probability it will trigger a false alarm (false  positives). 
 
-## Convolution Operation
+# Convolution Operation
 
 There are two inputs to a convolutional operation
 
@@ -759,7 +785,7 @@ ii) A set of ‘k’ filters (also called as kernels or feature extractors)  eac
 
 An excellent blog post can be found [here](https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47).
 
-## L1 and L2 regularization
+# L1 and L2 regularization
 
 A regression model that uses L1 regularization technique is called ***Lasso Regression\*** and model which uses L2 is called ***Ridge Regression\***.
 
@@ -778,7 +804,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, weight_decay=1e-5)
 
 L1 regularization is not included by default in the PyTorch optimizers, but could be added by including an extra loss `nn.L1Loss` in the weights of the model.  
 
-## Semantic segmentation vs Instance Segmentation
+# Semantic segmentation vs Instance Segmentation
 
 Semantic segmentation treats **multiple objects of the same class** as a single entity. 
 
@@ -807,9 +833,9 @@ Read this blog which explains semantic segmentation and U-Net architecture very 
 
 
 
-## What is gradient descent
+# What is gradient descent
 
-## Why do we use an activation function?
+# Why do we use an activation function?
 
 If we do not have the activation function the weights and bias would simply do a **linear transformation**. A linear equation is simple to solve but is limited in its capacity to solve complex problems and have less power to learn complex functional mappings from data. A neural network without an activation function is  just a linear regression model. 
 
@@ -827,19 +853,23 @@ The output of the sigmoid function always ranges between 0 and 1. Sigmoid is ver
 
 ReLU is one of the most used activation functions. It is preferred to  use RELU in the hidden layer. The concept is very straight forward. It  also adds non-linearity to the output. However the result can range from 0 to infinity. If you are unsure of which activation function you want to use then use RELU. The main reason why ReLu is used is because it is simple, fast, and empirically it seems to work well.
 
+ReLU (or Rectified Linear Unit) is the most widely used activation  function. It gives an **output of X if X is positive and zeros otherwise**.  ReLU is often used for hidden layers.
+
 **Softmax Activation Function**
 
-Softmax is an extension of the Sigmoid activation function. Softmax  function adds non-linearity to the output, however it is mainly used for classification examples where multiple classes of results can be  computed. 
-
-
+Softmax is an extension of the Sigmoid activation function. Softmax  function adds non-linearity to the output, however it is mainly used for classification examples where multiple classes of results can be  computed. Softmax is an activation function that generates the output between **zero and one**. It divides each output, such that the total sum of the outputs is equal to one. Softmax is often used for output layers.
 
 ### Sigmoid activation function
 
 Sigmoid activation function makes sure that mask pixels are in [0, 1] range.
 
+- **ReLU** is used in the hidden layers. 
+- **Sigmoid** is used in the output layer while making **binary predictions.** 
+- **Softmax** is used in the output layer while making **multi-class predictions.**
+
 ### Momentum in PyTorch
 
-## Static method vs Instance method
+# Static method vs Instance method
 
 ##### Static Method
 
@@ -891,7 +921,7 @@ class MyClass:
 2. A particular piece of code is to be shared by all the instance methods. 
 3. If you are writing utility classes and they are not supposed to be changed.
 
-## What is the purpose of self keyword in Python?
+# What is the purpose of self keyword in Python?
 
 `self` represents the instance of the class. By using the “self” keyword we can access the attributes and methods of the class in python. 
 
@@ -912,7 +942,7 @@ ClassA.methodA(ObjectA, arg1, arg2)
 
 The `self` variable refers to the object itself. The `self` parameter is a reference to the  **current instance of the class**, and is used to access variables that belongs to the class. It does not have to be named `self` , you can  call it whatever you like, but it has to be the first parameter of any function  in the class. 
 
-## list pop()
+# list pop()
 
 Code:
 
@@ -942,7 +972,7 @@ Output:
 [2, 3]
 ```
 
-## List comprehension in Python
+# List comprehension in Python
 
 code: 
 
@@ -1007,4 +1037,16 @@ b = [letter for word in words for letter in word if letter in ["a","e","i"]]
 ```
 
 Read [more](https://towardsdatascience.com/crystal-clear-explanation-of-python-list-comprehensions-ac4e652c7cfb).. 
+
+# Recurrent Neural Network
+
+##### Use cases
+
+1. sentiment analysis 
+2. text mining
+3.  and image captioning
+4. time series problems such as predicting the prices of stocks in a month or quarter
+5. 
+
+
 
