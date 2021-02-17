@@ -1,9 +1,3 @@
-
-
-[TOC]
-
-
-
 # Computer shortcuts
 
 - Select the whole line: if the cursor is at the beginning of the line, then `shift+down arrow` if the cursor is at the end of a line then, `shit+up arrow`
@@ -49,7 +43,10 @@
 - Get the size of a file (human-readable): `du -sh <file-name>`
 - Search for a file in the current directory: `find *<file-name-portion>*`
 - rename a folder: `vm old_name new_name`
-- 
+- `Ctrl + L` : equivalent to `clear` 
+- `Ctrl + U`: This shortcut erases everything from the current cursor position to the beginning of the line.
+- `Ctrl + A`: Move the cursor to the beginning of the line.  
+- `Ctrl + E`: This shortcut does the opposite of `Ctrl + A`. It moves the cursor to the end of the line.
 
 #### Anaconda commands
 
@@ -129,7 +126,7 @@
 
 
 
-# Instance segmentation:
+# Instance segmentation
 
 - object localization and detect boundaries. 
 
@@ -178,11 +175,9 @@ Enterprise software is sold to companies to solve their problems. This can cover
 
 - recurrent neural networks (RNNs),
 - Convolutional neural networks (CNNs), 
-- attention, 
+- Attention, 
 - Transformers, 
 - Capsule Nets
-
-
 
 # Batch Size
 
@@ -791,6 +786,30 @@ ii) A set of ‘k’ filters (also called as kernels or feature extractors)  eac
 
 An excellent blog post can be found [here](https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47).
 
+If you have a stride of 1 and if you set the size of zero padding to
+
+
+
+![img](https://adeshpande3.github.io/assets/ZeroPad.png)
+
+where K is the filter size, then the input and output volume **will always have the same spatial dimensions**.
+
+The formula for calculating the output size for any given conv layer is
+
+ 
+
+![img](https://adeshpande3.github.io/assets/Output.png)
+
+where O is the output height/length, W is the input height/length, K is the filter size, P is the padding, and S is the stride.
+
+# Dropout Layers
+
+Dropout layers have a very  specific function in neural networks. The problem of overfitting, where after training, the weights of the  network are so tuned to the training examples they are given that the  network doesn’t perform well when given new examples. The idea of  dropout is simplistic in nature. This layer “**drops out” a random set of  activations** **in that layer by setting them to zero**. Simple as that. Now,  what are the benefits of such a simple and seemingly unnecessary and  counterintuitive process? Well, in a way, it forces the network to be  redundant. By that I mean the network should be able to provide the  right classification or output for a specific example even if some of  the activations are dropped out. It makes sure that the network isn’t  getting too “fitted” to the training data and thus helps alleviate the  overfitting problem. An important note is that this **dropout layer is only used  during training, and not during test time.**
+
+# Capsule Networks
+
+[READ MORE...](https://analyticsindiamag.com/why-do-capsule-networks-work-better-than-convolutional-neural-networks/) here. 
+
 # L1 and L2 regularization
 
 A regression model that uses L1 regularization technique is called ***Lasso Regression\*** and model which uses L2 is called ***Ridge Regression\***.
@@ -1082,5 +1101,19 @@ from sklearn.metrics import jaccard_similarity_score
 jac = jaccard_similarity_score(predictions, label, Normalize = True/False)
 ```
 
-### Instance Segmentation
+# Instance Segmentation
+
+# What does the decoder do?
+
+Autoencoders are widly used with the image data and some of their use cases are:
+
+- Dimentionality Reduction   
+- Image Compression   
+- Image Denoising   
+- Image Generation    
+- Feature Extraction  
+
+Encoder-decoder (ED) architecture works well for short sentences, but if the text is too long (maybe higher than 40 words), then the ED performance comes down. 
+
+
 
