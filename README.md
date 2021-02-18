@@ -1115,5 +1115,37 @@ Autoencoders are widly used with the image data and some of their use cases are:
 
 Encoder-decoder (ED) architecture works well for short sentences, but if the text is too long (maybe higher than 40 words), then the ED performance comes down. 
 
+# List and Tuple difference
 
+| List                                        | Table                                       |
+| ------------------------------------------- | ------------------------------------------- |
+| Lists are mutable, means they can be edited | Tuples are immutble, means can't be edited. |
+| Lists are slower than tuples.               | Tuples are faster.                          |
+
+# What is the difference between Python Arrays and lists?
+
+Arrays and lists, in Python, have the same way of storing data. But, arrays  can hold only a **single data type** elements whereas lists can hold **any data type** elements.
+
+# Difference between HashTable and HashMap
+
+| Hash MAP                                      | Hash Table                            |
+| --------------------------------------------- | ------------------------------------- |
+| Not synchronized. So, it's not thread-safe.   | Synchronized. Means it's thread-safe. |
+| Allows one null key and multiple null values. | Doesn't allow any null key or value.  |
+
+# Synchronized
+
+`synchronized` means that in a multi threaded environment, an object having  `synchronized` method(s)/block(s) does not let two threads to access the `synchronized` method(s)/block(s) of code at the same time. This means that one thread can't read while another thread updates it. 
+
+# Sequence modeling (NLP)
+
+First step is always generating  a vector from text. 
+
+Classic way of doing this thing is using **Bag-of-Words**. 
+
+- One dimension per word in vocabulary. 
+
+But can't work well for ordering. This can be also solved using N-grams. But the dimensionality becomes very high. 
+
+**RNN**
 
