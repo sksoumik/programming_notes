@@ -1137,6 +1137,44 @@ Arrays and lists, in Python, have the same way of storing data. But, arrays  can
 
 `synchronized` means that in a multi threaded environment, an object having  `synchronized` method(s)/block(s) does not let two threads to access the `synchronized` method(s)/block(s) of code at the same time. This means that one thread can't read while another thread updates it. 
 
+# Why CNN works?
+
+Cause they try to find patterns in input data. Convolutional neural networks work because it's a good extension from the standard deep-learning algorithm.
+
+Given unlimited resources and money, there is no need for  convolutional because the standard algorithm will also work. However,  convolutional is more efficient because it **reduces the number of parameters**. The reduction is possible because it takes advantage of **feature locality**. 
+
+# Transfer Learning
+
+#### One shot vs few shot:
+
+It's about few/one/zero examples in *transfer learning* to new data after being trained on a dataset that's generally much larger.
+
+For an example, if you train on a dataset that has a million cat pictures, a million dog pictures, and a million horse pictures, and ask it to  identify cats/dogs/horses, that's normal supervised learning.
+
+Then you give one example of a crocodile picture (in addition to the  above mentioned millions of cats/dogs/horses) and ask the system to  identify crocodiles, that's one-shot learning.
+
+#### Zero-Shot Learning
+
+To me, this is the most interesting sub-field. With zero-shot learning, the target is to  classify unseen classes without a single training example.
+
+How does a machine “learn” without having any data to utilize?
+
+Think about it this way. Can you classify an object without ever seeing it?
+
+Yes, you can if you have adequate information about its appearance,  properties, and functionality. Think back to how you came to understand  the world as a kid. You could spot Mars in the night sky after reading  about its color and where it would be that night, or identify the  constellation Cassiopeia from only being told “it’s basically a  malformed ‘W’”.
+
+According to this year trend in NLP, [Zero shot learning will become more effective](https://blog.floydhub.com/ten-trends-in-deep-learning-nlp/#9-zero-shot-learning-will-become-more-effective).
+
+A machine utilizes the **metadata** of the images to perform the same task.  **The metadata is nothing but the features associated with the image**. 
+
+#### Knowledge transfer in Transfer Learning (TL) 
+
+In TL (Transfer Learning): "Knowledge" in  is trained **model weights**. 
+
+In NLU (Natural Language Understanding): Knowledge refers to structured data.  
+
+
+
 # Sequence modeling (NLP)
 
 First step is always generating  a vector from text. 
@@ -1149,3 +1187,87 @@ But can't work well for ordering. This can be also solved using N-grams. But the
 
 **RNN**
 
+
+
+# How does the Google "Did you mean?" algorithm work?
+
+Basically and according  to Douglas Merrill former CTO of Google it is like this:
+
+1) You write a  ( misspelled )  word  in Google. 
+
+2) You don't find what you wanted ( don't click on any results ).
+
+3) You realize you misspelled the word  so you rewrite the word in the search box.
+
+4) You find what you want ( you click in the first links ). 
+
+This pattern multiplied millions of times, shows what are the most common misspells and what are the most "common" corrections. 
+
+This way Google can almost instantaneously, offer spell correction in every language.
+
+Also this means if overnight everyone start to spell night as "nigth", Google would suggest that word instead.  Douglas describe it as "statistical machine learning".  
+
+# How to compute the similarity between two text documents?
+
+The common way of doing this is to transform the documents into TF-IDF  vectors and then compute the cosine similarity between them. 
+
+TF-IDF: Convert a collection of raw documents to a matrix of TF-IDF features. **tf–idf**, **TF\*IDF**, or **TFIDF**, short for **term frequency–inverse document frequency**, is a numerical statistic that is intended to reflect how important a word is to a [document](https://en.wikipedia.org/wiki/Document) in a collection or [corpus](https://en.wikipedia.org/wiki/Text_corpus).  This is a technique to quantify a word in documents, we generally  compute a weight to each word which signifies the importance of the word in the document and corpus. This method is a widely used technique in  Information Retrieval and Text Mining. 
+
+CountVectorizer is another technique that can do word count of the words in each document.
+
+Cosine Similarity: Cosine similarity is a metric used to determine how similar the documents are irrespective of their size. Mathematically, it measures the **cosine of the angle** between two vectors projected in a  multi-dimensional space. In this context, the two vectors I am talking  about are arrays containing the word counts of two documents. 
+
+# Common pre-processing steps for NLP
+
+1. Removing punctuations. 
+2. Normalizing case (lower/upper)
+3. Filter out stop words (i', 'me', 'my', 'myself', 'we', 'our' etc)
+4. Stemming
+5. Lemmitization. 
+6. 
+
+# Model Re-Training | Continuous model deployment
+
+1. **Model drift**: model deployment should be treated as a continuous process. Rather than  deploying a model once and moving on to another project, machine  learning practitioners need to retrain their models if they find that  the data distributions have deviated significantly from those of the  original training set. This concept, known as **model drift**.
+2. **Monitoring of continual learning pipelines**: There are great tools in Kubernetes, or Prometheus alongside  AlertManager that you can use to monitor all the input data. And you  should utilize cloud services and Kubernetes to automate your machine  learning infrastructure and experimentation.
+3. If you decide to retrain your model periodically, then batch retraining  is perfectly sufficient. This approach involves scheduling model  training processes on a recurring basis using a **job scheduler** such as  Jenkins or [Kubernetes CronJobs](https://mlinproduction.com/k8s-cronjobs/). If you’ve automated model drift detection, then it makes sense to trigger model retraining when drift is identified. 
+4. We can also use amazon SageMaker for managing the ML infrastructure. 
+5. 
+
+# Proxy Server 
+
+PS is an intermediate server between client and the Internet. Proxy servers offers the following basic functionalities:
+
+- Firewall and network data filtering.
+- Network connection sharing
+- Data caching
+
+##### Purpose of Proxy Servers:
+
+- Monitoring and Filtering: 
+- Improving performance
+- Translation
+- Accessing services anonymously
+- Security
+
+Read more from [here](https://www.tutorialspoint.com/internet_technologies/proxy_servers.htm)
+
+# SQL vs NoSQL: what’s the best option for you?
+
+**1 . Data structure**
+
+The first and primary factor in making the SQL vs. NoSQL decision is what your data looks like. If your data is primarily structured, a SQL database is likely the right choice. A SQL database is a great fit for transaction-oriented systems such as  customer relationship management tools, accounting software, and  e-commerce platforms. Each row in a SQL database is a distinct entity  (e.g. a customer), and each column is an attribute that describes that  entity (e.g. address, job title, item purchased, etc.). [Read more ...](https://www.thorntech.com/sql-vs-nosql/) 
+
+NoSQL examples: 
+
+1. Big data applications. 
+2. Rapidly growing application that needs scalability. 
+3.  Social Media (e.g. Facebook)
+4. 
+
+SQL (MongoDB, Redis, Cassandra) examples: 
+
+1. Transaction systems. 
+2. Banking systems. 
+3. Customer relationship systems. 
+4. E-commerce. 
