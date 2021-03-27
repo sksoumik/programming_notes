@@ -113,6 +113,12 @@
   `git checkout --orphan branchname` 
 
   `git rm -rf .`
+  
+- revert back to a specific commit: 
+
+  `git reset --hard <commit_id>`
+
+  `git push -f origin master`
 
 
 
@@ -1132,6 +1138,8 @@ Arrays and lists, in Python, have the same way of storing data. But, arrays  can
 | --------------------------------------------- | ------------------------------------- |
 | Not synchronized. So, it's not thread-safe.   | Synchronized. Means it's thread-safe. |
 | Allows one null key and multiple null values. | Doesn't allow any null key or value.  |
+
+Python dictionaries are based on a well-tested and finely tuned **hash table** implementation that provides the performance characteristics you’d expect: ***O*(1)** time complexity for lookup, insert, update, and delete operations in the average case.
 
 # Synchronized
 
