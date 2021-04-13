@@ -47,6 +47,7 @@
 - `Ctrl + U`: This shortcut erases everything from the current cursor position to the beginning of the line.
 - `Ctrl + A`: Move the cursor to the beginning of the line.  
 - `Ctrl + E`: This shortcut does the opposite of `Ctrl + A`. It moves the cursor to the end of the line.
+- 
 
 #### Anaconda commands
 
@@ -108,6 +109,8 @@
 
 #### Git
 
+- See a git cheatsheet: [[here](/static/git-cheat-sheet-education.pdf)] 
+
 - create a new branch without adding any content from the master branch (empty branch)
 
   `git checkout --orphan branchname` 
@@ -119,8 +122,23 @@
   `git reset --hard <commit_id>`
 
   `git push -f origin master`
+  
+-  create a new branch and switch to it at the same time:
 
+  `git checkout -b <branch_name>`
 
+- update a branch with the master:
+
+  ```bash
+  git checkout <branch_name>
+  git merge main
+  ```
+
+  Git cheatshit
+
+  
+
+  
 
 # Useful Notebooks
 
@@ -499,7 +517,16 @@ With neural networks, you’re usually working with hyperparameters once  the da
 - Mini-batch size.
 - Dropout rate (if we use any dropout layer)
 - Number of epochs
-- 
+
+##### Quantization
+
+Quantization that realizes speeding up and memory saving by replacing the operations of the neural network mainly on floating point operations with integer operations.
+
+This is the  most easy way to make inference from trained models which reduce operation costs, reduce calculation loads, and reduce memory consumption. 
+
+
+
+
 
 # Methods for finding out Hyperparameters
 
@@ -1279,3 +1306,14 @@ SQL (MongoDB, Redis, Cassandra) examples:
 2. Banking systems. 
 3. Customer relationship systems. 
 4. E-commerce. 
+
+# Image denoising
+
+Commonly used in image denoising: 
+
+- convolutional neural network 
+- pulse coupled neural network
+- wavelet  neural network
+
+# What is bitmap image? 
+
