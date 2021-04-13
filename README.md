@@ -127,14 +127,21 @@
 
   `git checkout -b <branch_name>`
 
+- Add agent:
+
+  ```shell
+  eval `ssh-agent -s`
+  ssh-add
+  ```
+
+  
+
 - update a branch with the master:
 
   ```bash
   git checkout <branch_name>
   git merge main
   ```
-
-  Git cheatshit
 
   
 
