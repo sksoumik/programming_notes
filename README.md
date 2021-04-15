@@ -1322,5 +1322,10 @@ Commonly used in image denoising:
 - pulse coupled neural network
 - wavelet  neural network
 
-# What is bitmap image? 
+# Difference between JPG and PNG
 
+**PNG** stands for Portable Network Graphics, with so-called “lossless” compression.
+
+JPEG or **JPG** stands for Joint Photographic Experts Group, with so-called “lossy” compression. 
+
+**JPEG** uses lossy compression algorithm and image may lost some of its data whereas **PNG** uses lossless compression algorithm and no image data loss is present in **PNG** format.
