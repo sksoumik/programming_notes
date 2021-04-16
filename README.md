@@ -26,6 +26,7 @@
 
 #### Linux Terminal
 
+- add a custom command in linux terminal: `alias custom_command='original_command'`  
 - delete a folder from linux including all files`sudo rm -r folder_name` 
 
 - Delete all files from  the current directory `sudo rm ./*` 
@@ -149,6 +150,9 @@
   git merge main
   ```
 
+#### Kaggle
+
+- download kaggle dataset: `kaggle datasets download [username/dataset name (just copy the url after kaggle.com)]`
 
 # Useful Notebooks
 
@@ -1338,3 +1342,12 @@ JPEG or **JPG** stands for Joint Photographic Experts Group, with so-called “l
 
 **JPEG** uses lossy compression algorithm and image may lost some of its data whereas **PNG** uses lossless compression algorithm and no image data loss is present in **PNG** format.
 
+# What is the difference between Image Processing and Computer Vision
+
+In image processing, an image is "processed", that is, transformations are applied to an input image and an output image is returned. The transformations can e.g. be "smoothing", "sharpening", "contrasting" and "stretching". The transformation used depends on the context and issue to be solved.
+
+In computer vision, an image or a video is taken as input, and the goal is to understand (including being able to infer something about it) the image and its contents. Computer vision uses image processing algorithms to solve some of its tasks.
+
+The main difference between these two approaches are the **goals** (not the methods used). For example, if the goal is to enhance an image for later use, then this may be called image processing. If the goal is to emulate human vision, like object recognition, defect detection or automatic driving, then it may be called computer vision.
+
+So basically, Image processing is related to enhancing the image and play with the features like colors. While computer vision is related to "Image Understanding". 
