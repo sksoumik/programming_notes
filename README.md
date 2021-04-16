@@ -474,6 +474,13 @@ PyTorch’s clear syntax, streamlined API, and easy debugging make it an excelle
 
 Want to make your own loss function? One that adapts over time or reacts to certain conditions? Maybe your own optimizer? Want to try something really weird like growing extra layers during training? Whatever - PyTorch is just here to crunch the numbers - you drive. [Ref: *Ref: Deep Learning with PyTorch - Eli Stevens*]
 
+# PyTorch vs NumPy
+
+PyTorch is not the only library that deals with multidimensional arrays. NumPy is by far the most popular multidimensional array library, to the point that it has now arguably become the lingua franca of data science. PyTorch features seamless interoperability with NumPy, which brings with it first-class integration with the rest of the scientific
+libraries in Python, such as SciPy, Scikit-learn, and Pandas. Compared to NumPy arrays, PyTorch tensors have a few superpowers, such as **the ability to perform very fast operations on graphical processing units (GPUs)**, distribute operations on multiple devices or machines, and keep track of the **graph of computations** that created them. 
+
+
+
 # Frequently used terms in ML
 
 ##### Feature engineering
@@ -1330,3 +1337,4 @@ Commonly used in image denoising:
 JPEG or **JPG** stands for Joint Photographic Experts Group, with so-called “lossy” compression. 
 
 **JPEG** uses lossy compression algorithm and image may lost some of its data whereas **PNG** uses lossless compression algorithm and no image data loss is present in **PNG** format.
+
