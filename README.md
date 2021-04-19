@@ -1,3 +1,9 @@
+# COMPUTER SCIENCE NOTES
+
+Maintained by [**Sadman Kabir Soumik**](https://www.linkedin.com/in/sksoumik/)
+
+---
+
 # Computer shortcuts
 
 #### Chrome
