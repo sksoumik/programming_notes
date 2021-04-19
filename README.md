@@ -1241,7 +1241,9 @@ But can't work well for ordering. This can be also solved using N-grams. But the
 
 **RNN**
 
+# Statistics Resources
 
+1. Gaussian/Normal distribution - [[YouTube - Krish Naik](https://youtu.be/UQOTNkq0X48)]
 
 # How does the Google "Did you mean?" algorithm work?
 
