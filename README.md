@@ -163,10 +163,20 @@ Maintained by [**Sadman Kabir Soumik**](https://www.linkedin.com/in/sksoumik/)
 # Useful Notebooks
 
 1. **[Bringing Old Photos Back to Life](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life)**  [Notebook](https://colab.research.google.com/drive/1NEm6AsybIiC5TwTU_4DqDkQO0nFRB-uA?usp=sharing)
+
 2. **[first order model](https://github.com/AliaksandrSiarohin/first-order-model)** Notebook 
+
 3. [Get SH*T Done with PyTorch](https://github.com/curiousily/Getting-Things-Done-with-Pytorch) 
+
 4. PyTorch Transformers [Tutorials](https://github.com/abhimishra91/transformers-tutorials) 
+
 5. **[huggingtweets](https://github.com/borisdayma/huggingtweets)** 
+
+6. Shadow removal from image. [Colab](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
+
+7. What does a CNN see? [Colab](https://colab.research.google.com/drive/1xM6UZ9OdpGDnHBljZ0RglHV_kBrZ4e-9#scrollTo=ZP9p7mH6RJXp)
+
+   
 
 # Instance segmentation
 
