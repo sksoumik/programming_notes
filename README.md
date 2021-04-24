@@ -39,9 +39,9 @@ See some great resources [here](static/pytorch tutorials.pdf)
 #### Linux Terminal
 
 - add a custom command in linux terminal: `alias custom_command='original_command'`  
-- delete a folder from linux including all files`sudo rm -r folder_name` 
+- delete a folder from linux including all files `sudo rm -r folder_name` 
 
-- Delete all files from  the current directory `sudo rm ./*` 
+- Delete all files from  the current directory  `sudo rm ./*` 
 
 - Clean up root disk in Linux | dev/sda1 disk full problem
 
@@ -50,9 +50,7 @@ See some great resources [here](static/pytorch tutorials.pdf)
   or
   `ncdu`   (see files sizes in the current directory)
 
-- Download youtube videos as mp3 youtube-dl 
-
-​          `youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>`
+- Download youtube videos as mp3 youtube-dl    `youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>`
 
 - Create a new file:  `cat filename`
 - Zip a folder with a name: `zip -r file_name.zip targer_folder_name/`
@@ -182,20 +180,12 @@ See some great resources [here](static/pytorch tutorials.pdf)
 
 7. What does a CNN see? [Colab](https://colab.research.google.com/drive/1xM6UZ9OdpGDnHBljZ0RglHV_kBrZ4e-9#scrollTo=ZP9p7mH6RJXp)
 
-   
-
-# Instance segmentation
-
-- object localization and detect boundaries. 
-
-
 
 # NLP Intro
 
 - Concepts of Bag-of-Words (BoW) and TF-IDF come into play. Both BoW and TF-IDF are techniques that help us convert text sentences into **numeric vectors**. [Read](https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/)
 - BERT tokenizer does the preprocessing by itself, so usually you don't benefit from standard preprocessing.
-
-
+- Transformer models: read [here](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
 
 # SVM
 
@@ -1381,12 +1371,6 @@ So basically, Image processing is related to enhancing the image and play with t
 # ARIMA vs LSTM for time-series data
 
 Read [here](https://www.datasciencecentral.com/profiles/blogs/arima-sarima-vs-lstm-with-ensemble-learning-insights-for-time-ser)
-
-# What is Transformer? 
-
-Read [here](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
-
-
 
 # What is difference between Random Forest and Decision Trees?
 
