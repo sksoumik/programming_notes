@@ -1385,3 +1385,26 @@ Read [here](https://www.datasciencecentral.com/profiles/blogs/arima-sarima-vs-ls
 # What is Transformer? 
 
 Read [here](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
+
+
+
+# What is difference between Random Forest and Decision Trees?
+
+ Two concepts are similar. As is implied by the names "Tree" and "Forest," a Random Forest is essentially a collection of Decision Trees. A decision tree is built on an entire dataset, using all the features/variables of interest, whereas a random forest randomly selects observations/rows and specific features/variables to build multiple decision trees from and then averages the results. After a large number of trees are built using this method, each tree "votes" or chooses the class, and the class receiving the most votes by a simple majority is the "winner" or predicted class. There are of course some more detailed differences, but this is the main conceptual difference.
+
+When using a decision tree model on a given training dataset the accuracy keeps improving with more and more splits. You can easily overfit the data and doesn't know when you have crossed the line unless you are using cross validation (on training data set). The advantage of a simple decision tree is model is easy to interpret, you know what variable and what value of that variable is used to split the data and predict outcome.
+
+A random forest is like a black box and works as mentioned in above answer. It's a forest you can build and control. You can specify the number of trees you want in your forest(n_estimators) and also you can specify max num of features to be used in each tree. But you cannot control the randomness, you cannot control which feature is part of which tree in the forest, you cannot control which data point is part of which tree. Accuracy keeps increasing as you increase the number of trees, but becomes constant at certain point. Unlike decision tree, it won't create highly biased model and reduces the variance.
+
+When to use to decision tree:
+
+1. When you want your model to be simple and explainable
+2. When you want non parametric model
+3. When you don't want to worry about feature selection or regularization or worry about multi-collinearity.
+4. You can overfit the tree and build a model if you are sure of validation or test data set is going to be subset of training data set or almost overlapping instead of unexpected.
+
+When to use random forest :
+
+1. When you don't bother much about interpreting the model but want better accuracy.
+2. Random forest will reduce variance part of error rather than bias part, so on a given training data set decision tree may be more accurate than a random forest. But on an unexpected validation data set, Random forest always wins in terms of accuracy.
+
