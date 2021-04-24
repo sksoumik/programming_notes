@@ -4,6 +4,12 @@ Maintained by [**Sadman Kabir Soumik**](https://www.linkedin.com/in/sksoumik/)
 
 ---
 
+
+
+# PyTorch Tutorial
+
+See some great resources [here](static/pytorch tutorials.pdf)
+
 # Computer shortcuts
 
 #### Chrome
@@ -60,7 +66,7 @@ Maintained by [**Sadman Kabir Soumik**](https://www.linkedin.com/in/sksoumik/)
 - `Ctrl + U`: This shortcut erases everything from the current cursor position to the beginning of the line.
 - `Ctrl + A`: Move the cursor to the beginning of the line.  
 - `Ctrl + E`: This shortcut does the opposite of `Ctrl + A`. It moves the cursor to the end of the line.
-- 
+- Display first 3 lines of a file in the terminal: `head -3 filename`
 
 #### Anaconda commands
 
@@ -1369,3 +1375,13 @@ In computer vision, an image or a video is taken as input, and the goal is to un
 The main difference between these two approaches are the **goals** (not the methods used). For example, if the goal is to enhance an image for later use, then this may be called image processing. If the goal is to emulate human vision, like object recognition, defect detection or automatic driving, then it may be called computer vision.
 
 So basically, Image processing is related to enhancing the image and play with the features like colors. While computer vision is related to "Image Understanding". 
+
+
+
+# ARIMA vs LSTM for time-series data
+
+Read [here](https://www.datasciencecentral.com/profiles/blogs/arima-sarima-vs-lstm-with-ensemble-learning-insights-for-time-ser)
+
+# What is Transformer? 
+
+Read [here](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
