@@ -1427,6 +1427,12 @@ ASGI (Asynchronous Server Gateway Interface) server implementation
 
 Usually, in the software development process, code developed on one machine might not work perfectly fine on any other machine because of the dependencies. This problem was solved by the containerization concept. So basically, an application that is being developed and deployed is bundled and wrapped together with all its configuration files and dependencies. This bundle is called a container. Now when you wish to run the application on another system, the container is deployed which will give a bug-free environment as all the dependencies and libraries are wrapped together. Most famous containerization environments are Docker and Kubernetes.
 
+###### What is Docker Compose? What can it be used for?
+
+Docker Compose is a tool that lets you define multiple containers and their configurations via a YAML or JSON file. The most common use for Docker Compose is when your application has one or more dependencies, e.g., MySQL or Redis. Normally, during development, these dependencies are installed locally—a step that then needs re-doing when moving to a production setup. You can avoid these installation and configuration parts by using Docker Compose.
+
+Once set up, you can bring all of these containers/dependencies up and running with a single `docker-compose up` command.
+
 ###### If you wish to use a base image and make modifications or personalize it, how do you do that?
 
 You pull an image from docker hub onto your local system
