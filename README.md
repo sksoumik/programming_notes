@@ -186,6 +186,16 @@ See some great resources [here](static/pytorch tutorials.pdf)
 - Concepts of Bag-of-Words (BoW) and TF-IDF come into play. Both BoW and TF-IDF are techniques that help us convert text sentences into **numeric vectors**. [Read](https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/)
 - BERT tokenizer does the preprocessing by itself, so usually you don't benefit from standard preprocessing.
 - Transformer models: read [here](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
+- Common pre-processing techniques: 
+  1. Removes unicode strings like.
+  2. Removes URL strings like.
+  3. Removes emoticons from text.
+  4. Remove Punctuation (`string.punctuation` or using regular expression).
+  5. Convert all words to one case. 
+  6.  Filter out Stop Words  (e.g. **Stopwords** are the most common **words** in any natural language. For example,  "the”, “is”, “in”, “for”, “where”, “when”, “to”, “at” etc.)
+  7. *Stemming:* A technique that takes the word to its root form. It just removes suffixes from the words. (`nltk.PorterStemmer()` / `nltk.SnowballStemmer()`).
+  8. 
+  9. 1. 
 
 # SVM
 
@@ -1392,3 +1402,71 @@ When to use random forest :
 1. When you don't bother much about interpreting the model but want better accuracy.
 2. Random forest will reduce variance part of error rather than bias part, so on a given training data set decision tree may be more accurate than a random forest. But on an unexpected validation data set, Random forest always wins in terms of accuracy.
 
+# Few Interesting Question About Neural Network
+
+###### What's the best way to initialize the weights of a neural network?
+
+No one really knows. Thought experiment: an optimal initialization would in theory perform best at the task in question for a given architecture. But that would be task-specific, so it would depend on the dataset and the desired output. So not a general solution.
+
+
+
+# Web Server
+
+1. Apache HTTP Serve
+2. Gunicorn
+3. Nginx (Engine-X) requires a JSON configuration
+4. Unicorn
+
+ASGI (Asynchronous Server Gateway Interface) server implementation
+
+1. Uvicorn
+
+# Docker Basics
+
+###### Containerization
+
+Usually, in the software development process, code developed on one machine might not work perfectly fine on any other machine because of the dependencies. This problem was solved by the containerization concept. So basically, an application that is being developed and deployed is bundled and wrapped together with all its configuration files and dependencies. This bundle is called a container. Now when you wish to run the application on another system, the container is deployed which will give a bug-free environment as all the dependencies and libraries are wrapped together. Most famous containerization environments are Docker and Kubernetes.
+
+###### If you wish to use a base image and make modifications or personalize it, how do you do that?
+
+You pull an image from docker hub onto your local system
+
+It’s one simple command to pull an image from docker hub:
+
+```
+$ docker pull <image_name>
+```
+
+###### How do you create a docker container from an image?
+
+Pull an image from docker repository with the above command and run it to create a container. Use the following command:
+
+```
+$ docker run -it -d <image_name>
+```
+
+`-d` means  the container needs to start in the detached mode.
+
+###### How do you list all the running containers?
+
+The following command lists down all the running containers:
+
+```
+$ docker ps
+```
+
+######  Suppose you have 3 containers running and out of these, you wish to access one of them. How do you access a running container?
+
+The following command lets us access a running container:
+
+```
+$ docker exec -it <container id> bash
+```
+
+###### **Can I use JSON instead of YAML for my compose file in Docker?**
+
+You can use JSON instead of YAML for your compose file, to use JSON file with compose, specify the JSON filename to use, for eg:
+
+```
+$ docker-compose -f docker-compose.json up
+```
