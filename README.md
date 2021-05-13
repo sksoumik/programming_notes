@@ -1421,6 +1421,10 @@ ASGI (Asynchronous Server Gateway Interface) server implementation
 
 1. Uvicorn
 
+# Metadata
+
+Metadata is "data that provides information about other data". In other words, it is "data about data".
+
 # Docker Basics
 
 ###### Containerization
@@ -1475,4 +1479,55 @@ You can use JSON instead of YAML for your compose file, to use JSON file with co
 
 ```
 $ docker-compose -f docker-compose.json up
+```
+
+# Does the image format (png, jpg, gif) affect how an image recognition neural net is trained?
+
+Short answer is **NO**.
+
+The format in which the image is encoded has to do with its quality. Neural networks are essentially mathematical models that perform lots and lots of operations (matrix multiplications, element-wise additions and mapping functions). A neural network sees a [Tensor](https://en.wikipedia.org/wiki/Tensor) as its input (i.e. a multi-dimensional array). It's shape usually is 4-D (number of images per batch, image height, image width, number of channels).
+
+Different image formats (especially lossy ones) may produce different input arrays but strictly speaking neural nets see arrays in their input, and *NOT* images.
+
+# Class Method vs Static Method in Python
+
+A **staticmethod** is a method that knows nothing about the class or instance it was called on. It just gets the arguments that were passed, no implicit first argument. We can use static method to create utility functions. It's a way of putting a function into a class (because it logically belongs there), while indicating that it does not require access to the class.
+
+**With classmethods**, the class of the object instance is implicitly passed as the first argument instead of `self`.
+
+To decide whether to use [@staticmethod](https://docs.python.org/3/library/functions.html?highlight=staticmethod#staticmethod) or [@classmethod](https://docs.python.org/3.5/library/functions.html?highlight=classmethod#classmethod) you have to look inside your method. **If your method accesses other variables/methods in your class then use @classmethod**. On the other hand, if your method does not touches any other parts of the class then use @staticmethod.
+
+```python
+class Apple:
+
+    _counter = 0
+
+    @staticmethod
+    def about_apple():
+        print('Apple is good for you.')
+
+        # note you can still access other member of the class
+        # but you have to use the class instance 
+        # which is not very nice, because you have repeat yourself
+        # 
+        # For example:
+        # @staticmethod
+        #    print('Number of apples have been juiced: %s' % Apple._counter)
+        #
+        # @classmethod
+        #    print('Number of apples have been juiced: %s' % cls._counter)
+        #
+        #    @classmethod is especially useful when you move your function to other class,
+        #       you don't have to rename the class reference 
+
+    @classmethod
+    def make_apple_juice(cls, number_of_apples):
+        print('Make juice:')
+        for i in range(number_of_apples):
+            cls._juice_this(i)
+
+    @classmethod
+    def _juice_this(cls, apple):
+        print('Juicing %d...' % apple)
+        cls._counter += 1
 ```
