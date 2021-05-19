@@ -1531,3 +1531,28 @@ class Apple:
         print('Juicing %d...' % apple)
         cls._counter += 1
 ```
+
+# Database basics
+
+###### Volatile vs Non-volatile
+
+Volatile: Power-off -> Data lost
+
+Non-Volatile: Power-off -> Still data remains. 
+
+###### Different ERD schemas:
+
+1. Star schema
+2. Constellation schema
+3. Snowflake schema
+
+###### Database vs Data warehouse
+
+Database is a collection of related data that represents some elements of the real world whereas Data warehouse is an information system that stores historical and commutative data from single or multiple sources. Database is designed to record data whereas the Data warehouse is designed to analyze data.
+
+DB: designed for record/store data.
+
+DW: designed for analyzing data.
+
+
+
