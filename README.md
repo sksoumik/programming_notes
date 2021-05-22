@@ -6,6 +6,26 @@ Maintained by [**Sadman Kabir Soumik**](https://www.linkedin.com/in/sksoumik/)
 
 
 
+# Difference between constant time vs linear time
+
+In time-complexity, 
+
+**Constant time** O(1) means, the algorithm doesn't depend on the size of the input. If the size of the container(e.g arrays) grow/increase, the execution time for some operation will remain same. 
+
+**Linear time**  O(n) means, the algorithm depends on the size of the input. If the size of the container (e.g. arrays) increases, the execution time for some operation will also increase.   
+
+# Time complexity
+
+| Name        | Running time | example algorithms                                    |
+| ----------- | ------------ | ----------------------------------------------------- |
+| constant    | O(1)         | Finding the median value in a sorted array of numbers |
+| logarithmic | O(log n)     | Binary search                                         |
+| Linear      | O(n)         | Find duplicate elements in array with hash map        |
+| Quadratic   | O(n^2)       | Bubble sort, Insertion sort                           |
+| Cubic       | O(n^3)       |                                                       |
+| Exponential | O(2^n)       | Find all subsets                                      |
+| Factorial   | O(n!)        | Find all permutations of a given set/string           |
+
 # PyTorch Tutorial
 
 See some great resources [here](static/pytorch tutorials.pdf)
@@ -194,8 +214,6 @@ See some great resources [here](static/pytorch tutorials.pdf)
   5. Convert all words to one case. 
   6.  Filter out Stop Words  (e.g. **Stopwords** are the most common **words** in any natural language. For example,  "the”, “is”, “in”, “for”, “where”, “when”, “to”, “at” etc.)
   7. *Stemming:* A technique that takes the word to its root form. It just removes suffixes from the words. (`nltk.PorterStemmer()` / `nltk.SnowballStemmer()`).
-  8. 
-  9. 1. 
 
 # SVM
 
@@ -376,13 +394,9 @@ Object classification + Object localization (bbox) = Object detection
 
 Object classification + Object localization + Object detection = Object Recognition (Object detection) 
 
-
-
 # CRUD
 
 In computer programming, **create, read, update, and delete** (CRUD) are the four basic functions of persistent storage. 
-
-
 
 # SQL vs NoSQL 
 
@@ -392,6 +406,7 @@ In computer programming, **create, read, update, and delete** (CRUD) are the fou
 - Organize data into one or more tables. 
 - Each table has rows and columns.
 - An unique identifier is added in each row. 
+- B+ tree is the main data structure
 
 Relational database management systems: mysql, postgresql, mariadb, oracle etc. 
 
@@ -400,10 +415,13 @@ Relational database management systems: mysql, postgresql, mariadb, oracle etc.
 - Non-relational. 
 - Organize data in a key:value pair. 
 - Mainly documents in JSON/XML format. 
+- LSM-tree (Long structured merge -tree) is the main data structure. 
 
 NoSQL management systems: MongoDB, firebase, apache cassandra etc. 
 
 **Foreign key** is just the primary key of another table. So that we can make a relationship between two tables.
+
+**LSM-tree**: read [here](http://www.shafaetsplanet.com/?p=3796)
 
 # SQL Basics
 
