@@ -448,6 +448,20 @@ INSERT INTO table_name (column1, column2, ... )
 VALUES (value1, value2, ... );
 ```
 
+Example, insert one row
+
+```sql
+INSERT INTO Instructor(ins_id, lastname, firstname, city, country)
+VALUES(4, 'Saha', 'Sandip', 'Edmonton', 'CA');
+```
+
+Example, insert multiple row
+
+```sql
+INSERT INTO Instructor(ins_id, lastname, firstname, city, country)
+VALUES(5, 'Doe', 'John', 'Sydney', 'AU'), (6, 'Doe', 'Jane', 'Dhaka', 'BD');
+```
+
 ##### Update Rule | Alter information in a table
 
 ```sql
@@ -456,11 +470,34 @@ SET column1 = value1, column2 = value2, ...
 WHERE condition;
 ```
 
+Example, update data
+
+```sql
+UPDATE Instructor 
+SET city='Toronto' 
+WHERE firstname="Sandip";
+```
+
+Example, update multiple columns
+
+```sql
+UPDATE Instructor 
+SET city='Dubai', country='AE' 
+WHERE ins_id=5;
+```
+
 ##### Delete | Remove one or more rows from a table
 
 ```sql
 DELETE FROM table_name
 WHERE condition;	
+```
+
+Example, delete one row from the table
+
+```sql
+DELETE FROM Instructor
+WHERE ins_id = 6;
 ```
 
 ##### JOIN statement
@@ -493,10 +530,6 @@ Various aggregate functions are:
 **DISTINCT** is used to remove duplicate values from a result set.
 
 **LIMIT**:  restricting the number of rows retrieved from the database.
-
-
-
-
 
 # Target Value Types
 
