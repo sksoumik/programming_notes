@@ -425,6 +425,44 @@ NoSQL management systems: MongoDB, firebase, apache cassandra etc.
 
 # SQL Basics
 
+##### Basic statements
+
+Create, delete, update, insert, select
+
+**Query statement (retrieve data): ** SELECT 
+
+**DML (Data manipulation language) statement:** INSERT, UPDATE, DELETE
+
+##### Select Rule | Query data from a table
+
+```sql
+SELECT column_name
+FROM Table_name
+WHERE Conditions;
+```
+
+##### Insert Rule | Inser new data in a table
+
+```sql
+INSERT INTO table_name (column1, column2, ... )
+VALUES (value1, value2, ... );
+```
+
+##### Update Rule | Alter information in a table
+
+```sql
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+```
+
+##### Delete | Remove one or more rows from a table
+
+```sql
+DELETE FROM table_name
+WHERE condition;	
+```
+
 ##### JOIN statement
 
 A SQL Join statement is used to combine data or rows from two or more tables based on a common field between them. Different types of Joins  are:
@@ -447,6 +485,18 @@ Various aggregate functions are:
 4) Min()
 5) Max()
 ```
+
+##### Few clauses that is used with the select statement
+
+**COUNT:** retrieves the number of rows
+
+**DISTINCT** is used to remove duplicate values from a result set.
+
+**LIMIT**:  restricting the number of rows retrieved from the database.
+
+
+
+
 
 # Target Value Types
 
