@@ -24,6 +24,16 @@ In time-complexity,
 | Exponential | O(2^n)       | Find all subsets                                      |
 | Factorial   | O(n!)        | Find all permutations of a given set/string           |
 
+# DFS, BFS
+
+| DFS                                                          | BFS                                                          |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Stack                                                        | Queue                                                        |
+| LIFO                                                         | FIFO                                                         |
+| Stacking Plates                                              | Queue in front of a elevator                                 |
+| DFS is more suitable when there are solutions away from source. | BFS is more suitable for searching vertices which are closer to the given source. |
+| when we want to know the all possible results                | when we want to find the shortest path (simple graph). we usually use bfs,it can guarantee the 'shortest'. |
+
 # PyTorch Tutorial
 
 See some great resources [here](static/pytorch tutorials.pdf)
@@ -398,9 +408,15 @@ NoSQL management systems: MongoDB, firebase, apache cassandra etc.
 
 ##### Basic statements
 
-Create, delete, update, insert, select
+- SQL statements fall into two different categories: Data Definition Language (DDL) statements and Data Manipulation Language (DML) statements.
+
+  ![](static/dbms-sql-command.png)
+
+Read more details from [here](https://www.javatpoint.com/dbms-sql-command)
 
 **Query statement (retrieve data): ** SELECT
+
+**DDL (data definition language)**: Create, Drop, Alter, Truncate
 
 **DML (Data manipulation language) statement:** INSERT, UPDATE, DELETE
 
@@ -501,6 +517,36 @@ Various aggregate functions are:
 **DISTINCT** is used to remove duplicate values from a result set.
 
 **LIMIT**: restricting the number of rows retrieved from the database.
+
+## Entity -relationship diagrams
+
+Entity: Table
+
+Attribute: Columns
+
+##### Data type, CHAR vs VARCHAR
+
+A CHAR field is a *fixed* length, and VARCHAR is a *variable* length field.
+
+This means that the storage requirements are different - a CHAR always takes the same amount of space regardless of what you store, whereas the storage requirements for a VARCHAR vary depending on the specific string stored. 
+
+CHAR fields are stored inside the register due to its size being known, this makes searching and indexing faster. 
+
+##### Indexing in DB
+
+Consider a "Book" of 1000 pages, divided by 10 Chapters, each section with 100 pages.
+
+Now, imagine you want to find a particular Chapter that contains a word "**Alchemist**". Without an index page, you have to scan through the entire book/Chapters. i.e: 1000 pages.
+
+This analogy is known as **"Full Table Scan"** in database world.
+
+![book index](static/indexing.jpg)
+
+But with an index page, you know where to go! And more, to lookup any particular Chapter that matters, you just need to look over the index page, again and again, every time. After finding the matching index you can efficiently jump to that chapter by skipping the rest.
+
+But then, in addition to actual 1000 pages, you will need another ~10 pages to show the indices, so totally 1010 pages.
+
+> Thus, the index is a separate section that stores values of indexed column + pointer to the indexed row in a sorted order for efficient look-ups.
 
 # Target Value Types
 
