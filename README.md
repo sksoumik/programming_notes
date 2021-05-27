@@ -1647,3 +1647,11 @@ Database is a collection of related data that represents some elements of the re
 DB: designed for record/store data.
 
 DW: designed for analyzing data.
+
+
+
+
+
+# What to do when there is no data/little data for a ML product
+
+Consider the task of building a chatbot or text classification system at your organization. In the beginning there may be little or no data to work with. At this point, a basic solution using rule-based systems or traditional machine learning will be apt.As you accumulate more data, more sophisticated NLP techniques (which are often data intensive) can be used, including deep learning. At each step of this journey there are dozens of alternative approaches one can take. 
