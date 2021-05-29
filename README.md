@@ -548,6 +548,29 @@ But then, in addition to actual 1000 pages, you will need another ~10 pages to s
 
 > Thus, the index is a separate section that stores values of indexed column + pointer to the indexed row in a sorted order for efficient look-ups.
 
+
+
+##### Normalization
+
+Normalization is a **database design technique** that reduces data redundancy and eliminates undesirable characteristics like Insertion, Update and Deletion Anomalies. Normalization rules divides larger tables into smaller tables and links them using relationships.
+
+If a table is not properly normalized and have data redundancy then it will not only eat up extra memory space but will also make it difficult to handle and update the database, without facing data loss. Insertion, Updation and Deletion Anomalies are very frequent if database is not normalized.
+
+###### 1NF
+
+1. It should only have single(atomic) valued attributes/columns.
+2. All the columns in a table should have unique names.
+
+###### 2NF
+
+1. Should be in 1NF.
+2. Single column primary column. There should be no partial dependency. 
+
+##### 3NF
+
+1. satisfy 2NF.
+2. 
+
 # Target Value Types
 
 Categorical variables can be:
@@ -1648,10 +1671,87 @@ DB: designed for record/store data.
 
 DW: designed for analyzing data.
 
-
-
-
-
 # What to do when there is no data/little data for a ML product
 
 Consider the task of building a chatbot or text classification system at your organization. In the beginning there may be little or no data to work with. At this point, a basic solution using rule-based systems or traditional machine learning will be apt.As you accumulate more data, more sophisticated NLP techniques (which are often data intensive) can be used, including deep learning. At each step of this journey there are dozens of alternative approaches one can take. 
+
+# How Django works
+
+1. The entry point to Django applications are URLs.  URLs could be as simple as www.example.com, or more complex like www.example.com/whatever/you/want/. When a user accesses a URL, Django will pass it to a view for processing.
+2. Requests are Processed by Views. Django Views are custom Python code that get executed when a certain URL is accessed. Views can be as simple as returning a string of text to the user. They can also be made complex, querying databases, processing forms, processing credit cards, etc. Once a view is done processing, a web **response** is provided back to the user. 
+3. Most often these web responses are HTML web page, showing a combination of text and images. These pages are created using Django's templating system.
+
+# RSS feeds
+
+Its another format like html pages. RSS feeds are created using XML. 
+
+## What is a back-end?
+
+The back-end is all of the technology required to **process the incoming request and generate and send the response to the client**. This typically includes three major parts:
+
+- The server. This is the computer that receives requests.
+- The app. This is the application running on the server that listens for requests, retrieves information from the database, and sends a response.
+- The database. Databases are used to organize and persist data.
+- The middlewares. Middleware is any code that executes between the server receiving a request and sending a response. 
+
+###### Server
+
+A server is simply a computer that listens for incoming requests. The server runs an app that contains logic about how to respond to various requests based on the [HTTP verb](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) and the [Uniform Resource Identifier (URI)](https://developer.mozilla.org/en-US/docs/Glossary/URI). The server should not send more than one response per request. 
+
+###### Routing
+
+The pair of an HTTP verb and a URI is called a *route* and matching them based on a request is called *routing*.
+
+###### Middlewares
+
+Middleware is any code that executes between the server receiving a request and sending a response. These middleware functions might modify the request object, query the database, or otherwise process the incoming request. Middleware functions typically end by passing control to the next middleware function, rather than by sending a response.
+
+Eventually, a middleware function will be called that ends the request-response cycle by sending an HTTP response back to the client.
+
+# Transfer data between client and server
+
+HTTP, FTP, SCP are the common File Transfer Protocols. 
+
+The basic point that distinguishes HTTP and FTP is that **HTTP** on request provides a web page from a web server to web browser. On another side, **FTP** is used to upload or download file between client and server.
+
+# The difference between SOAP and REST 
+
+Web services are categorised into two types: SOAP and REST. Typically SOAP and REST are the methods used to call the web services. There are several differences between SOAP and REST. Firstly SOAP relies on XML to assist the services while REST can support various formats such as HTML, XML, JSON, etc. Another significant difference is that SOAP is a protocol. 
+
+SOAP -> XML
+
+REST -> JSON, HTML, XML 
+
+# REST API using Flask
+
+##### When to create an API
+
+In general, consider an API if:
+
+1. Your data set is large, making download via FTP unwieldy or resource-intensive.
+2. Your users will need to access your data in real time, such as for display on another website or as part of an application.
+3. Your data changes or is updated frequently.
+4. Your users only need access to a part of the data at any one time.
+5. Your users will need to perform actions other than retrieve data, such as contributing, updating, or deleting data.
+
+If you have data you wish to share with the world, an API is one way you can get it into the hands of others. However, APIs are not always the best way of sharing data with users. If the size of the data you are providing is relatively small, you can instead provide a “data dump” in the form of a downloadable JSON, XML, CSV, or SQLite file. Depending on your resources, this approach can be viable up to a download size of a few gigabytes.
+
+##### **REST (REpresentational State Transfer)** 
+
+is a philosophy that describes some best practices for implementing APIs.
+
+REST means when a client machine places a request to obtain information about resources from a server, the server machine then transfers the current state of the resource back to the client machine.
+
+There are a few methods in this which are as follows.
+
+- **GET** –  select or retrieve data from the server
+- **POST** – send or write data to the server
+- **PUT** – update existing data on the server
+- **DELETE** – delete existing data on the server
+
+
+
+##### Create REST using Flask
+
+Flask-RESTful  can be used to build REST APIs. 
+
