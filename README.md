@@ -34,6 +34,48 @@ In time-complexity,
 | DFS is more suitable when there are solutions away from source. | BFS is more suitable for searching vertices which are closer to the given source. |
 | when we want to know the all possible results                | when we want to find the shortest path (simple graph). we usually use bfs,it can guarantee the 'shortest'. |
 
+# What is gradient
+
+A **gradient** is a derivative of a function that has more than one input variable. 
+
+# Data standardization vs Normalization
+
+**Normalization** typically means rescales the values into a **range of [0,1]**. 
+
+**Standardization**: typically means rescales data to have a **mean of 0** and a **standard deviation of 1** (unit variance). 
+
+# Why do we normalize data
+
+For machine learning, every dataset does not require normalization. It is required only when features have different ranges. 
+
+For example, consider a data set containing two features, age(x1), and income(x2). Where age ranges from 0–100, while income ranges from 0–20,000 and higher. Income is about 1,000 times larger than age and ranges from 20,000–500,000. So, these two features are in very different ranges. When we do further analysis, like multivariate linear regression, for example, the attributed income will intrinsically influence the result more due to its larger value. But this doesn’t necessarily mean it is more important as a predictor.
+
+Because different features do not have similar ranges of values and hence **gradients may end up taking a long time** and can oscillate back and forth and take a long time before it can finally **find its way to the global/local minimum**. To overcome the model learning problem, we normalize the data. We make sure that the different features take on similar ranges of values so that **gradient descents can converge more quickly**.
+
+# When Should You Use Normalization And Standardization
+
+**Normalization** is a good technique to use when you do not know the distribution of your data or when you know the distribution is not Gaussian (a bell curve). Normalization is useful when your data has varying scales and the algorithm you are using does not make assumptions about the distribution of your data, such as k-nearest neighbors and artificial neural networks.
+
+**Standardization** assumes that your data has a Gaussian (bell curve) distribution. This does not strictly have to be true, but the technique is more effective if your attribute distribution is Gaussian. Standardization is useful when your data has varying scales and the algorithm you are using does make assumptions about your data having a Gaussian distribution, such as linear regression, logistic regression, and linear discriminant analysis. 
+
+Normalization -> Data distribution is not Gaussian (bell curve).
+
+Standardization -> Data distribution is Gaussian (bell curve). 
+
+# Vanishing Gradient Problem
+
+As more layers using certain activation functions are added to neural networks, the **gradients of the loss function approaches zero**, making the network hard to train. 
+
+However, when *n* hidden layers use an activation like the sigmoid function, *n* small derivatives are multiplied together. Thus, the gradient decreases exponentially as we propagate down to the initial layers.
+
+The simplest solution is to use other activation functions, such as ReLU, which doesn’t cause a small derivative.
+
+# Why ReLU
+
+ **ReLu is** faster to compute than the **sigmoid** function, and its derivative **is** faster to compute. This makes a significant difference to training and inference time for neural networks. 
+
+Main benefit is that the derivative/gradient of ReLu is either 0 or 1, so multiplying by it won't cause weights that are further away from the end result of the loss function to suffer from the vanishing gradient. 
+
 # PyTorch Tutorial
 
 See some great resources [here](static/pytorch tutorials.pdf)
