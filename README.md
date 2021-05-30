@@ -76,6 +76,22 @@ The simplest solution is to use other activation functions, such as ReLU, which 
 
 Main benefit is that the derivative/gradient of ReLu is either 0 or 1, so multiplying by it won't cause weights that are further away from the end result of the loss function to suffer from the vanishing gradient. 
 
+# What is weight decay
+
+Having fewer parameters is only one way of preventing our model from getting overly complex. But it is actually a very limiting strategy. More parameters mean more interactions between various parts of our neural network. And more interactions mean more non-linearities. These non-linearities help us solve complex problems.
+
+However, we don’t want these interactions to get out of hand. Hence, what if we penalize complexity. We will still use a lot of parameters, but we will prevent our model from getting too complex. This is how the idea of weight decay came up.
+
+One way to penalize complexity, would be to add all our parameters (weights) to our loss function. Well, that won’t quite work because some parameters are positive and some are negative. So what if we add the squares of all the parameters to our loss function. We can do that, however it might result in our loss getting so huge that the best model would be to set all the parameters to 0.
+
+To prevent that from happening, we multiply the sum of squares with another smaller number. This number is called ***weight decay\*** or `wd.`
+
+Our loss function now looks as follows:
+
+```
+Loss = MSE(y_hat, y) + wd * sum(w^2)
+```
+
 # PyTorch Tutorial
 
 See some great resources [here](static/pytorch tutorials.pdf)
