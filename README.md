@@ -92,6 +92,10 @@ Our loss function now looks as follows:
 Loss = MSE(y_hat, y) + wd * sum(w^2)
 ```
 
+# Mean, Median
+
+[Watch](https://youtu.be/0ifDuw-Qgvo)
+
 # PyTorch Tutorial
 
 See some great resources [here](static/pytorch tutorials.pdf)
