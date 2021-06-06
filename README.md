@@ -4,6 +4,10 @@ Maintained by [**Sadman Kabir Soumik**](https://www.linkedin.com/in/sksoumik/)
 
 ---
 
+# ML Basics
+
+Read [here](https://developers.google.com/machine-learning/glossary)
+
 # Difference between constant time vs linear time
 
 In time-complexity,
@@ -23,6 +27,8 @@ In time-complexity,
 | Cubic       | O(n^3)       |                                                       |
 | Exponential | O(2^n)       | Find all subsets                                      |
 | Factorial   | O(n!)        | Find all permutations of a given set/string           |
+
+See the time and space complexities [chat](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability)
 
 # DFS, BFS
 
@@ -95,6 +101,12 @@ Loss = MSE(y_hat, y) + wd * sum(w^2)
 # Mean, Median
 
 [Watch](https://youtu.be/0ifDuw-Qgvo)
+
+# NLP
+
+#### Tokenization
+
+
 
 # PyTorch Tutorial
 
@@ -1226,6 +1238,10 @@ ClassA.methodA(ObjectA, arg1, arg2)
 
 The `self` variable refers to the object itself. The `self` parameter is a reference to the **current instance of the class**, and is used to access variables that belongs to the class. It does not have to be named `self` , you can call it whatever you like, but it has to be the first parameter of any function in the class.
 
+# None keyword in python
+
+The `None` keyword is used to define a null value, or no value at all. `None` is not the same as 0, `False`, or an empty string. None is a data type of its own (NoneType) and only None can be `None`. 
+
 # list pop()
 
 Code:
@@ -1817,3 +1833,12 @@ There are a few methods in this which are as follows.
 
 Flask-RESTful  can be used to build REST APIs. 
 
+# Why do we need to define a constructor
+
+A constructor is generally used to set initial values for any of the fields (aka variables). It may also be used to “set up” anything you need for a class when you instantiate it.
+
+A constructor is a method that is only called at the time of instantiation. You cannot ever explicitly call it, therefore, if you ever want to change the value of a field, you have to create methods other than the constructor to do so.
+
+You don’t have to create a constructor at all. A default constructor will run anyway and set all fields to zero, null, etc., so if that’s all you plan to do, don’t bother.
+
+Additionally, you can create overloaded constructors for different situations. You can have constructors that set values for any combination of variables and you can specify whether those values come from the program instantiating the class.
