@@ -30,6 +30,22 @@ In time-complexity,
 
 See the time and space complexities [chat](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability)
 
+# Linear vs Non-linear data structures
+
+|            Key            |                    Linear Data Structures                    |                  Non-linear Data Structures                  |      |
+| :-----------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | ---- |
+| Data Element Arrangement  | In linear data structure, data elements are **sequentially connected** and each element is traversable through a single run. | In non-linear data structure, data elements are hierarchically connected and are present at various levels. |      |
+|          Levels           | In linear data structure, all data elements are present at a single level. | In non-linear data structure, data elements are present at multiple levels. |      |
+| Implementation complexity |       Linear data structures are easier to implement.        | Non-linear data structures are difficult to understand and implement as compared to linear data structures. |      |
+|         Traversal         | Linear data structures can be traversed completely in a single run. | Non-linear data structures are not easy to traverse and needs multiple runs to be traversed completely. |      |
+|    Memory utilization     | Linear data structures are not very memory friendly and are not utilizing memory efficiently. |   Non-linear data structures uses memory very efficiently.   |      |
+|      Time Complexity      | Time complexity of linear data structure often increases with increase in size. | Time complexity of non-linear data structure often remain with increase in size. |      |
+|         Examples          |                  Array, List, Queue, Stack.                  |                      Graph, Map, Tree.                       |      |
+
+# Difference between tree and graph
+
+In tree, there is no cycles. In Graphs, cycles may form. 
+
 # DFS, BFS
 
 | DFS                                                          | BFS                                                          |
@@ -1842,3 +1858,47 @@ A constructor is a method that is only called at the time of instantiation. You 
 You don’t have to create a constructor at all. A default constructor will run anyway and set all fields to zero, null, etc., so if that’s all you plan to do, don’t bother.
 
 Additionally, you can create overloaded constructors for different situations. You can have constructors that set values for any combination of variables and you can specify whether those values come from the program instantiating the class.
+
+# interpreted language vs compiled language
+
+We need to convert our source code into machine code, so that our computer can understand it. There are mainly two ways to do these translations. 
+
+1. Compiling the source code. 
+2. Interpreting the source code.
+
+Luckily as a programmer, we don't need to worry about these things, because the languages themselves take care of these things, unless we are designing a programming language by ourselves. 
+
+
+Now let's think of a scenario where I am the programmer and you are a consumer. Now I want to send my coded application to you.
+
+One way to do this is that I compile my source code in my computer using a compiler, which will take my human readable source code, and translate it into a binary machine code. At this point, I have two files, one is the original source code, another one is the machine executable binary code. Now, I can't send my executable binary file to the consumers so that the consumers can run my application. I don't need to send the source code to the consumers. Compiled languages mainly work in this way. Examples of compiled languages: C, C++, Rust, Go. 
+
+Second way to distribute my program to the consumers is to give the source code to the consumer by interpreting my program. In this case, I send the actual source code to the consumer instead of the executable binary file. Then the consumer can download an interpreter that can execute my source code and run it **on the fly**. In this case, the interpreter goes through one line at a time of the source code and convert it to the equivalent binary code, and run it immediately before going to the next line. Examples of interpreted languages: Python, JavaScript, Ruby, PHP. 
+
+Benefits of compiled languages:
+
+1. It's always ready to run. Once it is compiled and I have the executable binary file, I can send that file to millions of consumers immediately. 
+2. It can be optimized for CPU usage. So, it is often faster. 
+3.  The source code is private. 
+
+Disadvantages/ downsides of compiled languages:
+
+1. If I compile it on PC, then that executable file will not work on Mac. It often needs to execute separately even for different types of CPU on the same operating system. 
+
+Benefits of interpreted languages:
+
+1. We don't need to care about what kind of machine we are working on. Because we don't distribute the executable file, we only send the source code. So, it is more portable and flexible across different platforms. 
+2. It is also easier to test and debug because you only need to write your source code and test it. 
+
+Disadvantages/ downsides of interpreted languages:
+
+1. Slower compared to compiled languages.
+2. An interpreter is required. 
+3. Source code is public. 
+
+# Loose Coupling vs Tight Coupling
+
+Loose coupling implies that services are independent so that changes in one service will not affect any other. The more dependencies you have between services, the more likely it is that changes will have wider, unpredictable consequences.
+
+In a tightly coupled system, your performance is largely dictated by your slowest component. For example, microservice architectures with services that collaborate via HTTP-based APIs can be vulnerable to cascading performance problems where one component slows down. If your services are decoupled, you will have more freedom to optimise them individually for specific workloads.
+
