@@ -1861,7 +1861,7 @@ Additionally, you can create overloaded constructors for different situations. Y
 
 # interpreted language vs compiled language
 
-We need to convert our source code into machine code, so that our computer can understand it. There are mainly two ways to do these translations. 
+We need to convert our source code (high-level language) into binary machine code (low-level), so that our computer can understand it. There are mainly two ways to do these translations. 
 
 1. Compiling the source code. 
 2. Interpreting the source code.
@@ -1895,6 +1895,8 @@ Disadvantages/ downsides of interpreted languages:
 1. Slower compared to compiled languages.
 2. An interpreter is required. 
 3. Source code is public. 
+
+But nowadays, most interpreted languages uses JIT (Just-in-time compilation), which makes interpreted languages faster. Read [here](https://medium.com/young-coder/the-difference-between-compiled-and-interpreted-languages-d54f66aa71f0). 
 
 # Loose Coupling vs Tight Coupling
 
