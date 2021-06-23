@@ -1904,3 +1904,10 @@ Loose coupling implies that services are independent so that changes in one serv
 
 In a tightly coupled system, your performance is largely dictated by your slowest component. For example, microservice architectures with services that collaborate via HTTP-based APIs can be vulnerable to cascading performance problems where one component slows down. If your services are decoupled, you will have more freedom to optimise them individually for specific workloads.
 
+
+
+# Web Scraping Best Practices
+
+- Never scrape more frequently than you need to.
+- Consider [caching](https://pypi.org/project/requests-cache/) the content you scrape so that it’s only downloaded once.
+- Build pauses into your code using functions like [`time.sleep()`](https://docs.python.org/3/library/time.html) to keep from overwhelming servers with too many requests too quickly.
