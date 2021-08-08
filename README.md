@@ -268,6 +268,22 @@ See some great resources [here](static/pytorch tutorials.pdf)
   git merge main
   ```
 
+- update the current branch with the recent changes:
+
+  ```
+  git pull origin <remote branch name>
+  ```
+
+- update the current branch with the master (if changes later after pulling the master code)
+
+  ```
+  git rebase master
+  ```
+
+  
+
+
+
 #### Kaggle
 
 - download kaggle dataset: `kaggle datasets download [username/dataset name (just copy the url after kaggle.com)]`
