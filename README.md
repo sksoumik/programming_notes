@@ -56,6 +56,23 @@ In tree, there is no cycles. In Graphs, cycles may form.
 | DFS is more suitable when there are solutions away from source. | BFS is more suitable for searching vertices which are closer to the given source. |
 | when we want to know the all possible results                | when we want to find the shortest path (simple graph). we usually use bfs,it can guarantee the 'shortest'. |
 
+
+
+# Polymorphism vs Overriding vs Overloading
+
+Polymorphism means more than one form, same object performing different operations according to the requirement.
+
+Polymorphism can be achieved by using two ways, those are
+
+1. Method overriding
+2. Method overloading
+
+*Method overloading* means writing two or more methods **in the same class** by using same method name, but the passing parameters is different.
+
+*Method overriding* means we use the method names **in the different classes**,that means parent class method is used in the child class.
+
+
+
 # What is gradient
 
 A **gradient** is a derivative of a function that has more than one input variable. 
@@ -1874,6 +1891,12 @@ A constructor is a method that is only called at the time of instantiation. You 
 You don’t have to create a constructor at all. A default constructor will run anyway and set all fields to zero, null, etc., so if that’s all you plan to do, don’t bother.
 
 Additionally, you can create overloaded constructors for different situations. You can have constructors that set values for any combination of variables and you can specify whether those values come from the program instantiating the class.
+
+# Compile time vs Run time
+
+**Compile-time:** the time period in which you, the developer, are compiling your code.
+
+**Run-time:** the time period which a user is running your piece of software.
 
 # interpreted language vs compiled language
 
