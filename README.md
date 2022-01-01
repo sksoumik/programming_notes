@@ -172,6 +172,7 @@ See some great resources [here](static/pytorch tutorials.pdf)
 #### Linux Terminal
 
 - add a custom command in linux terminal: `alias custom_command='original_command'`
+
 - delete a folder from linux including all files `sudo rm -r folder_name`
 
 - Delete all files from the current directory `sudo rm ./*`
@@ -186,18 +187,43 @@ See some great resources [here](static/pytorch tutorials.pdf)
 - Download youtube videos as mp3 youtube-dl `youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>`
 
 - Create a new file: `cat filename`
+
 - Zip a folder with a name: `zip -r file_name.zip targer_folder_name/`
+
 - Open a folder in file explorer using Linux Terminal: `xdg-open folder`
+
 - copy or move files from subdirectories that ends with a common extension: `mv **/*.csv target_dir`
+
 - Install VS Code from terminal: [read here](https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/)
+
 - Get the size of a file (human-readable): `du -sh <file-name>`
+
 - Search for a file in the current directory: `find *<file-name-portion>*`
+
 - rename a folder: `vm old_name new_name`
+
 - `Ctrl + L` : equivalent to `clear`
+
 - `Ctrl + U`: This shortcut erases everything from the current cursor position to the beginning of the line.
+
 - `Ctrl + A`: Move the cursor to the beginning of the line.
+
 - `Ctrl + E`: This shortcut does the opposite of `Ctrl + A`. It moves the cursor to the end of the line.
+
 - Display first 3 lines of a file in the terminal: `head -3 filename`
+
+- ```
+  sudo apt update        # Fetches the list of available updates
+  sudo apt upgrade       # Installs some updates; does not remove packages
+  sudo apt full-upgrade  # Installs updates; may also remove some packages, if needed
+  sudo apt autoremove    # Removes any old packages that are no longer needed
+  ```
+
+- see the laptop hardware information: `sudo lshw`
+
+- find cpu configuration: `lscpu`
+
+- 
 
 #### Anaconda commands
 
@@ -213,6 +239,8 @@ See some great resources [here](static/pytorch tutorials.pdf)
 
 #### GCP commands
 
+- Create a GCP VM Instance: [link](https://github.com/cs231n/gcloud/)
+  
 - Connect with the instance from terminal:
   `gcloud compute config-ssh`
   `ssh soumik.us-west1-b.project_name`
@@ -231,7 +259,9 @@ See some great resources [here](static/pytorch tutorials.pdf)
   `gsutil -m cp -r gs://ceri_snow_unified/CERI_snow_10sec/ C:/Users/Dell/code/ceri_test_windows`
 
 - See how much space left on GCP: `df -h`
+
 - Upload files from bucket to instance: `gsutil -m cp -R gs://bucket_location_gs_path .`
+
 - Download file from gcp bucket to an instance (. means current directory)
   `gsutil -m cp -r gs://bucket_location .`
 
