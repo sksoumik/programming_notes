@@ -285,6 +285,14 @@ See some great resources [here](static/pytorch tutorials.pdf)
 
 - See a git cheatsheet: [[here](/static/git-cheat-sheet-education.pdf)]
 
+- github authentication error: use `gh` client. 
+
+  ```bash
+  sudo apt update
+  sudo apt install gh
+  gh auth login
+  ```
+
 - create a new branch without adding any content from the master branch (empty branch)
 
   `git checkout --orphan branchname`
