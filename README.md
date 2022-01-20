@@ -104,6 +104,8 @@ Polymorphism can be achieved by using two ways, those are
 
 - delete a folder from linux including all files `sudo rm -r folder_name`
 
+- get a notification with with a voice after a process gets finished: `some-command; spd-say "Any Voice Message"`
+
 - Delete all files from the current directory `sudo rm ./*`
 
 - Clean up root disk in Linux | dev/sda1 disk full problem
