@@ -119,6 +119,8 @@ Polymorphism can be achieved by using two ways, those are
 
 - Create a new file: `cat filename`
 
+- find absolute location of a file: `readlink -f file.txt`
+
 - Zip a folder with a name: `zip -r file_name.zip targer_folder_name/`
 
 - Open a folder in file explorer using Linux Terminal: `xdg-open folder`
@@ -213,6 +215,22 @@ Polymorphism can be achieved by using two ways, those are
   - to see all file/folder size in the current directory of disk: `ncdu .`
 
 #### Git
+
+Create ssh key for github
+
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+Could not open a connection to your authentication agent
+
+```
+eval `ssh-agent -s`
+```
+
+
+
+
 
 - See a git cheatsheet: [[here](/static/git-cheat-sheet-education.pdf)]
 
