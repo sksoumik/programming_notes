@@ -78,10 +78,37 @@ Polymorphism can be achieved by using two ways, those are
 
 #### Chrome
 
-- Show all bookmarks to search: `ctrl + shift + O`
-- Move between tabs: `ctrl + fn + up/down arrow`
-- Go end of the page: `ctrl + fn + right arrow`
-- Go at the beginning of a list: `ctrl + fn + left arrow`
+- Show all bookmarks to search
+
+  ```
+  ctrl + shift + O
+  ```
+
+  
+
+- Move between tabs: 
+
+  ```
+  ctrl + fn + up/down arrow
+  ```
+
+  
+
+- Go end of the page: 
+
+  ```
+  ctrl + fn + right arrow
+  ```
+
+  
+
+- Go at the beginning of a list: 
+
+  ```
+  ctrl + fn + left arrow
+  ```
+
+  
 
 #### vscode
 
@@ -100,30 +127,86 @@ Polymorphism can be achieved by using two ways, those are
 
 #### Linux Terminal
 
-- add a custom command in linux terminal: `alias custom_command='original_command'`
+- add a custom command in linux terminal: 
 
-- delete a folder from linux including all files `sudo rm -r folder_name`
+  ```bash
+  alias custom_command='original_command'
+  ```
 
-- get a notification with with a voice after a process gets finished: `some-command; spd-say "Any Voice Message"`
+- delete a folder from linux including all files 
 
-- Delete all files from the current directory `sudo rm ./*`
+  ```bash
+  sudo rm -r folder_name
+  ```
+
+  
+
+- get a notification with a voice after a process gets finished:
+
+  ```bash
+  some-command; spd-say "Any Voice Message"
+  ```
+
+  
+
+- Delete all files from the current directory 
+
+  ```bash
+  sudo rm ./*
+  ```
+
+  
 
 - Clean up root disk in Linux | dev/sda1 disk full problem
 
-  `sudo apt-get install ncdu`
-  `sudo ncdu / (too see all files size in root dir)`
+  ```bash
+  sudo apt-get install ncdu
+  sudo ncdu /  # too see all files size in root dir
   or
-  `ncdu` (see files sizes in the current directory)
+  ncdu       # (see files sizes in the current directory)
+  ```
 
-- Download youtube videos as mp3 youtube-dl `youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>`
+  
 
-- Create a new file: `cat filename`
+- Download youtube videos as mp3 youtube-dl 
 
-- find absolute location of a file: `readlink -f file.txt`
+  ```bash
+  youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <URL>
+  ```
 
-- Zip a folder with a name: `zip -r file_name.zip targer_folder_name/`
+  
 
-- Open a folder in file explorer using Linux Terminal: `xdg-open folder`
+- Create a new file:
+
+  ```bash
+  cat filename
+  ```
+
+  
+
+- find absolute location of a file: 
+
+  ```bash
+  readlink -f file.txt
+  ```
+
+  
+
+- Zip a folder with a name: 
+
+  ```bash
+  zip -r file_name.zip targer_folder_name/
+  ```
+
+  
+
+- Open a folder in file explorer using Linux Terminal:
+
+  ```bash
+  xdg-open folder
+  ```
+
+  
 
 - copy or move files from subdirectories that ends with a common extension: `mv **/*.csv target_dir`
 
