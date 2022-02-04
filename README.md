@@ -258,29 +258,69 @@ Polymorphism can be achieved by using two ways, those are
 - Create a GCP VM Instance: [link](https://github.com/cs231n/gcloud/)
   
 - Connect with the instance from terminal:
-  `gcloud compute config-ssh`
-  `ssh soumik.us-west1-b.project_name`
-
+  
+  ```
+  gcloud compute config-ssh
+  ssh soumik.us-west1-b.project_name
+  ```
+  
+  
+  
 - After creating VM Instance configure from the local PC:
-  `gcloud config set project project_name`
-  `gcloud compute config-ssh`
-
+  
+  ```
+  gcloud config set project project_name
+  gcloud compute config-ssh
+  ```
+  
+  
+  
 - Copy file from instance to GCP workspace:
-  `sudo gsutil cp gs://ceri_snow_unified/CERI_snow_10sec/csv/kfold.csv .`
-
+  
+  ```
+  sudo gsutil cp gs://ceri_snow_unified/CERI_snow_10sec/csv/kfold.csv .
+  ```
+  
+  
+  
 - Copying files from GCP instance to local computer:
-  `gsutil -m cp -r gs://project_location/ ${loca_pc_dest_path}`
+  
+  ```
+  gsutil -m cp -r gs://project_location/ ${loca_pc_dest_path}
+  ```
 
   for example:
-  `gsutil -m cp -r gs://ceri_snow_unified/CERI_snow_10sec/ C:/Users/Dell/code/ceri_test_windows`
+  
+  ```
+  gsutil -m cp -r gs://ceri_snow_unified/CERI_snow_10sec/ C:/Users/Dell/code/ceri_test_windows
+  ```
+  
+  
+  
+- See how much space left on GCP: 
 
-- See how much space left on GCP: `df -h`
+  ```
+  df -h
+  ```
 
-- Upload files from bucket to instance: `gsutil -m cp -R gs://bucket_location_gs_path .`
+  
+
+- Upload files from bucket to instance: 
+
+  ```
+  gsutil -m cp -R gs://bucket_location_gs_path .
+  ```
+
+  
 
 - Download file from gcp bucket to an instance (. means current directory)
-  `gsutil -m cp -r gs://bucket_location .`
-
+  
+  ```
+  gsutil -m cp -r gs://bucket_location .
+  ```
+  
+  
+  
 - Untar files: `tar -xf filename.xz`
 
 - Transfer (copy) file from GCP instance to Cloud Storage Bucket: (run from the instance workplace)
