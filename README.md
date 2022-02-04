@@ -208,15 +208,39 @@ Polymorphism can be achieved by using two ways, those are
 
   
 
-- copy or move files from subdirectories that ends with a common extension: `mv **/*.csv target_dir`
+- copy or move files from subdirectories that ends with a common extension: 
+
+  ```
+  mv **/*.csv target_dir
+  ```
+
+  
 
 - Install VS Code from terminal: [read here](https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/)
 
-- Get the size of a file (human-readable): `du -sh <file-name>`
+- Get the size of a file (human-readable): 
 
-- Search for a file in the current directory: `find *<file-name-portion>*`
+  ```
+  du -sh <file-name>
+  ```
 
-- rename a folder: `vm old_name new_name`
+  
+
+- Search for a file in the current directory: 
+
+  ```
+  find *<file-name-portion>*
+  ```
+
+  
+
+- rename a folder: 
+
+  ```
+  vm old_name new_name
+  ```
+
+  
 
 - `Ctrl + L` : equivalent to `clear`
 
@@ -238,8 +262,6 @@ Polymorphism can be achieved by using two ways, those are
 - see the laptop hardware information: `sudo lshw`
 
 - find cpu configuration: `lscpu`
-
-- 
 
 #### Anaconda commands
 
@@ -321,21 +343,38 @@ Polymorphism can be achieved by using two ways, those are
   
   
   
-- Untar files: `tar -xf filename.xz`
+- Untar files: 
+
+  ```
+  tar -xf filename.xz
+  ```
+
+  
 
 - Transfer (copy) file from GCP instance to Cloud Storage Bucket: (run from the instance workplace)
 
-  `gsutil cp filename gs://bucket_name`
+  ```
+  gsutil cp filename gs://bucket_name
+  ```
+
+  
 
 - Transfer/Copy file/folder from Cloud Storage Bucket to the local computer: (Open terminal in your local computer and navigate to the folder where you need the file to be copied and run this command):
 
-  `gsutil -m cp -r gs://bucket_name/folder .`
+  ```
+  gsutil -m cp -r gs://bucket_name/folder .
+  ```
+
+  
 
 - Clean up root disk in Linux | dev/sda1 disk full problem | see which files are taking what space in the disk:
 
-  - install ncdu: `sudo apt-get install ncdu`
-  - to see all file/folder size in the root directory of disk: `sudo ncdu /`
-  - to see all file/folder size in the current directory of disk: `ncdu .`
+  ```
+  sudo apt-get install ncdu
+  sudo ncdu /              # see all file/folder size in the root directory of disk
+  ```
+  
+  
 
 #### Git
 
@@ -350,8 +389,6 @@ Could not open a connection to your authentication agent
 ```
 eval `ssh-agent -s`
 ```
-
-
 
 
 
