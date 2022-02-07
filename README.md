@@ -444,6 +444,12 @@ eval `ssh-agent -s`
   git rebase master
   ```
 
+- add an existing project to github repo:
+
+  ```
+  
+  ```
+
   
 
 # Microsoft -vs- Google
@@ -1377,8 +1383,48 @@ In a tightly coupled system, your performance is largely dictated by your slowes
 
 
 
-# Web Scraping Best Practices
+# Get vs Post request
 
-- Never scrape more frequently than you need to.
-- Consider [caching](https://pypi.org/project/requests-cache/) the content you scrape so that it’s only downloaded once.
-- Build pauses into your code using functions like [`time.sleep()`](https://docs.python.org/3/library/time.html) to keep from overwhelming servers with too many requests too quickly.
+`GET` is used for viewing something, without changing it, while `POST` is used for changing something. For example, a search page should use `GET` to get data while a form that changes your password should use `POST`. Essentially `GET` is used to retrieve remote data, and `POST` is used to insert/update remote data.
+
+#### Get
+
+- GET requests can be cached
+- GET requests remain in the browser history
+- GET requests can be bookmarked
+- GET requests should never be used when dealing with sensitive data
+- GET requests have length restrictions
+- GET requests are only used to request data (not modify)
+
+#### Post
+
+- POST requests are never cached
+- POST requests do not remain in the browser history
+- POST requests cannot be bookmarked
+- POST requests have no restrictions on data length
+
+
+
+# Distributed computing vs Parallel computing
+
+#### Parallel Computing
+
+In parallel computing multiple processors performs multiple tasks assigned to them simultaneously. Memory in parallel systems can either be shared or distributed. Parallel computing provides concurrency and saves time and money.
+
+#### Distributed Computing
+
+In distributed computing we have multiple autonomous computers which seems to the user as single system. In distributed systems there is no shared memory and computers communicate with each other through message passing. In distributed computing a single task is divided among different computers.
+
+
+
+| Parallel                                           | Distributed                                                  |
+| -------------------------------------------------- | ------------------------------------------------------------ |
+| Many operations are performed simultaneously       | System components are located at different locations         |
+| Single computer is required                        | Uses multiple computers                                      |
+| Multiple processors perform multiple operations    | Multiple computers perform multiple operations               |
+| Processors communicate with each other through bus | Computer communicate with each other through message passing. |
+
+
+
+
+
