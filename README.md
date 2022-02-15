@@ -266,14 +266,61 @@ Polymorphism can be achieved by using two ways, those are
 #### Anaconda commands
 
 - create a new venv
-  `conda create -n myenv python=3.6`
+  
+  ```bash
+  conda create -n myenv python=3.6
+  ```
+  
+  
+  
 - create anaconda env file from terminal
-  `conda env export > conda.yaml`
-- Creating new anaconda environment using a yaml file: `conda env create --file dependency.yaml`
+  
+  ```bash
+  conda env export > conda.yaml
+  ```
+  
+  
+  
+- Creating new anaconda environment using a yaml file: 
+
+  ```bash
+  conda env create --file dependency.yaml
+  ```
+
+  
+
 - remove a venv from anaconda
-  `conda env remove -n env_name`
-- Remove any anaconda env: `conda env remove -n env_name`
-- Remove any package from an environment: activate the target env and `conda remove package_name`
+  
+  ```bash
+  conda env remove -n env_name
+  ```
+  
+  
+  
+- Remove any anaconda env
+
+  ```bash
+  conda env remove -n env_name
+  ```
+
+  
+
+- Remove any package from an environment: activate the target env and then:
+
+  ```bash
+  conda remove package_name
+  ```
+
+  
+
+- update an existing environment with a `yml` file
+
+  ```bash
+  conda activate myenv
+  conda env update --file conda.yml --prune
+  ```
+
+  
 
 #### GCP commands
 
