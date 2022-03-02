@@ -263,6 +263,20 @@ Polymorphism can be achieved by using two ways, those are
 
 - find cpu configuration: `lscpu`
 
+- Get public IP address:
+
+  ```
+  curl ifconfig.me
+  ```
+
+- Get private IP address (IPv4 address):
+
+  ```
+  hostname -I
+  ```
+
+- 
+
 #### Anaconda commands
 
 - create a new venv
