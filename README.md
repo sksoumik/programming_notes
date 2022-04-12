@@ -334,7 +334,19 @@ Polymorphism can be achieved by using two ways, those are
   conda env update --file conda.yml --prune
   ```
 
+
+- Install miniconda on Linux
+
+  ```bash
+  wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh
   
+  bash Miniconda3-py38_4.10.3-Linux-x86_64.sh
+  
+  cd miniconda3/bin
+  source activate
+  ```
+
+
 
 #### GCP commands
 
@@ -505,13 +517,26 @@ eval `ssh-agent -s`
   git rebase master
   ```
 
-- add an existing project to github repo:
+- **git stage**: To stage a file is simply to prepare it finely for a commit. Git, with its index allows you to commit only certain parts of the changes you’ve done since the last commit.
+
+  Say you’re working on two features – one is finished, and one still needs some work done. You’d like to make a commit and go home but wouldn’t like to commit the parts of the second feature, which is not done yet. You stage the parts you know belong to the first feature, and commit.
+  
+- Add a folder in github lfs track which contains large files (larger than 100MB):
 
   ```
-  
+  git lfs track "myfolder/**"
   ```
 
-  
+
+# Mongodb
+
+- start the [`mongod`](https://docs.mongodb.com/manual/reference/program/mongod/#mongodb-binary-bin.mongod) process: 
+
+```
+sudo systemctl start mongod
+```
+
+- 
 
 # Microsoft -vs- Google
 
@@ -1485,7 +1510,7 @@ In distributed computing we have multiple autonomous computers which seems to th
 | Multiple processors perform multiple operations    | Multiple computers perform multiple operations               |
 | Processors communicate with each other through bus | Computer communicate with each other through message passing. |
 
+# Why do use CSRF token? 
 
-
-
+A CSRF token is a secure random token (e.g., synchronizer token or challenge token) that is used **to prevent CSRF attacks**. The token needs to be unique per user session and should be of large random value to make it difficult to guess. A CSRF secure application assigns a unique CSRF token for every user session.
 
