@@ -4,10 +4,6 @@ Maintained by [**Sadman Kabir Soumik**](https://www.linkedin.com/in/sksoumik/)
 
 ---
 
-# ML Basics
-
-Read [here](https://developers.google.com/machine-learning/glossary)
-
 # Difference between constant time vs linear time
 
 In time-complexity,
@@ -74,41 +70,7 @@ Polymorphism can be achieved by using two ways, those are
 
 *Method overriding* ability of any object-oriented programming language that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. When a method in a subclass has the same name, same parameters or signature and same return type(or sub-type) as a method in its super-class, then the method in the subclass is said to **override** the method in the super-class.
 
-# Computer shortcuts
-
-#### Chrome
-
-- Show all bookmarks to search
-
-  ```
-  ctrl + shift + O
-  ```
-
-  
-
-- Move between tabs: 
-
-  ```
-  ctrl + fn + up/down arrow
-  ```
-
-  
-
-- Go end of the page: 
-
-  ```
-  ctrl + fn + right arrow
-  ```
-
-  
-
-- Go at the beginning of a list: 
-
-  ```
-  ctrl + fn + left arrow
-  ```
-
-  
+# Keyboard shortcuts
 
 #### vscode
 
@@ -274,8 +236,6 @@ Polymorphism can be achieved by using two ways, those are
   ```
   hostname -I
   ```
-
-- 
 
 #### Anaconda commands
 
@@ -526,17 +486,6 @@ eval `ssh-agent -s`
   ```
   git lfs track "myfolder/**"
   ```
-
-
-# Mongodb
-
-- start the [`mongod`](https://docs.mongodb.com/manual/reference/program/mongod/#mongodb-binary-bin.mongod) process: 
-
-```
-sudo systemctl start mongod
-```
-
-- 
 
 # Microsoft -vs- Google
 
@@ -1083,16 +1032,6 @@ b = [letter for word in words for letter in word if letter in ["a","e","i"]]
 
 Read [more](https://towardsdatascience.com/crystal-clear-explanation-of-python-list-comprehensions-ac4e652c7cfb)..
 
-# Recurrent Neural Network
-
-##### Use cases
-
-1. sentiment analysis
-2. text mining
-3. and image captioning
-4. time series problems such as predicting the prices of stocks in a month or quarter
-5.
-
 
 
 # List and Tuple difference
@@ -1106,6 +1045,8 @@ Read [more](https://towardsdatascience.com/crystal-clear-explanation-of-python-l
 
 Arrays and lists, in Python, have the same way of storing data. But, arrays can hold only a **single data type** elements whereas lists can hold **any data type** elements.
 
+
+
 # Difference between HashTable and HashMap
 
 | Hash MAP                                      | Hash Table                            |
@@ -1113,11 +1054,17 @@ Arrays and lists, in Python, have the same way of storing data. But, arrays can 
 | Not synchronized. So, it's not thread-safe.   | Synchronized. Means it's thread-safe. |
 | Allows one null key and multiple null values. | Doesn't allow any null key or value.  |
 
-Python dictionaries are based on a well-tested and finely tuned **hash table** implementation that provides the performance characteristics you’d expect: **_O_(1)** time complexity for lookup, insert, update, and delete operations in the average case.
+Python **dictionaries** are based on a well-tested and finely tuned **hash table** implementation that provides the performance characteristics you’d expect: **_O_(1)** time complexity for lookup, insert, update, and delete operations in the average case.
+
+Python's `set()` also uses hashtable as its underlying data structure.
+
+
 
 # Synchronized
 
 `synchronized` means that in a multi threaded environment, an object having `synchronized` method(s)/block(s) does not let two threads to access the `synchronized` method(s)/block(s) of code at the same time. This means that one thread can't read while another thread updates it.
+
+
 
 # How does the Google "Did you mean?" algorithm work?
 
@@ -1302,6 +1249,8 @@ class Apple:
         cls._counter += 1
 ```
 
+
+
 # Database basics
 
 ###### Volatile vs Non-volatile
@@ -1422,7 +1371,7 @@ Additionally, you can create overloaded constructors for different situations. Y
 
 **Run-time:** the time period which a user is running your piece of software.
 
-# interpreted language vs compiled language
+# Interpreted language vs compiled language
 
 We need to convert our source code (high-level language) into binary machine code (low-level), so that our computer can understand it. There are mainly two ways to do these translations. 
 
@@ -1513,4 +1462,6 @@ In distributed computing we have multiple autonomous computers which seems to th
 # Why do use CSRF token? 
 
 A CSRF token is a secure random token (e.g., synchronizer token or challenge token) that is used **to prevent CSRF attacks**. The token needs to be unique per user session and should be of large random value to make it difficult to guess. A CSRF secure application assigns a unique CSRF token for every user session.
+
+
 
