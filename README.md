@@ -237,6 +237,14 @@ Polymorphism can be achieved by using two ways, those are
   hostname -I
   ```
 
+- unzip all zip files in a directory
+
+  ```
+  unzip \*.zip
+  ```
+
+  
+
 #### Anaconda commands
 
 - create a new venv
@@ -411,15 +419,23 @@ Polymorphism can be achieved by using two ways, those are
 
 #### Git
 
-Create ssh key for github
+- Add an existing project to github
 
+```bash
+git init
+git add . && git commit -m "initial commit"
+git push -f origin master
 ```
+
+- Create ssh key for github
+
+```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-Could not open a connection to your authentication agent
+- Could not open a connection to your authentication agent
 
-```
+```bash
 eval `ssh-agent -s`
 ```
 
