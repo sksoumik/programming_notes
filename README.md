@@ -243,7 +243,38 @@ Polymorphism can be achieved by using two ways, those are
   unzip \*.zip
   ```
 
-  
+- Rename a file
+
+```bash
+mv filename.txt newfilename.txt
+```
+
+- Move all certain types of files from all subdirectories to a target path
+
+  If you only want to move the `.zip` files, you could do something like: 
+
+```bash
+mkdir ./zipfiles
+find . -name "*.zip" -exec mv "{}" ./zipfiles \;
+```
+
+- Count the number of files in a directory
+
+```bash
+ls | wc -l
+```
+
+- Convert all png images to jpg from a directory
+
+```bash
+# Convert and keep original files:
+mogrify -format jpg *.png
+
+# Convert and remove original files:
+mogrify -format jpg *.png && rm *.png
+```
+
+
 
 #### Anaconda commands
 
