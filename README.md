@@ -274,6 +274,14 @@ mogrify -format jpg *.png
 mogrify -format jpg *.png && rm *.png
 ```
 
+- Randomly delete certain number of certain types of files from the current directory:
+
+The following code randomly deletes 1000 jpg files from the current directory.
+
+```
+find . -maxdepth 1 -type f -name "*.jpg" -print0 | head -z -n 1000 | xargs -0 rm
+```
+
 
 
 #### Anaconda commands
