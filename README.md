@@ -582,6 +582,18 @@ All palindromes and anagrams are permutations, but not all permutations are eith
 
 https://fastapi.tiangolo.com/async/#in-a-hurry
 
+# Multi-threading vs multi-processing
+
+When looking for the difference between python `multiprocessing` and `multithreading`, one might have the impression that they work pretty much the same. That could not be more wrong. The key differences are:
+
+- A process is an independent instance executed in a processor core. Threads are components of a process and run concurrently (inside that process).
+- Processes do not share the same memory space, while threads do (their mother’s memory, poetic, right?).
+- Threads are lighter and cause less overhead. Also, because they share the same memory inside a process, it is easier, faster, and safer to share data.
+- True parallelism can ONLY be achieved using `multiprocessing`. That is because only one thread can be executed at a given time inside a process time-space. This is assured by Python’s global interpreter lock (GIL) (see [Python GIL at RealPython](https://realpython.com/python-gil/)).
+- Processes execution is scheduled by the operating system, while threads are scheduled by the GIL.
+
+Ref: [medium](https://towardsdatascience.com/multithreading-vs-multiprocessing-in-python-3afeb73e105f)
+
 # Daemon in Linux
 
 A **daemon** (pronounced DEE-muhn) is a program that runs continuously and exists for the purpose of handling periodic service requests that a computer system expects to receive. The **daemon** program forwards the requests to other programs (or processes) as appropriate. For example, the **Cron** daemon is a built-in **Linux** utility that runs processes on your system at a scheduled time. We can configure a **cron** job to schedule scripts or other commands to run automatically.
