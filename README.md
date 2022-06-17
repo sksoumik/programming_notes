@@ -542,10 +542,6 @@ eval `ssh-agent -s`
   git lfs track "myfolder/**"
   ```
 
-# Microsoft -vs- Google
-
-Microsoft is an enterprise software company driven by **license revenue**, while Google is a consumer Internet company driven by **advertising revenue**.
-
 # Enterprise software vs Consumer software
 
 Enterprise software is just another term for business software. This is software that is **sold to (or targeted at) companies, not to individuals.** So, all the software which you use on a general basis like Windows or **Google or Quora is consumer software.**
@@ -579,6 +575,10 @@ All palindromes and anagrams are permutations, but not all permutations are eith
 # Concurrency and parallelism
 
 **Concurrency** and **parallelism** both relate to "different things happening more or less at the same time.
+
+**Concurrency** is when two or more tasks can start, run, and complete in overlapping time **periods**. It doesn't necessarily mean they'll ever both be running **at the same instant**. For example, *multitasking* on a single-core machine.
+
+**Parallelism** is when tasks *literally* run at the same time, e.g., on a multicore processor. 
 
 https://fastapi.tiangolo.com/async/#in-a-hurry
 
