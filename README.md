@@ -57,6 +57,36 @@ In tree, there is no cycles. In Graphs, cycles may form.
 
 
 
+# Dynamic Programming:
+
+Dynamic programming is used where we have problems,  which can be divided into similar sub-problems,  so that their results can be re-used. 
+
+
+
+# Dynamic programming vs Recursion
+
+During recursion, there may exist a case where same sub-problems are solved multiple times.
+Consider the example of calculating nth fibonacci number.
+
+```
+fibo(n) = fibo(n-1) + fibo(n-2)
+fibo(n-1) = fibo(n-2) + fibo(n-3)
+fibo(n-2) = fibo(n-3) + fibo(n-4)
+.................................
+.................................
+.................................
+fibo(2) = fibo(1) + fibo(0)
+```
+
+In the first three steps, it can be clearly seen that `fibo(n-3)` is calculated twice. If one goes deeper into recursion, it may find repeating the same sub-problems again and again.
+
+**Benefit of DP over Recursion:**
+DP is a technique which uses a **table** to store the results of sub-problem so that if same sub-problem is encountered again in future, it could directly return the result instead of re-calculating it.
+
+Ref: [Quora](https://qr.ae/pvo8OU)
+
+
+
 # Polymorphism vs Overriding vs Overloading
 
 Polymorphism means more than one form, same object performing different operations according to the requirement.
