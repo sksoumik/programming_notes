@@ -572,6 +572,27 @@ eval `ssh-agent -s`
   git lfs track "myfolder/**"
   ```
 
+
+
+#### Elasticsearch local commands
+
+```bash
+# Reload deamon
+sudo systemctl daemon-reload
+
+# Restart the elasticsearch service
+sudo systemctl restart elasticsearch
+```
+
+Run the command below to start the elasticsearch service and verify the service is running.
+
+```bash
+sudo systemctl start elasticsearch
+systemctl status elasticsearch
+```
+
+
+
 # Enterprise software vs Consumer software
 
 Enterprise software is just another term for business software. This is software that is **sold to (or targeted at) companies, not to individuals.** So, all the software which you use on a general basis like Windows or **Google or Quora is consumer software.**
