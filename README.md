@@ -1581,5 +1581,21 @@ In distributed computing we have multiple autonomous computers which seems to th
 
 A CSRF token is a secure random token (e.g., synchronizer token or challenge token) that is used **to prevent CSRF attacks**. The token needs to be unique per user session and should be of large random value to make it difficult to guess. A CSRF secure application assigns a unique CSRF token for every user session.
 
+# GCP and AWS Equivalent Service names
+
+| GCP               | AWS                             |
+| ----------------- | ------------------------------- |
+| Cloud Storage     | S3 (Simple Storage Service)     |
+| Compute Engine    | EC2 (Elastic Compute Cloud)     |
+| BigQuery          | Redshift                        |
+| Cloud Functions   | Lambda                          |
+| App Engine        | Elastic beanstalk               |
+| Kubernetes Engine | ECS (Elastic Container Service) |
+| Cloud Firestore   | DynamoDB                        |
+| Dataflow          | Amazon Kinesis                  |
+| Dataproc          | EMR - Elastic MapReduce         |
+
+Ref: https://cloudhawk.io/blog/aws/hybrid/cloud/2019/05/02/aws-gcp-service-equivalence.html
+
 
 
