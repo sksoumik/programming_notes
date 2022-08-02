@@ -591,7 +591,47 @@ sudo systemctl start elasticsearch
 systemctl status elasticsearch
 ```
 
+Check the status of the ES:
 
+```
+sudo systemctl status elasticsearch
+```
+
+Stop the ES service:
+
+```
+sudo systemctl stop elasticsearch
+```
+
+Install plugins
+
+```bash
+sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install <plugin name> 
+```
+
+
+
+### Docker
+
+```
+sudo service docker start
+sudo service docker stop
+sudo service docker status
+```
+
+
+
+# Docker vs Kubernetes
+
+In a nutshell, **Docker** is a suite of software development tools for creating, sharing and running individual containers; **Kubernetes** is a system for operating containerized applications at scale.
+
+Think of containers as standardized packaging for microservices with all the needed application code and dependencies inside. Creating these containers is the domain of **Docker**. A container can run anywhere, on a laptop, in the cloud, on local servers, and even on edge devices.
+
+A modern application consists of many containers. Operating them in production is the job of **Kubernetes**. Since containers are easy to replicate, applications can auto-scale: expand or contract processing capacities to match user demands.
+
+Docker and Kubernetes are mostly complementary technologies—Kubernetes *and* Docker.
+
+Ref: [Peter](https://www.dynatrace.com/news/blog/kubernetes-vs-docker/)
 
 # Enterprise software vs Consumer software
 
@@ -1596,6 +1636,10 @@ A CSRF token is a secure random token (e.g., synchronizer token or challenge tok
 | Dataproc          | EMR - Elastic MapReduce         |
 
 Ref: https://cloudhawk.io/blog/aws/hybrid/cloud/2019/05/02/aws-gcp-service-equivalence.html
+
+# Docker vs Kubernetes vs Docker Swarm
+
+https://youtu.be/9_s3h_GVzZc
 
 
 
