@@ -617,6 +617,8 @@ sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install <plugin name>
 sudo service docker start
 sudo service docker stop
 sudo service docker status
+
+sudo systemctl stop docker.socket
 ```
 
 
@@ -638,6 +640,14 @@ Ref: [Peter](https://www.dynatrace.com/news/blog/kubernetes-vs-docker/)
 Enterprise software is just another term for business software. This is software that is **sold to (or targeted at) companies, not to individuals.** So, all the software which you use on a general basis like Windows or **Google or Quora is consumer software.**
 
 Enterprise software is sold to companies to solve their problems. This can cover a wide range of applications, from software to manage the employees like payroll, attendance, promotions etc. (HRM), interacting with customers like the one’s marketing, sales.
+
+# Download speed vs Upload Speed
+
+Download speed refers to how many megabits of data per second it takes to download data from a server in the form of images, videos, text, files and audio to your device. Activities such as listening to music on Spotify, downloading large files or streaming videos on Netflix all require you to download data.
+
+Upload speed refers to how fast you can send information from your computer to another device or server on the internet. While downloading information is more common, some online activities need data to travel in the opposite direction. Sending emails, playing live tournament-style [video games](https://www.allconnect.com/blog/recommended-speeds-by-gaming-type) and [video calling](https://www.allconnect.com/blog/how-to-video-chat) on Zoom require fast upload speeds for you to send data to someone else’s server. 
+
+[Ref](https://www.allconnect.com/blog/difference-between-download-upload-internet-speeds)
 
 # Permutations vs Anagrams vs Palindromes
 
@@ -1425,11 +1435,30 @@ Non-Volatile: Power-off -> Still data remains.
 
 ###### Database vs Data warehouse
 
-Database is a collection of related data that represents some elements of the real world whereas Data warehouse is an information system that stores historical and commutative data from single or multiple sources. Database is designed to record data whereas the Data warehouse is designed to analyze data.
+Database is a collection of related data that represents some elements of the real world whereas Data warehouse is an information system that stores historical and commutative data from single or multiple sources. **Database is designed to record data whereas the Data warehouse is designed to analyze data.**
 
 DB: designed for record/store data.
 
 DW: designed for analyzing data.
+
+# Joins in SQL
+
+![](static/join.jpg)
+
+
+
+Outer is Optional. 
+
+So following list shows join equivalent syntaxes with and without **OUTER**
+
+```sql
+LEFT OUTER JOIN => LEFT JOIN
+RIGHT OUTER JOIN => RIGHT JOIN
+FULL OUTER JOIN => FULL JOIN
+INNER JOIN => JOIN
+```
+
+
 
 
 
