@@ -880,6 +880,10 @@ But then, in addition to actual 1000 pages, you will need another ~10 pages to s
 
 
 
+##### Foreign 
+
+Foreign Key references the primary key of another Table! It helps connect your Tables. 
+
 ##### Normalization
 
 Normalization is a **database design technique** that reduces data redundancy and eliminates undesirable characteristics like Insertion, Update and Deletion Anomalies. Normalization rules divides larger tables into smaller tables and links them using relationships.
@@ -888,24 +892,25 @@ If a table is not properly normalized and have data redundancy then it will not 
 
 ###### 1NF
 
-1. It should only have single(atomic) valued attributes/columns.
+1. It should only have single valued attributes/columns.
 2. All the columns in a table should have unique names.
+2. Values stored in a column should be of the same domain. 
 
 ###### 2NF
 
 1. Should be in 1NF.
-2. Single column primary column. There should be no partial dependency. 
+2. Records should not depend on anything other than a table's primary key. 
 
 ##### 3NF
 
 1. satisfy 2NF.
-2. 
+5. Has no transitive functional dependencies. 
 
-5. 
+(A transitive [functional dependency is when changing a non-key column, might cause any of the other non-key columns to change. 
+
+
 
 # SQLite Database Creation: Flask
-
-##
 
 ```sql
 $ sqlite3 database.db
@@ -1457,8 +1462,6 @@ RIGHT OUTER JOIN => RIGHT JOIN
 FULL OUTER JOIN => FULL JOIN
 INNER JOIN => JOIN
 ```
-
-
 
 
 
