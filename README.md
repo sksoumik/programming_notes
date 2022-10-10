@@ -67,18 +67,10 @@ In tree, there is no cycles. In Graphs, cycles may form.
 | List iteration               | O(n) time                                                    | O(n) time                                                    |
 | Cost of accessing an element | O(1)                                                         | O(n)                                                         |
 | application                  | array better in searching                                    | linked list better in insertion and deletions                |
-|                              |                                                              |                                                              |
-|                              |                                                              |                                                              |
-
-
-
-# Dynamic Programming:
-
-Dynamic programming is used where we have problems,  which can be divided into similar sub-problems,  so that their results can be re-used. 
-
-
 
 # Dynamic programming vs Recursion
+
+Dynamic programming is used where we have problems,  which can be divided into similar sub-problems,  so that their results can be re-used. 
 
 During recursion, there may exist a case where same sub-problems are solved multiple times.
 Consider the example of calculating nth fibonacci number.
