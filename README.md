@@ -57,6 +57,21 @@ In tree, there is no cycles. In Graphs, cycles may form.
 
 
 
+# Array vs Linked List
+
+| Operation                    | Array                                                        | LinkedList                                                   |
+| ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Size                         | Since data can only be stored in contiguous blocks of memory in an array, its size cannot be altered at runtime due to the risk of overwriting other data. | in a linked list, each node points to the next one such that data can exist at scattered (non-contiguous) addresses; this allows for a dynamic size that can change at runtime. |
+| Memory allocation            | Happens at compile time                                      | Happens at run-time                                          |
+| Execution time               | Any element in an array can be directly accessed with its index. Also, better cache locality in arrays (due to contiguous memory allocation) can significantly improve performance. As a result, some operations (such as **modifying** a certain element) are faster in arrays. | In the case of a linked list, all the previous elements must be traversed to reach any element. **Inserting/deleting** an element in the data are faster in linked lists. |
+| List iteration               | O(n) time                                                    | O(n) time                                                    |
+| Cost of accessing an element | O(1)                                                         | O(n)                                                         |
+| application                  | array better in searching                                    | linked list better in insertion and deletions                |
+|                              |                                                              |                                                              |
+|                              |                                                              |                                                              |
+
+
+
 # Dynamic Programming:
 
 Dynamic programming is used where we have problems,  which can be divided into similar sub-problems,  so that their results can be re-used. 
@@ -99,6 +114,107 @@ Polymorphism can be achieved by using two ways, those are
 *Method overloading* means writing two or more methods **in the same class** by using same method name, but the passing parameters are different.
 
 *Method overriding* ability of any object-oriented programming language that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes. When a method in a subclass has the same name, same parameters or signature and same return type(or sub-type) as a method in its super-class, then the method in the subclass is said to **override** the method in the super-class.
+
+# OOP Concepts
+
+#### Encapsulation
+
+Declare all variables in the class as *private*. Write public methods in the class to set and get the values of the variables. It is more defined in the setter and getter method. 
+
+#### Abstraction
+
+Handle complexity by hiding the unnecessary details from the user. For example, coffee machine. 
+
+Base class won't have the implementation details, we just define a abstract method without detail implementation. Other class will inherit this class, override the abstract method and have the detail implementation. 
+
+#### Inheritance
+
+Child class extends a parent class. Child class can extend parent class's all public and protected methods and can have its own implementation. 
+
+#### Polymorphism
+
+See above. 
+
+### Benefits of OOP
+
+1. Modularity for easier troubleshooting. When working with OOP, we know exactly where to look at when something goes wrong. 
+2. Reuse of code through inheritance. 
+3. OOP systems can be easily upgraded from small scale to large scale systems. 
+
+# Things to consider when designing REST API (Best Practices)
+
+1. Use JSON as the Format for Sending and Receiving Data. This is because, with XML for example, it's often a bit of a hassle to decode and encode data – so XML isn’t widely supported by frameworks anymore. 
+
+2. When you're designing a REST API, you should not use verbs in the endpoint paths. The endpoints should use nouns, signifying what each of them does. This is because HTTP methods such as `GET`, `POST`, `PUT`, `PATCH`, and `DELETE` are already in verb form for performing basic CRUD (Create, Read, Update, Delete) operations. 
+
+   So, for example, an endpoint should not look like this:
+
+   ```
+   https://mysite.com/getPosts or https://mysite.com/createPost
+   ```
+
+   Instead, it should be something like this: `https://mysite.com/posts`
+
+3. You should always use regular HTTP status codes in responses to requests made to your API. This will help your users to know what is going on – whether the request is successful, or if it fails, or something else. For example, 404 - Not Found. [See](https://moz.com/learn/seo/http-status-codes) the most popular codes.
+
+4. Oftentimes, different endpoints can be interlinked, so you should nest them so it's easier to understand them.
+
+   For example, in the case of a multi-user blogging platform, different posts could be written by different authors, so an endpoint such as `https://mysite.com/posts/author` would make a valid nesting in this case. 
+
+5. Use SSL for Security. 
+
+6. REST APIs should have different versions, so you don’t force clients (users) to migrate to new versions. This might even break the application if you're not careful. One of the commonest versioning systems in web development is semantic versioning. 
+
+   Many RESTful APIs from tech giants and individuals usually comes like this:
+   `https://mysite.com/v1/` for version 1
+   `https://mysite.com/v2` for version 2 
+
+7. When you make a REST API, you need to help clients (consumers) learn and figure out how to use it correctly. The best way to do this is by providing good documentation for the API.
+
+   The documentation should contain:
+
+   - relevant endpoints of the API
+   - example requests of the endpoints
+   - implementation in several programming languages
+   - messages listed for different errors with their status codes. 
+
+   
+
+   Ref: [freecodecamp](https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/) 
+
+# Git Rebase
+
+With a regular rebase, you can update your current branch with another branch. 
+
+```bash
+git getch origin main
+# checkout to target branch
+git checkout <my-feature-branch>
+# rebase it against the main branch
+git rebase origin/main
+```
+
+# Git Pull vs Fetch
+
+| fetch                                                        | pull                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Gathers any commit from the target branch to the current branch. However, it doesn't merge with the current branch. If we want to merge those changes, we must have to use `git merge` | Tries to automatically merge after fetching commits. So, all pulled commits will be merged into your currently active branch. Git pulls automatically merge the commits without letting the user review them. |
+
+# Git Bisect
+
+This command is uses binary search algorithm to find which commit in the project's history introduced a bug,. 
+
+```
+git bisect start
+git bisect good
+git bisect bad <bad commit> 
+```
+
+It tracks down the commits where the code works and where it doesn't. 
+
+# Kubernetes main components
+
+
 
 # Keyboard shortcuts
 
@@ -817,6 +933,16 @@ DELETE FROM Instructor
 WHERE ins_id = 6;
 ```
 
+##### Delete vs Drop vs Truncate 
+
+**DROP** command is used to **remove schema, table**, domain or Constraints from the database. 
+
+**Truncate** command is used to **delete the data inside a table**, but not the table itself.
+
+**DELETE** command is used to remove **some or all the tuples** from the table. 
+
+**Rollback**: One can make use of this command if they wish to **undo any changes** or alterations since the execution of the last COMMIT.	
+
 ##### JOIN statement
 
 A SQL Join statement is used to combine data or rows from two or more tables based on a common field between them. Different types of Joins are:
@@ -847,6 +973,57 @@ Various aggregate functions are:
 **DISTINCT** is used to remove duplicate values from a result set.
 
 **LIMIT**: restricting the number of rows retrieved from the database.
+
+##### Union vs Join: 
+
+Join: It combines data into new columns.
+
+Union: It combines data into new rows. 
+
+```sql
+SELECT Name 
+FROM Boys 
+WHERE Rollno < 16 
+
+UNION
+
+SELECT Name 
+FROM Girls 
+WHERE Rollno > 9 
+
+
+Result: 
+------------------
+Name
+-------------------
+Soumik
+Sadman
+Kabir
+Khan
+Zara
+Kona
+Rini
+Mini
+.... 
+
+```
+
+```sql
+SELECT Boys.Name, Boys.Age, Girls.Address,
+FROM Boys 
+INNER JOIN Girls 
+ON Boys.Rollno = Girls.Rollno; 
+
+Result
+-------------------
+Name     Age      Address
+-------------------------
+Soumik   27		  Dhaka
+Kabir    31       New York
+....   ....       ..... 
+```
+
+
 
 ## Entity -relationship diagrams
 
@@ -1672,6 +1849,27 @@ Ref: https://cloudhawk.io/blog/aws/hybrid/cloud/2019/05/02/aws-gcp-service-equiv
 # Docker vs Kubernetes vs Docker Swarm
 
 https://youtu.be/9_s3h_GVzZc
+
+# Caching
+
+Caching is also useful when retrieving data from a server. Instead of requesting the server every time we need data, we can store (cache) the data locally. Though, we may need a caching strategy if we have limited cache space or if the cached data can change over time.
+
+The caching can also be implemented on the server itself. Instead of querying a database every time a user loads a page, we can cache the content and serve it to users from the cache. Then, update our cache every once in a while. 
+
+There are different caching strategies like: 
+
+FIFO, LIFO and LRU
+
+#### Least Recently Used (LRU)
+
+This is probably the most famous strategy. The name says it all. It evicts the least recently used value. But what does that mean?
+
+When you call the cached function, the results are added to the cache (that is how caching works). But when you call the cached function with a value that is already cached, it returns the cached value and puts it at the top of the cache.
+When the cache is full the bottom-most value is removed.
+
+In this strategy, recently used entries are most likely to be reused.
+
+[Ref](https://towardsdatascience.com/make-your-python-code-run-faster-with-caching-87bee85e9002)
 
 
 
