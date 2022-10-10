@@ -168,6 +168,70 @@ See above.
 
    Ref: [freecodecamp](https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/)
 
+# Why stateless architecture is better
+
+It doesn't store any session data. A stateful architecture remembers client data(state) from request to the next. Adding or removing servers (horizontal scaling) is difficult with this approach. 
+
+That's why stateless archi is better for horizontal scaling. In stateless (REST) architecture, we move the state data from web servers to persistent storage(SQL/NoSQL DB). It helps to auto-scale the web-tier(servers) just by adding/removing servers based on the traffic loads. 
+
+Instead of pulling data from web-servers, stateless architecture pulls state from shared storage(DB). 
+
+For this reason, stateless is 
+
+- Robust
+- Scalable
+- Simpler
+
+# Message Queue vs Pub/SUb
+
+#### Message queues
+
+Message queues consist of a publishing service and multiple consumer services that communicate via a **queue**. This **communication is typically one way** where the publisher will issue commands to the consumers. The publishing service will typically put a message on a queue or exchange and a single consumer service will consume this message and perform an action based on this.
+
+Consider the following exchange:
+
+ 
+
+[![img](https://www.baeldung.com/wp-content/uploads/2021/07/1-1.png)](https://www.baeldung.com/wp-content/uploads/2021/07/1-1.png)
+
+From this, we can see a Publisher service that is putting a message ‘m n+1' onto the queue. In addition, we can also see multiple messages already in existence on the queue waiting to be consumed. On the right-hand side, we have 2 consuming services ‘A' and ‘B' that is listening to the queue for messages. 
+
+Let's now consider the same exchange after some time:
+
+ 
+
+[![img](https://www.baeldung.com/wp-content/uploads/2021/07/2-1.png)](https://www.baeldung.com/wp-content/uploads/2021/07/2-1.png)
+
+First, we can see that the Publisher's message has been pushed to the tail of the queue. Next, the important part to consider is the right-hand side of the image. We can see that consumer ‘A' has read the message ‘m 1' and, as such, it is no longer available in the queue for the other service ‘B' to consume.
+
+Example: Amazon SQS, RabbitMQ 
+
+#### Pub/Sub
+
+**Conversely, to message queues, in a pub-sub architecture we want all our consuming (subscribing) applications to get \*at least 1\* copy of the message that our publisher posts to an exchange.**
+
+Consider the following exchange:
+
+ 
+
+[![img](https://www.baeldung.com/wp-content/uploads/2021/07/3-1.png)](https://www.baeldung.com/wp-content/uploads/2021/07/3-1.png)
+
+On the left we have a publisher sending a message “m n+1” to a Topic. This Topic will broadcast this message to its subscriptions. These subscriptions are bound to queues. Each queue has a listening subscriber service awaiting messages.
+
+Let's now consider the same exchange after some time has passed:
+
+ 
+
+[![img](https://www.baeldung.com/wp-content/uploads/2021/07/4.png)](https://www.baeldung.com/wp-content/uploads/2021/07/4.png)
+
+Both the subscribing services are consuming “m 1” as both received a copy of this message. In addition, the Topic is distributing the new message “m n+1” to all of its subscribers.
+
+Pub sub should be used where we need a guarantee that each subscriber gets a copy of the message.
+
+Example: Apache Kafka
+
+Ref: https://www.baeldung.com/pub-sub-vs-message-queues 
+
 # Git Rebase
 
 With a regular rebase, you can update your current branch with another branch.
@@ -509,9 +573,9 @@ find . -maxdepth 1 -type f -name "*.jpg" -print0 | head -z -n 1000 | xargs -0 rm
 
   ```bash
   wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh
-
+  
   bash Miniconda3-py38_4.10.3-Linux-x86_64.sh
-
+  
   cd miniconda3/bin
   source activate
   ```
