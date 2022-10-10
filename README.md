@@ -2,32 +2,7 @@
 
 Maintained by [**Sadman Kabir Soumik**](https://www.linkedin.com/in/sksoumik/)
 
----
 
-# Difference between constant time vs linear time
-
-In time-complexity,
-
-**Constant time** O(1) means, the algorithm doesn't depend on the size of the input. If the size of the data container(e.g arrays) grow/increase, the execution time for some operation will remain same.
-
-**Linear time** O(n) means, the algorithm depends on the size of the input. If the size of the data container (e.g. arrays) increases, the execution time for some operation will also increase.
-
-# Time complexity
-
-`n`: input size.
-
-| Name        | Running time                                                                           | example algorithms                                    |
-| ----------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| constant    | O(1)                                                                                   | Finding the median value in a sorted array of numbers |
-| logarithmic | O(log n) \| every time n increases by an amount k, the time or space increases by k/2. | Binary search                                         |
-| Linear      | O(n)                                                                                   | Find duplicate elements in array with hash map        |
-| Loglinear   | O(n log n) \| implies that O(log n) operations will occur n times.                     | Merge Sort, Heap Sort, Quick Sort                     |
-| Quadratic   | O(n^2)                                                                                 | Bubble sort, Insertion sort                           |
-| Cubic       | O(n^3)                                                                                 |                                                       |
-| Exponential | O(2^n)                                                                                 | Find all subsets                                      |
-| Factorial   | O(n!)                                                                                  | Find all permutations of a given set/string           |
-
-See the time and space complexities [chat](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability)
 
 # Linear vs Non-linear data structures
 
@@ -231,6 +206,14 @@ Pub sub should be used where we need a guarantee that each subscriber gets a cop
 Example: Apache Kafka
 
 Ref: https://www.baeldung.com/pub-sub-vs-message-queues 
+
+# synchronous vs asynchronous
+
+Synchronous: Sequential execution. With synchronous communication the caller sends a message and waits for the receiver to respond. This is appropriate for actions such as login and purchase, in which the caller must have a reply.  
+
+With asynchronous communication the caller skips the wait and continues executing whatever code is necessary. 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_VJbuMmfCEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 # Git Rebase
 
